@@ -183,7 +183,6 @@ local defaultSettings = {
 		DBMCount = "10",
 		EasyMarking = true,
 		TMW = true,
-		PetBattle = true,
 		WeakAuras = true,
 		BarLine = true,
 		InfobarLine = true,
@@ -193,6 +192,7 @@ local defaultSettings = {
 		Details = true,
 		PGFSkin = true,
 		Rematch = true,
+		QuestTracker = true,
 	},
 	Tooltip = {
 		CombatHide = false,
@@ -212,8 +212,6 @@ local defaultSettings = {
 		ItemLevel = true,
 		GemNEnchant = true,
 		HideErrors = true,
-		SoloInfo = true,
-		AlertinChat = false,
 		ExpRep = true,
 		Interrupt = false,
 		OwnInterrupt = true,
@@ -226,6 +224,7 @@ local defaultSettings = {
 		OnlyCompleteRing = false,
 		ExplosiveCache = {},
 		PlacedItemAlert = false,
+		EnhancedMenu = false,
 	},
 	Tutorial = {
 		Complete = false,
@@ -329,6 +328,10 @@ end
 local function setupAuraWatch()
 	f:Hide()
 	SlashCmdList["NDUI_AWCONFIG"]()
+end
+
+local function updateBagSortOrder()
+	SetSortBagsRightToLeft(not NDuiDB["Bags"]["ReverseSort"])
 end
 
 local function updateChatSticky()
@@ -454,7 +457,7 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{1, "Bags", "BagsiLvl", L["Bags Itemlevel"]},
 		{1, "Bags", "Artifact", L["Bags Artifact"], true},
 		{1, "Bags", "DeleteButton", L["Bags DeleteButton"]},
-		{1, "Bags", "ReverseSort", L["Bags ReverseSort"].."*", true},
+		{1, "Bags", "ReverseSort", L["Bags ReverseSort"].."*", true, nil, updateBagSortOrder},
 		{},--blank
 		{3, "Bags", "BagsScale", L["Bags Scale"], false, {.5, 1.5, 1}},
 		{3, "Bags", "IconSize", L["Bags IconSize"], true, {30, 42, 0}},
@@ -550,7 +553,7 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 	},
 	[6] = {
 		{1, "AuraWatch", "Enable", "|cff00cc4c"..L["Enable AuraWatch"], nil, setupAuraWatch},
-		{1, "AuraWatch", "DeprecatedAuras", L["DeprecatedAuras"]},
+		--{1, "AuraWatch", "DeprecatedAuras", L["DeprecatedAuras"]},
 		{1, "AuraWatch", "ClickThrough", L["AuraWatch ClickThrough"]},
 		{3, "AuraWatch", "IconScale", L["AuraWatch IconScale"], true, {.8, 2, 1}},
 		{},--blank
@@ -570,8 +573,8 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{3, "Auras", "DebuffSize", L["DebuffSize"], true, {24, 40, 0}},
 		{3, "Auras", "BuffsPerRow", L["BuffsPerRow"], nil, {10, 20, 0}},
 		{3, "Auras", "DebuffsPerRow", L["DebuffsPerRow"], true, {10, 16, 0}},
-		{},--blank
-		{1, "Auras", "Totems", L["Enable Totems"]},
+		--{},--blank
+		--{1, "Auras", "Totems", L["Enable Totems"]},
 		--{1, "Auras", "Reminder", L["Enable Reminder"], true},
 	},
 	[7] = {
@@ -631,6 +634,7 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{1, "Skins", "ClassLine", L["ClassColor Line"]},
 		{},--blank
 		{1, "Skins", "MicroMenu", L["Micromenu"]},
+		{1, "Skins", "QuestTracker", L["QuestTracker"], true},
 		{},--blank
 		{1, "Skins", "DBM", L["DBM Skin"]},
 		{1, "Skins", "Skada", L["Skada Skin"], true},
@@ -663,6 +667,7 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{1, "ACCOUNT", "AutoBubbles", L["AutoBubbles"], true},
 		{1, "Misc", "FasterLoot", L["Faster Loot"].."*", nil, nil, updateFasterLoot},
 		{1, "Misc", "HideErrors", L["Hide Error"].."*", true, nil, updateErrorBlocker},
+		{1, "Misc", "EnhancedMenu", L["TargetEnhancedMenu"]},
 	},
 	[13] = {
 		{1, "ACCOUNT", "VersionCheck", L["Version Check"]},
@@ -1009,7 +1014,9 @@ local function importData()
 			NDuiDB[key][value] = {}
 		elseif arg1 == "r" or arg1 == "g" or arg1 == "b" then
 			local color = select(4, strsplit(":", option))
-			NDuiDB[key][value][arg1] = tonumber(color)
+			if NDuiDB[key][value] then
+				NDuiDB[key][value][arg1] = tonumber(color)
+			end
 		elseif key == "AuraWatchList" then
 			if value == "Switcher" then
 				local index, state = select(3, strsplit(":", option))
