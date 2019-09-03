@@ -1,11 +1,11 @@
 
 AtlasLootClassicDB = {
+	["global"] = {
+		["__addonrevision"] = 1010008,
+	},
 	["profileKeys"] = {
 		["苍炎月影 - 希尔盖"] = "苍炎月影 - 希尔盖",
 		["苍炎月影 - 黑曜石之锋"] = "苍炎月影 - 黑曜石之锋",
-	},
-	["global"] = {
-		["__addonrevision"] = 1010008,
 	},
 	["profiles"] = {
 		["苍炎月影 - 希尔盖"] = {

@@ -1,3 +1,7 @@
 ModernQuestWatch: disabled
 CharacterStatsClassic: enabled
 NDui: enabled
+SortBags: disabled
+Cleanup: disabled
+NugRunning: disabled
+NugRunningOptions: disabled
