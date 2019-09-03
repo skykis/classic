@@ -1,0 +1,14 @@
+{
+    "addonsMap": [
+        "EZJunk"
+    ],
+    "interfaceMap": [],
+    "children": [],
+    "localName": "EZJunk",
+    "searchName": "[怀旧专用] EZJunk：自动卖垃圾",
+    "name": "[怀旧专用] EZJunk：自动卖垃圾",
+    "fileName": "%5B%E6%80%80%E6%97%A7%E4%B8%93%E7%94%A8%5D%20EZJunk%EF%BC%9A%E8%87%AA%E5%8A%A8%E5%8D%96%E5%9E%83%E5%9C%BE",
+    "target": "_178",
+    "version": "1.0.0",
+    "gameVersion": ""
+}

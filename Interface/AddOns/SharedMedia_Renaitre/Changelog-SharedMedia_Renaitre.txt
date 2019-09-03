@@ -1,0 +1,60 @@
+v5.4
+-fix typo
+-update libraries
+-update TOC
+
+v5.3
+-update libraries
+-added statusbars; rCurve1h, rCurve1ho, rCurve3h, rCurve3ho, RenAscension, RenAscensionL
+-added sound; OMNotInMyHouse
+-TOC update
+
+v5.2
+-removed statusbars: RenCurved series
+-added statusbars; rCurve 1-3, rCurveG 1-3, RenDeity, RenDeityL, RenCloakL
+-update libraries
+
+v5.0.5
+-added backgrounds; RenFlare, RenOrb, RenOrbSmall
+-added border, RenFade, RenFadeB
+-added more sounds
+-added statusbars; RenCurved series, RenCloak
+-removed backgrounds; RenFade, RenCombo 1-5
+
+v4.3.4.8.12
+-added sounds
+-added RenHorizonUp, RenHorizonDown
+
+v4.3.4
+-update libs and paths
+-reduced size of RenCombo 1-5 for better scaling
+
+v4.3.3
+-added RenCombo 1-5
+-added Fade
+-added RenChatBubble-Backdrop, RenChatBubble-Tail
+
+v4.3
+-added Tunnel, TunnelL statusbars
+-update CallBackHandler-1.0, LibStub
+-updated TOC
+
+v4.2a
+-added DeityL statusbar
+
+v4.2
+-added Deity statusbar
+-added DeityGlow nameplate aggro glow
+-added RageGuy, RageGuyFu backgrounds for Weak/Power Auras
+-updated TOC
+
+v4.1
+-updated TOC
+-added black versions (blk) of the "Fade" borders since certain addons do not recolor the border
+
+v4.1beta
+-added Beveled Borders
+-renamed Fade Borders
+
+v4.0.6
+-initial release

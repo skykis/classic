@@ -1,0 +1,14 @@
+{
+    "target": "curse",
+    "searchName": "Auctionator",
+    "localName": "Auctionator",
+    "version": "Auctionator 8.2.0.zip",
+    "fileName": "auctionator",
+    "addonsMap": [
+        "Auctionator"
+    ],
+    "interfaceMap": [],
+    "children": [],
+    "name": "Auctionator",
+    "gameVersion": "8.2.0"
+}

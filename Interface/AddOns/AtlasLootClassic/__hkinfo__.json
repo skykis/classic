@@ -1,0 +1,27 @@
+{
+    "target": "curse",
+    "searchName": "AtlasLootClassic",
+    "localName": "AtlasLootClassic",
+    "version": "v1.1.8-beta-classic",
+    "fileName": "atlaslootclassic",
+    "addonsMap": [
+        "AtlasLootClassic",
+        "AtlasLootClassic_Crafting",
+        "AtlasLootClassic_DungeonsAndRaids",
+        "AtlasLootClassic_PvP",
+        "AtlasLootClassic_Collections",
+        "AtlasLootClassic_Factions",
+        "AtlasLootClassic_Options"
+    ],
+    "interfaceMap": [],
+    "children": [
+        "AtlasLootClassic_Crafting",
+        "AtlasLootClassic_DungeonsAndRaids",
+        "AtlasLootClassic_PvP",
+        "AtlasLootClassic_Collections",
+        "AtlasLootClassic_Factions",
+        "AtlasLootClassic_Options"
+    ],
+    "name": "AtlasLootClassic",
+    "gameVersion": "1.13.2"
+}

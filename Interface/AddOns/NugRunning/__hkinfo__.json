@@ -1,0 +1,17 @@
+{
+    "addonsMap": [
+        "NugRunning",
+        "NugRunningOptions"
+    ],
+    "interfaceMap": [],
+    "children": [
+        "NugRunningOptions"
+    ],
+    "localName": "NugRunning",
+    "searchName": "[怀旧专用] NugRunning：法术计时条",
+    "name": "[怀旧专用] NugRunning：法术计时条",
+    "fileName": "%5B%E6%80%80%E6%97%A7%E4%B8%93%E7%94%A8%5D%20NugRunning%EF%BC%9A%E6%B3%95%E6%9C%AF%E8%AE%A1%E6%97%B6%E6%9D%A1",
+    "target": "_178",
+    "version": "1.13.14",
+    "gameVersion": ""
+}

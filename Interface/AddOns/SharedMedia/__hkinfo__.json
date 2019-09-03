@@ -1,0 +1,14 @@
+{
+    "target": "curse",
+    "searchName": "SharedMedia",
+    "localName": "SharedMedia",
+    "version": "3.1.0 - r192",
+    "fileName": "sharedmedia",
+    "addonsMap": [
+        "SharedMedia"
+    ],
+    "interfaceMap": [],
+    "children": [],
+    "name": "SharedMedia",
+    "gameVersion": "8.0.1"
+}

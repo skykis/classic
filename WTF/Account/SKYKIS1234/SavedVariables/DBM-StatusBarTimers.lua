@@ -1,0 +1,32 @@
+
+DBT_AllPersistentOptions = {
+	["Default"] = {
+		["DBM"] = {
+			["FontSize"] = 10,
+			["HugeTimerY"] = -42,
+			["HugeBarXOffset"] = 0,
+			["Scale"] = 1,
+			["TimerY"] = -105,
+			["HugeScale"] = 1,
+			["BarYOffset"] = 15,
+			["ExpandUpwardsLarge"] = true,
+			["Texture"] = "Interface\\Addons\\NDui\\Media\\Armory",
+			["TimerX"] = 118,
+			["ExpandUpwards"] = true,
+			["TimerPoint"] = "LEFT",
+			["StartColorG"] = 0.7,
+			["EndColorG"] = 0,
+			["Heigh"] = 20,
+			["EndColorR"] = 1,
+			["Width"] = 175,
+			["HugeTimerPoint"] = "CENTER",
+			["StartColorR"] = 1,
+			["StartColorB"] = 0,
+			["HugeBarYOffset"] = 15,
+			["HugeTimerX"] = 330,
+			["HugeWidth"] = 210,
+			["BarXOffset"] = 0,
+			["EndColorB"] = 0,
+		},
+	},
+}

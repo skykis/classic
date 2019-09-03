@@ -1,0 +1,14 @@
+{
+    "target": "curse",
+    "searchName": "Guidelime",
+    "localName": "Guidelime",
+    "version": "v1.012",
+    "fileName": "guidelime",
+    "addonsMap": [
+        "Guidelime"
+    ],
+    "interfaceMap": [],
+    "children": [],
+    "name": "Guidelime",
+    "gameVersion": "1.13.2"
+}

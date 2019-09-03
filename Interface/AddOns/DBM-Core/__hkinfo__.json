@@ -1,0 +1,39 @@
+{
+    "target": "curse",
+    "searchName": "Deadly Boss Mods (DBM)",
+    "localName": "DBM-Core",
+    "version": "1.13.5-classic",
+    "fileName": "deadly-boss-mods",
+    "addonsMap": [
+        "DBM-Core",
+        "DBM-DefaultSkin",
+        "DBM-GUI",
+        "DBM-StatusBarTimers",
+        "DBM-Party-Classic",
+        "DBM-AQ20",
+        "DBM-AQ40",
+        "DBM-Azeroth",
+        "DBM-BWL",
+        "DBM-MC",
+        "DBM-Onyxia",
+        "DBM-Naxx",
+        "DBM-ZG"
+    ],
+    "interfaceMap": [],
+    "children": [
+        "DBM-DefaultSkin",
+        "DBM-GUI",
+        "DBM-StatusBarTimers",
+        "DBM-Party-Classic",
+        "DBM-AQ20",
+        "DBM-AQ40",
+        "DBM-Azeroth",
+        "DBM-BWL",
+        "DBM-MC",
+        "DBM-Onyxia",
+        "DBM-Naxx",
+        "DBM-ZG"
+    ],
+    "name": "Deadly Boss Mods (DBM)",
+    "gameVersion": "1.13.2"
+}

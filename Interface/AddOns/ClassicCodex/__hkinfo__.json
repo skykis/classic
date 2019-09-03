@@ -1,0 +1,14 @@
+{
+    "addonsMap": [
+        "ClassicCodex"
+    ],
+    "interfaceMap": [],
+    "children": [],
+    "localName": "ClassicCodex",
+    "searchName": "ClassicCodex",
+    "name": "ClassicCodex",
+    "fileName": "classiccodex",
+    "target": "curse",
+    "version": "ClassicCodex 1.2.1",
+    "gameVersion": ""
+}

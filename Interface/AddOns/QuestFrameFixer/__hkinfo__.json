@@ -1,0 +1,14 @@
+{
+    "addonsMap": [
+        "QuestFrameFixer"
+    ],
+    "interfaceMap": [],
+    "children": [],
+    "localName": "QuestFrameFixer",
+    "searchName": "[怀旧专用] QuestFrameFixer：任务惊叹号",
+    "name": "[怀旧专用] QuestFrameFixer：任务惊叹号",
+    "fileName": "%5B%E6%80%80%E6%97%A7%E4%B8%93%E7%94%A8%5D%20QuestFrameFixer%EF%BC%9A%E4%BB%BB%E5%8A%A1%E6%83%8A%E5%8F%B9%E5%8F%B7",
+    "target": "_178",
+    "version": "1.1.1",
+    "gameVersion": ""
+}

@@ -1,0 +1,6 @@
+VER 3 0000000001000001 "攻击" "INV_MISC_QUESTIONMARK"
+#showtooltip 毁灭打击
+/startattack
+/cast 毁灭打击
+/cast 英勇打击
+END

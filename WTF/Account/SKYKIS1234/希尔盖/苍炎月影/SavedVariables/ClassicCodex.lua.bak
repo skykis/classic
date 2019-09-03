@@ -1,0 +1,37 @@
+
+CodexConfig = {
+	["showLowLevel"] = false,
+	["showHighLevel"] = true,
+	["colorBySpawn"] = true,
+	["autoAccept"] = true,
+	["allQuestGivers"] = true,
+	["nameplateIcon"] = true,
+	["showFestival"] = true,
+	["autoTurnin"] = true,
+	["currentQuestGivers"] = true,
+	["trackingMethod"] = 1,
+	["spawnMarkerSize"] = 10,
+	["questMarkerSize"] = 14,
+}
+CodexHistory = {
+	[5261] = true,
+	[7] = true,
+	[15] = true,
+	[18] = true,
+	[783] = true,
+	[33] = true,
+	[3903] = true,
+	[3100] = true,
+}
+CodexBrowserFavorites = {
+	["items"] = {
+	},
+	["units"] = {
+	},
+	["quests"] = {
+	},
+	["objets"] = {
+	},
+}
+CodexColors = {
+}

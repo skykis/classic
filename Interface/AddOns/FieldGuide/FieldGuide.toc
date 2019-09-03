@@ -1,0 +1,34 @@
+## Interface: 11302
+## Title: Field Guide
+## Notes: Shows when spells are trainable and how much each spell costs to train, and other stuff.
+## Author: cloudbells
+## Version: @project-version@
+## SavedVariablesPerCharacter: FieldGuideOptions
+## OptionalDeps: TomTom
+
+# Load libraries.
+Libraries\LibStub\LibStub.lua
+Libraries\CallbackHandler-1.0\CallbackHandler-1.0.lua
+Libraries\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libraries\LibDBIcon-1.0\LibDBIcon-1.0.lua
+Libraries\HereBeDragons-2.0\HereBeDragons-2.0.lua
+Libraries\HereBeDragons-2.0\HereBeDragons-Pins-2.0.lua
+
+# Load utilites.
+Util.lua
+
+# Load spell tables.
+Database\WeaponSkills.lua
+Database\Druid.lua
+Database\Hunter.lua
+Database\Mage.lua
+Database\Paladin.lua
+Database\Priest.lua
+Database\Rogue.lua
+Database\Shaman.lua
+Database\Warlock.lua
+Database\Warrior.lua
+
+# Load core files.
+FieldGuide.lua
+FieldGuide.xml

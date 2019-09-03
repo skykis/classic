@@ -1,0 +1,14 @@
+{
+    "target": "curse",
+    "searchName": "TinyInspect",
+    "localName": "MerInspect",
+    "version": "MerInspect(Classic)1.02",
+    "fileName": "itemlevel-anywhere",
+    "addonsMap": [
+        "MerInspect"
+    ],
+    "interfaceMap": [],
+    "children": [],
+    "name": "MerInspect",
+    "gameVersion": "1.12.0"
+}

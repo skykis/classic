@@ -1,0 +1,36 @@
+
+GuidelimeDataChar = {
+	["mainFrameHeight"] = 400,
+	["showUnavailableSteps"] = false,
+	["guideSkip"] = {
+		["Hakurai - by Shikushiku 中文由Qcat汉化 1-12 埃尔文森林,西部荒野"] = {
+			[25] = true,
+			[13] = true,
+			[15] = true,
+			[22] = true,
+		},
+	},
+	["arrowY"] = -20,
+	["arrowRelative"] = "TOP",
+	["mainFrameX"] = 0,
+	["mainFrameLocked"] = false,
+	["mainFrameWidth"] = 350,
+	["arrowLocked"] = false,
+	["editorFrameY"] = 0,
+	["showCompletedSteps"] = false,
+	["mainFrameAlpha"] = 0.5,
+	["currentGuide"] = "Hakurai - by Shikushiku 中文由Qcat汉化 1-12 埃尔文森林,西部荒野",
+	["editorFrameX"] = 0,
+	["arrowX"] = 0,
+	["mainFrameY"] = 0,
+	["showArrow"] = true,
+	["guideSize"] = {
+		["Hakurai - by Shikushiku 中文由Qcat汉化 1-12 埃尔文森林,西部荒野"] = 231,
+	},
+	["version"] = "1.0",
+	["arrowAlpha"] = 0.8,
+	["mainFrameShowing"] = true,
+	["editorFrameRelative"] = "CENTER",
+	["mainFrameRelative"] = "RIGHT",
+	["mainFrameFontSize"] = 14,
+}

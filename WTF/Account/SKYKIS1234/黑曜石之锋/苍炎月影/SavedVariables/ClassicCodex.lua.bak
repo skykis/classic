@@ -1,0 +1,75 @@
+
+CodexConfig = {
+	["showLowLevel"] = false,
+	["showHighLevel"] = true,
+	["colorBySpawn"] = true,
+	["autoAccept"] = false,
+	["allQuestGivers"] = true,
+	["nameplateIcon"] = true,
+	["showFestival"] = true,
+	["autoTurnin"] = false,
+	["currentQuestGivers"] = true,
+	["spawnMarkerSize"] = 10,
+	["trackingMethod"] = 1,
+	["questMarkerSize"] = 14,
+}
+CodexHistory = {
+	[38] = true,
+	[244] = true,
+	[6181] = true,
+	[1097] = true,
+	[246] = true,
+	[152] = true,
+	[12] = true,
+	[153] = true,
+	[125] = true,
+	[64] = true,
+	[65] = true,
+	[5635] = true,
+	[6281] = true,
+	[130] = true,
+	[131] = true,
+	[132] = true,
+	[3741] = true,
+	[9] = true,
+	[11] = true,
+	[13] = true,
+	[117] = true,
+	[22] = true,
+	[102] = true,
+	[36] = true,
+	[103] = true,
+	[6261] = true,
+	[129] = true,
+	[104] = true,
+	[151] = true,
+	[6285] = true,
+	[176] = true,
+	[109] = true,
+	[89] = true,
+	[239] = true,
+	[184] = true,
+	[14] = true,
+}
+CodexBrowserFavorites = {
+	["items"] = {
+	},
+	["units"] = {
+	},
+	["quests"] = {
+	},
+	["objets"] = {
+	},
+}
+CodexColors = {
+	["赤脊山蛮兵"] = {
+		0.819607843137255, -- [1]
+		0.329411764705882, -- [2]
+		0.835294117647059, -- [3]
+	},
+	["赤脊山秘法师"] = {
+		0.647058823529412, -- [1]
+		0.901960784313726, -- [2]
+		0.0901960784313726, -- [3]
+	},
+}

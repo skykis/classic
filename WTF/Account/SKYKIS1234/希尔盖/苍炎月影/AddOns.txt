@@ -1,0 +1,3 @@
+ModernQuestWatch: disabled
+CharacterStatsClassic: enabled
+NDui: enabled

@@ -1,0 +1,341 @@
+<Ui>
+    <Button name="FieldGuideSpellButtonTemplate" virtual="true" registerForClicks="LeftButtonUp, RightButtonUp">
+        <Size>
+            <AbsDimension x="37" y="37" />
+        </Size>
+        <Layers>
+            <Layer level="BACKGROUND">
+                <Texture name="$parentBackground" file="Interface/Addons/FieldGuide/Media/Buttons/SpellBackground">
+                    <Size>
+                        <AbsDimension x="64" y="64" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="TOPLEFT">
+                            <Offset>
+                                <AbsDimension x="-3" y="3" />
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </Texture>
+            </Layer>
+        </Layers>
+        <Scripts>
+            <OnLoad>
+				FieldGuideSpellButton_OnLoad(self)
+			</OnLoad>
+            <OnEnter>
+                FieldGuideSpellButton_OnEnter(self, button)
+            </OnEnter>
+            <OnLeave>
+                GameTooltip:Hide()
+            </OnLeave>
+            <OnClick>
+                FieldGuideSpellButton_OnClick(self, button)
+            </OnClick>
+            <OnDragStart>
+                FieldGuideSpellButton_OnDragStart(self, button)
+            </OnDragStart>
+        </Scripts>
+        <HighlightTexture name="$parentHighlight" file="Interface/Addons/FieldGuide/Media/Buttons/SpellHighlight" alphaMode="ADD" />
+    </Button>
+    <Button name="FieldGuidePinTemplate" virtual="true" registerForClicks="RightButtonUp">
+        <Size>
+            <AbsDimension x="16" y="16" />
+        </Size>
+        <Layers>
+            <Layer level="OVERLAY" setAllPoints="true">
+                <Texture name="$parentTexture" file="Interface/Addons/FieldGuide/Media/Map/GoldGreenDot" />
+            </Layer>
+        </Layers>
+        <Scripts>
+            <OnEnter>
+                FieldGuidePin_OnEnter(self)
+            </OnEnter>
+            <OnLeave>
+                GameTooltip:Hide()
+            </OnLeave>
+            <OnClick>
+                FieldGuidePin_OnClick(self, button)
+            </OnClick>
+        </Scripts>
+    </Button>
+    <FontString name="FieldGuideLevelStringTemplate" font="Fonts/FRIZQT__.ttf" outline="NORMAL" justifyH="LEFT" virtual="true">
+        <Shadow>
+          <Color a="1" r="0" g="0" b="0" />
+          <Offset x="1" y="-1" />
+        </Shadow>
+        <FontHeight>
+            <AbsValue val="16" />
+        </FontHeight>
+    </FontString>
+    <FontString name="FieldGuideCostStringTemplate" font="Fonts/ARIALN.ttf" outline="NORMAL" justifyH="LEFT" virtual="true">
+        <Shadow>
+          <Color a="0.5" r="0" g="0" b="0" />
+          <Offset x="1" y="-1" />
+        </Shadow>
+        <FontHeight>
+            <AbsValue val="20" />
+        </FontHeight>
+    </FontString>
+    <Frame name="FieldGuideFrame" parent="UIParent" enableMouse="true" movable="true" clampedToScreen="true">
+        <Size x="680" y="500" /> <!-- 725 for 14 spells etc, 680 original (13) -->
+        <Anchors>
+            <Anchor point="CENTER" />
+        </Anchors>
+        <Backdrop edgeFile="Interface/DialogFrame/UI-DialogBox-Border">
+			<EdgeSize val="32"/>
+		</Backdrop>
+        <Layers>
+            <Layer level="BACKGROUND">
+                <Texture name="$parentBackgroundTexture" file="Interface/Addons/FieldGuide/Media/Background/Background">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" x="8" y="-8" />
+                        <Anchor point="BOTTOMRIGHT" x="-8" y="8" />
+                    </Anchors>
+                </Texture>
+            </Layer>
+            <Layer level="BORDER">
+                <Texture name="$parentBackgroundTextureClass">
+                    <Color a="0.4" />
+                    <Anchors>
+                        <Anchor point="TOPLEFT" x="8" y="-8" />
+                        <Anchor point="BOTTOMRIGHT" x="-8" y="8" />
+                    </Anchors>
+                </Texture>
+            </Layer>
+            <Layer level="OVERLAY">
+                <Texture name="$parentScrollSeparatorTexture" file="Interface/Addons/FieldGuide/Media/Buttons/ScrollbarVertical-Knob">
+                    <Size x="48" y="56" />
+                    <Anchors>
+                        <Anchor point="BOTTOMRIGHT" x="0" y="-4" />
+                    </Anchors>
+                </Texture>
+            </Layer>
+        </Layers>
+        <Frames>
+            <Slider name="$parentVerticalSlider" orientation="VERTICAL" minValue="0" maxValue="0" defaultValue="0" valueStep="1">
+                <Size x="25" y="1" />
+                <Anchors>
+                    <Anchor point="TOPRIGHT" relativeTo="FieldGuideFrame" x="-11" y="-24" />
+                    <Anchor point="BOTTOMRIGHT" relativeTo="FieldGuideFrame" y="49" />
+                </Anchors>
+                <Scripts>
+                    <OnValueChanged>
+                        FieldGuide_OnVerticalValueChanged(self, value)
+                    </OnValueChanged>
+                </Scripts>
+                <ThumbTexture name="$parentThumbTexture" file="Interface/Addons/FieldGuide/Media/Buttons/ScrollbarVertical-Knob">
+                    <Size x="32" y="32" />
+                </ThumbTexture>
+                <Frames>
+                    <Button name="$parentScrollUpButton">
+                        <Size x="32" y="32" />
+                        <Anchors>
+                            <Anchor point="TOPRIGHT" relativeTo="FieldGuideFrame" x="-7" y="-5" />
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                FieldGuide_Scroll(1)
+                            </OnClick>
+                        </Scripts>
+                        <NormalTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollUpButton-Up" />
+                        <PushedTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollUpButton-Down" />
+                        <DisabledTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollUpButton-Disabled" />
+                        <HighlightTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollUpButton-Highlight" alphaMode="ADD" />
+                    </Button>
+                    <Button name="$parentScrollDownButton">
+                        <Size x="32" y="32" />
+                        <Anchors>
+                            <Anchor point="BOTTOMRIGHT" relativeTo="FieldGuideFrame" x="-7" y="31" />
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                FieldGuide_Scroll(-1)
+                            </OnClick>
+                        </Scripts>
+                        <NormalTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollDownButton-Up" />
+                        <PushedTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollDownButton-Down" />
+                        <DisabledTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollDownButton-Disabled" />
+                        <HighlightTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollDownButton-Highlight" alphaMode="ADD" />
+                    </Button>
+                </Frames>
+                <Layers>
+                    <Layer level="ARTWORK">
+                        <Texture name="$parentBackground" setAllPoints="true">
+                            <Color a="1" r="0" g="0" b="0" />
+                        </Texture>
+                    </Layer>
+                    <Layer level="ARTWORK" textureSubLevel="1">
+                        <Texture name="$parentTop" file="Interface/Addons/FieldGuide/Media/Scrollbar/ScrollbarVertical">
+                            <Size x="31" y="102" />
+                            <Anchors>
+                                <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="FieldGuideFrame" x="-8" y="-8" />
+                            </Anchors>
+                            <TexCoords left="0" right="0.484375" top="0" bottom="0.4"/>
+                        </Texture>
+                        <Texture name="$parentBottom" file="Interface/Addons/FieldGuide/Media/Scrollbar/ScrollbarVertical">
+                            <Size x="31" y="106"/>
+                            <Anchors>
+                                <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="FieldGuideFrame" x="-8" y="36" />
+                            </Anchors>
+                            <TexCoords left="0.515625" right="1.0" top="0" bottom="0.4140625" />
+                        </Texture>
+                        <Texture name="$parentMiddle" file="Interface/Addons/FieldGuide/Media/Scrollbar/ScrollbarVertical">
+                            <Size x="31" y="1" />
+                            <Anchors>
+                                <Anchor point="TOP" relativeTo="$parentTop" relativePoint="BOTTOM" />
+                                <Anchor point="BOTTOM" relativeTo="$parentBottom" relativePoint="TOP" />
+                            </Anchors>
+                            <TexCoords left="0" right="0.484375" top=".75" bottom="1" />
+                        </Texture>
+                    </Layer>
+                    <Layer level="OVERLAY">
+                        <Texture name="$parentExtension" file="Interface/Addons/FieldGuide/Media/Scrollbar/ScrollbarVertical">
+                            <Size x="6" y="32" />
+                            <Anchors>
+                                <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="FieldGuideFrame" x="-8" y="10" />
+                            </Anchors>
+                            <TexCoords left="0.90625" right="1.0" top="0" bottom="0" />
+                        </Texture>
+                    </Layer>
+                </Layers>
+            </Slider>
+            <Slider name="$parentHorizontalSlider" orientation="HORIZONTAL" minValue="0" maxValue="0" defaultValue="0" valueStep="1">
+                <Size x="1" y="25" />
+                <Anchors>
+                    <Anchor point="BOTTOMLEFT" relativeTo="FieldGuideFrame" x="22" y="10" />
+                    <Anchor point="BOTTOMRIGHT" relativeTo="FieldGuideFrame" x="-51" />
+                </Anchors>
+                <Scripts>
+                    <OnValueChanged>
+                        FieldGuide_OnHorizontalValueChanged(self, value)
+                    </OnValueChanged>
+                </Scripts>
+                <ThumbTexture name="$parentThumbTexture" file="Interface/Addons/FieldGuide/Media/Buttons/ScrollbarHorizontal-Knob">
+                    <Size x="32" y="32" />
+                </ThumbTexture>
+                <Frames>
+                    <Button name="$parentScrollLeftButton">
+                        <Size x="32" y="32" />
+                        <Anchors>
+                            <Anchor point="BOTTOMLEFT" relativeTo="FieldGuideFrame" x="4" y="6" />
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                FieldGuide_Scroll(1, true)
+                            </OnClick>
+                        </Scripts>
+                        <NormalTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollLeftButton-Up" />
+                        <PushedTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollLeftButton-Down" />
+                        <DisabledTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollLeftButton-Disabled" />
+                        <HighlightTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollLeftButton-Highlight" alphaMode="ADD" />
+                    </Button>
+                    <Button name="$parentScrollRightButton">
+                        <Size x="32" y="32" />
+                        <Anchors>
+                            <Anchor point="BOTTOMRIGHT" relativeTo="FieldGuideFrame" x="-33" y="6" />
+                        </Anchors>
+                        <Scripts>
+                            <OnClick>
+                                FieldGuide_Scroll(-1, true)
+                            </OnClick>
+                        </Scripts>
+                        <NormalTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollRightButton-Up" />
+                        <PushedTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollRightButton-Down" />
+                        <DisabledTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollRightButton-Disabled" />
+                        <HighlightTexture file="Interface/Addons/FieldGuide/Media/Buttons/ScrollRightButton-Highlight" alphaMode="ADD" />
+                    </Button>
+                </Frames>
+                <Layers>
+                    <Layer level="ARTWORK">
+                        <Texture name="$parentBackground" setAllPoints="true">
+                            <Color a="1" r="0" g="0" b="0" />
+                        </Texture>
+                    </Layer>
+                    <Layer level="ARTWORK" textureSubLevel="2">
+                        <Texture name="$parentLeft" file="Interface/Addons/FieldGuide/Media/Scrollbar/ScrollbarHorizontal">
+                            <Size x="102" y="31" />
+                            <Anchors>
+                                <Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" relativeTo="FieldGuideFrame" x="9" y="7" />
+                            </Anchors>
+                            <TexCoords left="0.58203125" right="1" top="0.515625" bottom="1" />
+                        </Texture>
+                        <Texture name="$parentRight" file="Interface/Addons/FieldGuide/Media/Scrollbar/ScrollbarHorizontal">
+                            <Size x="102" y="31" />
+                            <Anchors>
+                                <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="FieldGuideFrame" x="-36" y="7" />
+                            </Anchors>
+                            <TexCoords left="0.6" right="1" top="0" bottom="0.484375" />
+                        </Texture>
+                        <Texture name="$parentMiddle" file="Interface/Addons/FieldGuide/Media/Scrollbar/ScrollbarHorizontal">
+                            <Size x="1" y="31" />
+                            <Anchors>
+                                <Anchor point="LEFT" relativeTo="$parentLeft" relativePoint="RIGHT" />
+                                <Anchor point="RIGHT" relativeTo="$parentRight" relativePoint="LEFT" />
+                            </Anchors>
+                            <TexCoords left="0" right="0.25" top="0" bottom="0.484375" />
+                        </Texture>
+                    </Layer>
+                    <Layer level="OVERLAY">
+                        <Texture name="$parentExtension" file="Interface/Addons/FieldGuide/Media/Scrollbar/ScrollbarHorizontal">
+                            <Size x="24" y="6" />
+                            <Anchors>
+                                <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="FieldGuideFrame" x="-12" y="7" />
+                            </Anchors>
+                            <TexCoords left="0.78125" right="0.90234375" top="0.90625" bottom="1.0" />
+                        </Texture>
+                    </Layer>
+                </Layers>
+            </Slider>
+            <CheckButton name="$parentTalentsCheckBox" inherits="UICheckButtonTemplate">
+                <Scripts>
+                    <OnClick>
+                        FieldGuide_ToggleButtons(1)
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+            <CheckButton name="$parentEnemySpellsCheckBox" inherits="UICheckButtonTemplate">
+                <Scripts>
+                    <OnClick>
+                        FieldGuide_ToggleButtons(2)
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+            <CheckButton name="$parentKnownSpellsCheckBox" inherits="UICheckButtonTemplate">
+                <Scripts>
+                    <OnClick>
+                        FieldGuide_ToggleButtons(3)
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+            <Frame name="FieldGuideDropdownFrame" inherits="UIDropDownMenuTemplate" frameStrata="MEDIUM">
+            <Anchors>
+                    <Anchor point="TOPRIGHT" x="-40" y="-26"/>
+                </Anchors>
+            </Frame>
+        </Frames>
+        <Scripts>
+            <OnLoad>
+                FieldGuide_OnLoad(self)
+            </OnLoad>
+            <OnShow>
+                PlaySound(SOUNDKIT.IG_SPELLBOOK_OPEN)
+            </OnShow>
+            <OnHide>
+                PlaySound(SOUNDKIT.IG_SPELLBOOK_CLOSE)
+            </OnHide>
+            <OnDragStart>
+                self:StartMoving()
+            </OnDragStart>
+            <OnDragStop>
+                self:StopMovingOrSizing()
+            </OnDragStop>
+            <OnMouseWheel>
+                FieldGuide_Scroll(delta)
+            </OnMouseWheel>
+            <OnEvent>
+                FieldGuide_OnEvent(self, event, ...)
+            </OnEvent>
+        </Scripts>
+    </Frame>
+</Ui>

@@ -1,0 +1,14 @@
+{
+    "target": "curse",
+    "searchName": "CensusPlusClassic",
+    "localName": "CensusPlusClassic",
+    "version": "CensusPlusClassic_v0.5.0",
+    "fileName": "censusplusclassic",
+    "addonsMap": [
+        "CensusPlusClassic"
+    ],
+    "interfaceMap": [],
+    "children": [],
+    "name": "CensusPlusClassic",
+    "gameVersion": "1.13.2"
+}
