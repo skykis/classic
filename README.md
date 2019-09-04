@@ -3,6 +3,9 @@
 界面截图(笔记本截图，ndui分辨率适应各种尺寸)<br>
 ![](https://github.com/skykis/classic/raw/master/WoWScrnShot_090419_211207.jpg)
 --
+界面截图(1080p，ndui分辨率适应各种尺寸)<br>
+![](https://github.com/skykis/classic/raw/master/WoWScrnShot_090419_233949.jpg)
+--
 ndui为主<br>
 [NDuiClassic nga链接](https://bbs.nga.cn/read.php?tid=18321155)
 --
