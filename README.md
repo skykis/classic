@@ -1,6 +1,6 @@
 自用魔兽世界怀旧服插件列表
 ==
-下载后将Interface放入魔兽世界_classic_目录内（WTF可不放）
+下载后将Interface和Fonts放入魔兽世界_classic_目录内（WTF可不放）
 --
 界面截图(笔记本截图，ndui分辨率适应各种尺寸)<br>
 ![](https://github.com/skykis/classic/raw/master/WoWScrnShot_090419_211207.jpg)
