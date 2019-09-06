@@ -1,6 +1,8 @@
-#忽略所有文件，注意放在开头
+﻿#忽略所有文件，注意放在开头
 /*
 #除Interface文件夹外
 !/Interface
 #除WTF文件夹外
 !/WTF
+#除Fonts文件夹外
+!/Fonts
