@@ -122,7 +122,8 @@ local defaultSettings = {
 		BlockAddonAlert = true,
 		ChatMenu = true,
 		WhisperColor = true,
-		ChatItemLevel = true,
+		--ChatItemLevel = true,
+		Chatbar = true,
 	},
 	Map = {
 		Coord = true,
@@ -191,7 +192,7 @@ local defaultSettings = {
 		ClassLine = true,
 		Details = true,
 		PGFSkin = true,
-		Rematch = true,
+		QuestLogEx = true,
 		QuestTracker = true,
 	},
 	Tooltip = {
@@ -602,7 +603,8 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{1, "Chat", "Sticky", L["Chat Sticky"].."*", nil, nil, updateChatSticky},
 		{1, "Chat", "WhisperColor", L["Differ WhipserColor"].."*", true},
 		{1, "Chat", "Freedom", L["Language Filter"]},
-		{1, "Chat", "ChatItemLevel", "|cff00cc4c"..L["ShowChatItemLevel"], true},
+		{1, "Chat", "Chatbar", L["ShowChatbar"], true},
+		--{1, "Chat", "ChatItemLevel", "|cff00cc4c"..L["ShowChatItemLevel"]},
 		{},--blank
 		{1, "Chat", "EnableFilter", "|cff00cc4c"..L["Enable Chatfilter"]},
 		{1, "Chat", "BlockAddonAlert", L["Block Addon Alert"], true},
@@ -643,7 +645,7 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{1, "Skins", "WeakAuras", L["WeakAuras Skin"]},
 		{1, "Skins", "Details", L["Details Skin"], true},
 		{1, "Skins", "PGFSkin", L["PGF Skin"]},
-		{1, "Skins", "Rematch", L["Rematch Skin"], true},
+		{1, "Skins", "QuestLogEx", L["QuestLogEx Skin"], true},
 	},
 	[11] = {
 		{1, "Tooltip", "CombatHide", L["Hide Tooltip"].."*"},
