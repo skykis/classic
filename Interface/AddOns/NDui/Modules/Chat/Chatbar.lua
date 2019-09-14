@@ -12,7 +12,6 @@ function module:Chatbar()
 
 	local Chatbar = CreateFrame("Frame", nil, UIParent)
 	Chatbar:SetSize(width, height)
-	Chatbar:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 5, 9)
 
 	local function AddButton(r, g, b, text, func)
 		local bu = CreateFrame("Button", nil, Chatbar, "SecureActionButtonTemplate")
@@ -58,7 +57,7 @@ function module:Chatbar()
 			ChatFrame_OpenChat("/raid ", chatFrame)
 		end},
 		{.25, 1, .25, GUILD.."/"..OFFICER, function(_, btn)
-			if btn == "RightButton" and C_GuildInfo.CanEditOfficerNote() then
+			if btn == "RightButton" and CanEditOfficerNote() then
 				ChatFrame_OpenChat("/o ", chatFrame)
 			else
 				ChatFrame_OpenChat("/g ", chatFrame)
@@ -132,4 +131,10 @@ function module:Chatbar()
 			buttonList[i]:SetPoint("LEFT", buttonList[i-1], "RIGHT", padding, 0)
 		end
 	end
+
+	-- Mover
+	local width = (#buttonList-1)*(padding+width) + width
+	local mover = B.Mover(Chatbar, L["Chatbar"], "Chatbar", {"BOTTOMLEFT", UIParent, "BOTTOMLEFT", 5, 9}, width, 20)
+	Chatbar:ClearAllPoints()
+	Chatbar:SetPoint("BOTTOMLEFT", mover)
 end

@@ -384,14 +384,32 @@ function UF:UpdateQuestUnit(_, unit)
 	end
 end
 
-function UF:UpdateCodexQuestUnit()
-	if not NDuiDB["Nameplate"]["QuestIndicator"] then return end
-	if not Codex or not CodexMap then return end
+function UF:UpdateForQuestie(name)
+	local data = name and QuestieTooltips.tooltipLookup["u_"..name]
+	if data then
+		local foundObjective, progressText
+		for _, tooltip in pairs(data) do
+			local questID = tooltip.Objective.QuestData.Id
+			QuestieQuest:UpdateQuest(questID)
+			if qCurrentQuestlog[questID] then
+				foundObjective = true
+				if tooltip.Objective.Needed then
+					progressText = tooltip.Objective.Needed - tooltip.Objective.Collected
+					if progressText == 0 then
+						foundObjective = nil
+					end
+					break
+				end
+			end
+		end
+		if foundObjective then
+			self.questIcon:Show()
+			self.questCount:SetText(progressText)
+		end
+	end
+end
 
-	self.questIcon:Hide()
-	self.questCount:SetText("")
-
-	local name = self.unitName
+function UF:UpdateCodexQuestUnit(name)
 	if name and CodexMap.tooltips[name] then
 		for _, meta in pairs(CodexMap.tooltips[name]) do
 			local questData = meta["quest"]
@@ -424,7 +442,7 @@ function UF:UpdateCodexQuestUnit()
 							end
 						end
 
-						if foundObjective then
+						if foundObjective and progressText > 0 then
 							self.questIcon:Show()
 							self.questCount:SetText(progressText)
 						elseif not foundObjective and meta["questLevel"] and meta["texture"] then
@@ -434,6 +452,20 @@ function UF:UpdateCodexQuestUnit()
 				end
 			end
 		end
+	end
+end
+
+function UF:UpdateQuestIndicator()
+	if not NDuiDB["Nameplate"]["QuestIndicator"] then return end
+
+	self.questIcon:Hide()
+	self.questCount:SetText("")
+
+	local name = self.unitName
+	if QuestieTooltips then
+		UF.UpdateForQuestie(self, name)
+	elseif CodexMap then
+		UF.UpdateCodexQuestUnit(self, name)
 	end
 end
 
@@ -452,7 +484,7 @@ function UF:AddQuestIcon(self)
 	self.questIcon = qicon
 	self.questCount = count
 	--self:RegisterEvent("QUEST_LOG_UPDATE", UF.UpdateQuestUnit, true)
-	self:RegisterEvent("QUEST_LOG_UPDATE", UF.UpdateCodexQuestUnit, true)
+	self:RegisterEvent("QUEST_LOG_UPDATE", UF.UpdateQuestIndicator, true)
 end
 
 -- Unit classification
@@ -673,7 +705,7 @@ function UF:PostUpdatePlates(event, unit)
 	UF.UpdateUnitPower(self)
 	UF.UpdateTargetChange(self)
 	--UF.UpdateQuestUnit(self, event, unit)
-	UF.UpdateCodexQuestUnit(self)
+	UF.UpdateQuestIndicator(self)
 	UF.UpdateUnitClassify(self, unit)
 	UF:UpdateClassPowerAnchor()
 end
@@ -692,6 +724,20 @@ function UF:PlateVisibility(event)
 		UIFrameFadeOut(self.Health.bg, 2, self.Health.bg:GetAlpha(), .1)
 		UIFrameFadeOut(self.Power, 2, self.Power:GetAlpha(), .1)
 		UIFrameFadeOut(self.Power.bg, 2, self.Power.bg:GetAlpha(), .1)
+	end
+end
+
+function UF:ResizePlayerPlate()
+	local plate = _G.oUF_PlayerPlate
+	if plate then
+		plate:SetHeight(NDuiDB["Nameplate"]["PPHeight"])
+		plate.Power:SetHeight(NDuiDB["Nameplate"]["PPPHeight"])
+		local bars = plate.ClassPower
+		if bars then
+			for i = 1, 6 do
+				bars[i]:SetHeight(NDuiDB["Nameplate"]["PPHeight"])
+			end
+		end
 	end
 end
 

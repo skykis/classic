@@ -32,7 +32,7 @@ function S:MicroButton_Create(parent, data)
 		button:SetParent(bu)
 		button:ClearAllPoints(bu)
 		button:SetAllPoints(bu)
-		if not NDuiDB["Actionbar"]["Enable"] then button.SetPoint = B.Dummy end
+		button.SetPoint = B.Dummy
 		button:UnregisterAllEvents()
 		button:SetNormalTexture(nil)
 		button:SetPushedTexture(nil)
@@ -60,7 +60,7 @@ function S:MicroMenu()
 	if not NDuiDB["Skins"]["MicroMenu"] then return end
 
 	local menubar = CreateFrame("Frame", nil, UIParent)
-	menubar:SetSize(257, 22)
+	menubar:SetSize(238, 22)
 	B.Mover(menubar, L["Menubar"], "Menubar", C.Skins.MicroMenuPos)
 
 	-- Generate Buttons

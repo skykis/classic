@@ -1,7 +1,7 @@
 {
     "addonsMap": [
-        "Details",
-        "Details_TinyThreat"
+        "Details_TinyThreat",
+        "Details"
     ],
     "interfaceMap": [],
     "children": [
@@ -12,6 +12,6 @@
     "name": "[怀旧专用] Details! 伤害统计插件",
     "fileName": "%5B%E6%80%80%E6%97%A7%E4%B8%93%E7%94%A8%5D%20Details!%20%E4%BC%A4%E5%AE%B3%E7%BB%9F%E8%AE%A1%E6%8F%92%E4%BB%B6",
     "target": "_178",
-    "version": "DetailsClassic.1.13.2.146.140",
+    "version": "DetailsClassic.1.13.2.140.153",
     "gameVersion": ""
 }
