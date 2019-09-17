@@ -7,35 +7,33 @@ _detalhes_database = {
 		["tabelas"] = {
 			{
 				{
-					["combatId"] = 13,
 					["tipo"] = 2,
+					["combatId"] = 13,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1297,
 							["totalabsorbed"] = 0.007707,
-							["friendlyfire"] = {
-							},
 							["damage_from"] = {
 								["河爪蛮兵"] = true,
 							},
 							["targets"] = {
 								["河爪蛮兵"] = 359,
 							},
-							["colocacao"] = 1,
 							["pets"] = {
 							},
+							["last_event"] = 1567340082,
+							["end_time"] = 1567340082,
 							["friendlyfire_total"] = 0,
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 359.007707,
-							["on_hold"] = false,
+							["delay"] = 0,
 							["dps_started"] = false,
 							["total"] = 359.007707,
 							["classe"] = "PRIEST",
-							["serial"] = "Player-4769-0052831A",
+							["damage_taken"] = 80.007707,
 							["nome"] = "苍炎月影",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["心灵震爆"] = {
 										["c_amt"] = 0,
@@ -55,16 +53,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "心灵震爆",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 1,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									["射击"] = {
 										["c_amt"] = 0,
@@ -84,16 +82,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "射击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 7,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 									["暗言术：痛"] = {
 										["c_amt"] = 0,
@@ -113,33 +111,34 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "暗言术：痛",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 3,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["grupo"] = true,
-							["end_time"] = 1567340082,
-							["last_dps"] = 35.6476722271744,
 							["custom"] = 0,
+							["last_dps"] = 35.6476722271744,
+							["colocacao"] = 1,
 							["tipo"] = 1,
-							["damage_taken"] = 80.007707,
+							["friendlyfire"] = {
+							},
 							["start_time"] = 1567340072,
-							["delay"] = 0,
-							["last_event"] = 1567340082,
+							["serial"] = "Player-4769-0052831A",
+							["on_hold"] = false,
 						}, -- [1]
 						{
 							["flag_original"] = 68168,
 							["totalabsorbed"] = 0.00643,
-							["monster"] = true,
 							["damage_from"] = {
 								["苍炎月影"] = true,
 							},
@@ -148,19 +147,20 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["last_event"] = 1567340080,
+							["friendlyfire"] = {
+							},
 							["friendlyfire_total"] = 0,
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 80.00643,
-							["on_hold"] = false,
-							["dps_started"] = false,
+							["delay"] = 0,
+							["monster"] = true,
 							["total"] = 80.00643,
 							["classe"] = "UNKNOW",
-							["serial"] = "Creature-0-4517-0-19174-124-00006BB4CC",
+							["damage_taken"] = 359.00643,
 							["nome"] = "河爪蛮兵",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["攻击"] = {
 										["c_amt"] = 0,
@@ -180,83 +180,69 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "攻击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 3,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 								},
+								["tipo"] = 2,
 							},
-							["friendlyfire"] = {
-							},
-							["end_time"] = 1567340082,
+							["dps_started"] = false,
 							["last_dps"] = 0,
+							["end_time"] = 1567340082,
 							["custom"] = 0,
 							["tipo"] = 1,
-							["damage_taken"] = 359.00643,
+							["on_hold"] = false,
 							["start_time"] = 1567340076,
-							["delay"] = 0,
-							["last_event"] = 1567340080,
+							["serial"] = "Creature-0-4517-0-19174-124-00006BB4CC",
+							["fight_component"] = true,
 						}, -- [2]
 					},
 				}, -- [1]
 				{
-					["combatId"] = 13,
 					["tipo"] = 3,
+					["combatId"] = 13,
 					["_ActorTable"] = {
 					},
 				}, -- [2]
 				{
-					["combatId"] = 13,
 					["tipo"] = 7,
+					["combatId"] = 13,
 					["_ActorTable"] = {
 					},
 				}, -- [3]
 				{
-					["combatId"] = 13,
 					["tipo"] = 9,
+					["combatId"] = 13,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1047,
-							["debuff_uptime"] = 9,
-							["debuff_uptime_targets"] = {
-							},
 							["debuff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 0,
+										["refreshamt"] = 0,
 										["id"] = 0,
+										["uptime"] = 9,
 										["targets"] = {
 										},
-										["uptime"] = 9,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
-							},
-							["buff_uptime_targets"] = {
-							},
-							["grupo"] = true,
-							["nome"] = "苍炎月影",
-							["spell_cast"] = {
-								[0] = 8,
-							},
-							["pets"] = {
+								["tipo"] = 9,
 							},
 							["buff_uptime"] = 20,
-							["tipo"] = 4,
-							["last_event"] = 1567340082,
+							["classe"] = "PRIEST",
 							["buff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
 										["activedamt"] = 1,
@@ -265,21 +251,32 @@ _detalhes_database = {
 										},
 										["actived_at"] = 1567340082,
 										["uptime"] = 0,
-										["appliedamt"] = 1,
+										["counter"] = 0,
 										["refreshamt"] = 0,
 										["actived"] = true,
-										["counter"] = 0,
+										["appliedamt"] = 1,
 									},
-									[15271] = {
+									[1244] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 1,
-										["id"] = 15271,
+										["refreshamt"] = 0,
+										["id"] = 1244,
+										["uptime"] = 10,
 										["targets"] = {
 										},
-										["uptime"] = 10,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
+									},
+									[15271] = {
 										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 15271,
+										["uptime"] = 10,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
 									},
 									[588] = {
 										["activedamt"] = 1,
@@ -288,48 +285,49 @@ _detalhes_database = {
 										},
 										["actived_at"] = 1567340072,
 										["uptime"] = 0,
-										["appliedamt"] = 1,
+										["counter"] = 0,
 										["refreshamt"] = 0,
 										["actived"] = true,
-										["counter"] = 0,
-									},
-									[1244] = {
-										["activedamt"] = 1,
-										["id"] = 1244,
-										["targets"] = {
-										},
-										["uptime"] = 10,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
+								["tipo"] = 9,
+							},
+							["debuff_uptime"] = 9,
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["spell_cast"] = {
+								[0] = 8,
+							},
+							["nome"] = "苍炎月影",
+							["tipo"] = 4,
+							["debuff_uptime_targets"] = {
+							},
+							["pets"] = {
 							},
 							["serial"] = "Player-4769-0052831A",
-							["classe"] = "PRIEST",
+							["last_event"] = 1567340082,
 						}, -- [1]
 					},
 				}, -- [4]
 				{
-					["combatId"] = 13,
 					["tipo"] = 2,
+					["combatId"] = 13,
 					["_ActorTable"] = {
 					},
 				}, -- [5]
 				["raid_roster"] = {
 					["苍炎月影"] = true,
 				},
+				["tempo_start"] = 1567340072,
 				["last_events_tables"] = {
-				},
-				["overall_added"] = true,
-				["cleu_timeline"] = {
 				},
 				["alternate_power"] = {
 				},
-				["tempo_start"] = 1567340072,
-				["enemy"] = "河爪蛮兵",
-				["combat_counter"] = 559,
+				["cleu_events"] = {
+					["n"] = 1,
+				},
 				["playing_solo"] = true,
 				["totals"] = {
 					438.865125, -- [1]
@@ -338,34 +336,22 @@ _detalhes_database = {
 						-0.00667100000000076, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
-					["frags_total"] = 0,
 					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
 				},
-				["player_last_events"] = {
-				},
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["CombatEndedAt"] = 33793.546,
-				["aura_timeline"] = {
-				},
-				["__call"] = {
-				},
-				["data_inicio"] = "20:14:33",
-				["end_time"] = 33793.546,
 				["totals_grupo"] = {
 					359, -- [1]
 					0, -- [2]
@@ -373,28 +359,46 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
 				},
-				["combat_id"] = 13,
-				["TotalElapsedCombatTime"] = 33793.546,
 				["frags_need_refresh"] = true,
+				["instance_type"] = "none",
+				["hasSaved"] = true,
+				["data_fim"] = "20:14:43",
+				["cleu_timeline"] = {
+				},
+				["enemy"] = "河爪蛮兵",
+				["TotalElapsedCombatTime"] = 33793.546,
+				["CombatEndedAt"] = 33793.546,
+				["aura_timeline"] = {
+				},
+				["__call"] = {
+				},
+				["data_inicio"] = "20:14:33",
+				["end_time"] = 33793.546,
+				["combat_id"] = 13,
 				["PhaseData"] = {
 					{
 						1, -- [1]
 						1, -- [2]
 					}, -- [1]
+					["damage"] = {
+						{
+							["苍炎月影"] = 359.007707,
+						}, -- [1]
+					},
 					["heal_section"] = {
 					},
 					["heal"] = {
@@ -403,30 +407,27 @@ _detalhes_database = {
 					},
 					["damage_section"] = {
 					},
-					["damage"] = {
-						{
-							["苍炎月影"] = 359.007707,
-						}, -- [1]
-					},
 				},
+				["overall_added"] = true,
 				["frags"] = {
 					["河爪蛮兵"] = 1,
 				},
-				["data_fim"] = "20:14:43",
-				["instance_type"] = "none",
+				["TimeData"] = {
+				},
+				["combat_counter"] = 559,
 				["CombatSkillCache"] = {
 				},
-				["spells_cast_timeline"] = {
+				["player_last_events"] = {
 				},
 				["start_time"] = 33783.475,
 				["contra"] = "河爪蛮兵",
-				["TimeData"] = {
+				["spells_cast_timeline"] = {
 				},
 			}, -- [1]
 			{
 				{
-					["combatId"] = 12,
 					["tipo"] = 2,
+					["combatId"] = 12,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1297,
@@ -439,20 +440,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["on_hold"] = false,
 							["classe"] = "PRIEST",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 398.008324,
-							["friendlyfire"] = {
-							},
-							["colocacao"] = 1,
+							["delay"] = 0,
 							["dps_started"] = false,
 							["end_time"] = 1567340059,
-							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["total"] = 398.008324,
+							["damage_taken"] = 128.008324,
 							["nome"] = "苍炎月影",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["心灵震爆"] = {
 										["c_amt"] = 0,
@@ -472,16 +472,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "心灵震爆",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 1,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									["射击"] = {
 										["c_amt"] = 1,
@@ -501,16 +501,16 @@ _detalhes_database = {
 										["c_max"] = 43,
 										["id"] = "射击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 43,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 7,
-										["r_amt"] = 0,
-										["c_min"] = 43,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 									["暗言术：痛"] = {
 										["c_amt"] = 0,
@@ -530,29 +530,30 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "暗言术：痛",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 3,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["grupo"] = true,
-							["total"] = 398.008324,
-							["serial"] = "Player-4769-0052831A",
-							["last_dps"] = 33.9771490524161,
 							["custom"] = 0,
+							["last_dps"] = 33.9771490524161,
+							["colocacao"] = 1,
 							["last_event"] = 1567340058,
-							["damage_taken"] = 128.008324,
+							["friendlyfire"] = {
+							},
 							["start_time"] = 1567340047,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Player-4769-0052831A",
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 68168,
@@ -565,19 +566,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["dps_started"] = false,
 							["classe"] = "UNKNOW",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 128.002291,
+							["delay"] = 0,
 							["monster"] = true,
-							["fight_component"] = true,
-							["dps_started"] = false,
 							["end_time"] = 1567340072,
 							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["damage_taken"] = 398.002291,
 							["nome"] = "河爪强盗",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									[0] = {
 										["c_amt"] = 0,
@@ -596,15 +597,15 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = 0,
 										["r_dmg"] = 0,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
 										["m_crit"] = 0,
-										["a_amt"] = 0,
+										["r_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 1,
 										["b_dmg"] = 0,
 										["n_amt"] = 0,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_amt"] = 0,
+										["a_dmg"] = 0,
 									},
 									["攻击"] = {
 										["c_amt"] = 0,
@@ -624,16 +625,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "攻击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 4,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 									["含毒之刺"] = {
 										["c_amt"] = 0,
@@ -653,84 +654,70 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "含毒之刺",
 										["r_dmg"] = 0,
-										["spellschool"] = 8,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 5,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 8,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["total"] = 128.002291,
-							["serial"] = "Creature-0-4517-0-19174-452-00006BB568",
+							["last_dps"] = 0,
 							["friendlyfire"] = {
 							},
-							["last_dps"] = 0,
 							["custom"] = 0,
 							["last_event"] = 1567340069,
-							["damage_taken"] = 398.002291,
+							["on_hold"] = false,
 							["start_time"] = 1567340051,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Creature-0-4517-0-19174-452-00006BB568",
+							["fight_component"] = true,
 						}, -- [2]
 					},
 				}, -- [1]
 				{
-					["combatId"] = 12,
 					["tipo"] = 3,
+					["combatId"] = 12,
 					["_ActorTable"] = {
 					},
 				}, -- [2]
 				{
-					["combatId"] = 12,
 					["tipo"] = 7,
+					["combatId"] = 12,
 					["_ActorTable"] = {
 					},
 				}, -- [3]
 				{
-					["combatId"] = 12,
 					["tipo"] = 9,
+					["combatId"] = 12,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1047,
-							["debuff_uptime"] = 10,
-							["debuff_uptime_targets"] = {
-							},
 							["debuff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 0,
+										["refreshamt"] = 0,
 										["id"] = 0,
+										["uptime"] = 10,
 										["targets"] = {
 										},
-										["uptime"] = 10,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
-							},
-							["buff_uptime_targets"] = {
-							},
-							["grupo"] = true,
-							["nome"] = "苍炎月影",
-							["spell_cast"] = {
-								[0] = 9,
-							},
-							["pets"] = {
+								["tipo"] = 9,
 							},
 							["buff_uptime"] = 36,
-							["tipo"] = 4,
-							["last_event"] = 1567340059,
+							["classe"] = "PRIEST",
 							["buff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
 										["activedamt"] = 1,
@@ -739,69 +726,83 @@ _detalhes_database = {
 										},
 										["actived_at"] = 1567340059,
 										["uptime"] = 0,
-										["appliedamt"] = 1,
+										["counter"] = 0,
 										["refreshamt"] = 0,
 										["actived"] = true,
-										["counter"] = 0,
-									},
-									[15271] = {
-										["activedamt"] = 1,
-										["id"] = 15271,
-										["targets"] = {
-										},
-										["uptime"] = 12,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[588] = {
-										["activedamt"] = 1,
-										["id"] = 588,
-										["targets"] = {
-										},
-										["uptime"] = 12,
-										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 									[1244] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 1,
+										["refreshamt"] = 0,
 										["id"] = 1244,
+										["uptime"] = 12,
 										["targets"] = {
 										},
-										["uptime"] = 12,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
+									},
+									[15271] = {
 										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 15271,
+										["uptime"] = 12,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+									[588] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 588,
+										["uptime"] = 12,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
 									},
 								},
+								["tipo"] = 9,
+							},
+							["debuff_uptime"] = 10,
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["spell_cast"] = {
+								[0] = 9,
+							},
+							["nome"] = "苍炎月影",
+							["tipo"] = 4,
+							["debuff_uptime_targets"] = {
+							},
+							["pets"] = {
 							},
 							["serial"] = "Player-4769-0052831A",
-							["classe"] = "PRIEST",
+							["last_event"] = 1567340059,
 						}, -- [1]
 						{
 							["flag_original"] = 68168,
+							["last_event"] = 0,
 							["nome"] = "河爪强盗",
-							["tipo"] = 4,
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["classe"] = "UNKNOW",
 							["spell_cast"] = {
 								[0] = 1,
 							},
-							["last_event"] = 0,
+							["tipo"] = 4,
 							["monster"] = true,
 							["serial"] = "Creature-0-4517-0-19174-452-00006BB568",
-							["classe"] = "UNKNOW",
+							["fight_component"] = true,
 						}, -- [2]
 					},
 				}, -- [4]
 				{
-					["combatId"] = 12,
 					["tipo"] = 2,
+					["combatId"] = 12,
 					["_ActorTable"] = {
 					},
 				}, -- [5]
@@ -809,12 +810,14 @@ _detalhes_database = {
 					["苍炎月影"] = true,
 				},
 				["CombatStartedAt"] = 33783.475,
-				["tempo_start"] = 1567340047,
+				["overall_added"] = true,
 				["last_events_tables"] = {
 				},
 				["alternate_power"] = {
 				},
-				["combat_counter"] = 558,
+				["cleu_events"] = {
+					["n"] = 1,
+				},
 				["playing_solo"] = true,
 				["totals"] = {
 					525.988611, -- [1]
@@ -823,21 +826,21 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
-					["frags_total"] = 0,
 					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
 				},
 				["totals_grupo"] = {
 					398, -- [1]
@@ -846,22 +849,23 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
 				},
 				["frags_need_refresh"] = true,
 				["instance_type"] = "none",
+				["hasSaved"] = true,
 				["data_fim"] = "20:14:20",
 				["cleu_timeline"] = {
 				},
@@ -872,33 +876,9 @@ _detalhes_database = {
 				},
 				["__call"] = {
 				},
-				["PhaseData"] = {
-					{
-						1, -- [1]
-						1, -- [2]
-					}, -- [1]
-					["heal_section"] = {
-					},
-					["heal"] = {
-						{
-						}, -- [1]
-					},
-					["damage_section"] = {
-					},
-					["damage"] = {
-						{
-							["苍炎月影"] = 398.008324,
-						}, -- [1]
-					},
-				},
+				["data_inicio"] = "20:14:08",
 				["end_time"] = 33770.143,
 				["combat_id"] = 12,
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["overall_added"] = true,
-				["spells_cast_timeline"] = {
-				},
 				["player_last_events"] = {
 					["苍炎月影"] = {
 						{
@@ -1008,21 +988,43 @@ _detalhes_database = {
 						["n"] = 5,
 					},
 				},
-				["data_inicio"] = "20:14:08",
+				["tempo_start"] = 1567340047,
+				["spells_cast_timeline"] = {
+				},
+				["contra"] = "河爪强盗",
+				["combat_counter"] = 558,
 				["CombatSkillCache"] = {
 				},
-				["frags"] = {
-					["河爪强盗"] = 1,
+				["PhaseData"] = {
+					{
+						1, -- [1]
+						1, -- [2]
+					}, -- [1]
+					["damage"] = {
+						{
+							["苍炎月影"] = 398.008324,
+						}, -- [1]
+					},
+					["heal_section"] = {
+					},
+					["heal"] = {
+						{
+						}, -- [1]
+					},
+					["damage_section"] = {
+					},
 				},
 				["start_time"] = 33758.429,
 				["TimeData"] = {
 				},
-				["contra"] = "河爪强盗",
+				["frags"] = {
+					["河爪强盗"] = 1,
+				},
 			}, -- [2]
 			{
 				{
-					["combatId"] = 11,
 					["tipo"] = 2,
+					["combatId"] = 11,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1297,
@@ -1035,20 +1037,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["on_hold"] = false,
 							["classe"] = "PRIEST",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 317.004508,
-							["friendlyfire"] = {
-							},
-							["colocacao"] = 1,
+							["delay"] = 0,
 							["dps_started"] = false,
 							["end_time"] = 1567340038,
-							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["total"] = 317.004508,
+							["damage_taken"] = 46.004508,
 							["nome"] = "苍炎月影",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["心灵震爆"] = {
 										["c_amt"] = 0,
@@ -1068,16 +1069,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "心灵震爆",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 1,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									["射击"] = {
 										["c_amt"] = 0,
@@ -1097,16 +1098,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "射击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 5,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 									["暗言术：痛"] = {
 										["c_amt"] = 0,
@@ -1126,29 +1127,30 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "暗言术：痛",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 2,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["grupo"] = true,
-							["total"] = 317.004508,
-							["serial"] = "Player-4769-0052831A",
-							["last_dps"] = 42.6310527165056,
 							["custom"] = 0,
+							["last_dps"] = 42.6310527165056,
+							["colocacao"] = 1,
 							["last_event"] = 1567340037,
-							["damage_taken"] = 46.004508,
+							["friendlyfire"] = {
+							},
 							["start_time"] = 1567340030,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Player-4769-0052831A",
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 68168,
@@ -1161,19 +1163,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["dps_started"] = false,
 							["classe"] = "UNKNOW",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 46.005221,
+							["delay"] = 0,
 							["monster"] = true,
-							["fight_component"] = true,
-							["dps_started"] = false,
 							["end_time"] = 1567340038,
 							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["damage_taken"] = 317.005221,
 							["nome"] = "碎尸鸟",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["攻击"] = {
 										["c_amt"] = 0,
@@ -1193,84 +1195,70 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "攻击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 3,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["total"] = 46.005221,
-							["serial"] = "Creature-0-4517-0-19174-1109-00006BB4A2",
+							["last_dps"] = 0,
 							["friendlyfire"] = {
 							},
-							["last_dps"] = 0,
 							["custom"] = 0,
 							["last_event"] = 1567340036,
-							["damage_taken"] = 317.005221,
+							["on_hold"] = false,
 							["start_time"] = 1567340032,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Creature-0-4517-0-19174-1109-00006BB4A2",
+							["fight_component"] = true,
 						}, -- [2]
 					},
 				}, -- [1]
 				{
-					["combatId"] = 11,
 					["tipo"] = 3,
+					["combatId"] = 11,
 					["_ActorTable"] = {
 					},
 				}, -- [2]
 				{
-					["combatId"] = 11,
 					["tipo"] = 7,
+					["combatId"] = 11,
 					["_ActorTable"] = {
 					},
 				}, -- [3]
 				{
-					["combatId"] = 11,
 					["tipo"] = 9,
+					["combatId"] = 11,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1047,
-							["debuff_uptime"] = 7,
-							["debuff_uptime_targets"] = {
-							},
 							["debuff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 0,
+										["refreshamt"] = 0,
 										["id"] = 0,
+										["uptime"] = 7,
 										["targets"] = {
 										},
-										["uptime"] = 7,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
-							},
-							["buff_uptime_targets"] = {
-							},
-							["grupo"] = true,
-							["nome"] = "苍炎月影",
-							["spell_cast"] = {
-								[0] = 6,
-							},
-							["pets"] = {
+								["tipo"] = 9,
 							},
 							["buff_uptime"] = 24,
-							["tipo"] = 4,
-							["last_event"] = 1567340038,
+							["classe"] = "PRIEST",
 							["buff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
 										["activedamt"] = 1,
@@ -1279,54 +1267,68 @@ _detalhes_database = {
 										},
 										["actived_at"] = 1567340037,
 										["uptime"] = 0,
-										["appliedamt"] = 1,
+										["counter"] = 0,
 										["refreshamt"] = 0,
 										["actived"] = true,
-										["counter"] = 0,
-									},
-									[15271] = {
-										["activedamt"] = 1,
-										["id"] = 15271,
-										["targets"] = {
-										},
-										["uptime"] = 8,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[588] = {
-										["activedamt"] = 1,
-										["id"] = 588,
-										["targets"] = {
-										},
-										["uptime"] = 8,
-										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 									[1244] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 1,
+										["refreshamt"] = 0,
 										["id"] = 1244,
+										["uptime"] = 8,
 										["targets"] = {
 										},
-										["uptime"] = 8,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
+									},
+									[15271] = {
 										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 15271,
+										["uptime"] = 8,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+									[588] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 588,
+										["uptime"] = 8,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
 									},
 								},
+								["tipo"] = 9,
+							},
+							["debuff_uptime"] = 7,
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["spell_cast"] = {
+								[0] = 6,
+							},
+							["nome"] = "苍炎月影",
+							["tipo"] = 4,
+							["debuff_uptime_targets"] = {
+							},
+							["pets"] = {
 							},
 							["serial"] = "Player-4769-0052831A",
-							["classe"] = "PRIEST",
+							["last_event"] = 1567340038,
 						}, -- [1]
 					},
 				}, -- [4]
 				{
-					["combatId"] = 11,
 					["tipo"] = 2,
+					["combatId"] = 11,
 					["_ActorTable"] = {
 					},
 				}, -- [5]
@@ -1334,12 +1336,14 @@ _detalhes_database = {
 					["苍炎月影"] = true,
 				},
 				["CombatStartedAt"] = 33758.429,
-				["tempo_start"] = 1567340030,
+				["overall_added"] = true,
 				["last_events_tables"] = {
 				},
 				["alternate_power"] = {
 				},
-				["combat_counter"] = 557,
+				["cleu_events"] = {
+					["n"] = 1,
+				},
 				["playing_solo"] = true,
 				["totals"] = {
 					363, -- [1]
@@ -1348,21 +1352,21 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
-					["frags_total"] = 0,
 					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
 				},
 				["totals_grupo"] = {
 					317, -- [1]
@@ -1371,22 +1375,23 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
 				},
 				["frags_need_refresh"] = true,
 				["instance_type"] = "none",
+				["hasSaved"] = true,
 				["data_fim"] = "20:13:58",
 				["cleu_timeline"] = {
 				},
@@ -1397,11 +1402,28 @@ _detalhes_database = {
 				},
 				["__call"] = {
 				},
+				["data_inicio"] = "20:13:50",
+				["end_time"] = 33748.696,
+				["combat_id"] = 11,
+				["player_last_events"] = {
+				},
+				["tempo_start"] = 1567340030,
+				["spells_cast_timeline"] = {
+				},
+				["contra"] = "碎尸鸟",
+				["combat_counter"] = 557,
+				["CombatSkillCache"] = {
+				},
 				["PhaseData"] = {
 					{
 						1, -- [1]
 						1, -- [2]
 					}, -- [1]
+					["damage"] = {
+						{
+							["苍炎月影"] = 317.004508,
+						}, -- [1]
+					},
 					["heal_section"] = {
 					},
 					["heal"] = {
@@ -1410,37 +1432,18 @@ _detalhes_database = {
 					},
 					["damage_section"] = {
 					},
-					["damage"] = {
-						{
-							["苍炎月影"] = 317.004508,
-						}, -- [1]
-					},
-				},
-				["end_time"] = 33748.696,
-				["combat_id"] = 11,
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["overall_added"] = true,
-				["spells_cast_timeline"] = {
-				},
-				["player_last_events"] = {
-				},
-				["data_inicio"] = "20:13:50",
-				["CombatSkillCache"] = {
-				},
-				["frags"] = {
-					["碎尸鸟"] = 1,
 				},
 				["start_time"] = 33740.92,
 				["TimeData"] = {
 				},
-				["contra"] = "碎尸鸟",
+				["frags"] = {
+					["碎尸鸟"] = 1,
+				},
 			}, -- [3]
 			{
 				{
-					["combatId"] = 10,
 					["tipo"] = 2,
+					["combatId"] = 10,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1297,
@@ -1453,20 +1456,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["on_hold"] = false,
 							["classe"] = "PRIEST",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 306.003091,
-							["friendlyfire"] = {
-							},
-							["colocacao"] = 1,
+							["delay"] = 0,
 							["dps_started"] = false,
 							["end_time"] = 1567340019,
-							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["total"] = 306.003091,
+							["damage_taken"] = 51.003091,
 							["nome"] = "苍炎月影",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["心灵震爆"] = {
 										["c_amt"] = 0,
@@ -1486,16 +1488,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "心灵震爆",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 1,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									["射击"] = {
 										["c_amt"] = 0,
@@ -1515,16 +1517,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "射击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 6,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 									["暗言术：痛"] = {
 										["c_amt"] = 0,
@@ -1544,29 +1546,30 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "暗言术：痛",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 3,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["grupo"] = true,
-							["total"] = 306.003091,
-							["serial"] = "Player-4769-0052831A",
-							["last_dps"] = 31.0789245378676,
 							["custom"] = 0,
+							["last_dps"] = 31.0789245378676,
+							["colocacao"] = 1,
 							["last_event"] = 1567340016,
-							["damage_taken"] = 51.003091,
+							["friendlyfire"] = {
+							},
 							["start_time"] = 1567340006,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Player-4769-0052831A",
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 68136,
@@ -1579,19 +1582,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["friendlyfire"] = {
+							},
 							["friendlyfire_total"] = 0,
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 51.00585,
-							["on_hold"] = false,
-							["dps_started"] = false,
+							["last_event"] = 1567340015,
+							["fight_component"] = true,
 							["total"] = 51.00585,
+							["delay"] = 0,
 							["classe"] = "UNKNOW",
-							["serial"] = "Creature-0-4517-0-19174-157-0000EBB452",
 							["nome"] = "血牙野猪",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									{
 										["c_amt"] = 0,
@@ -1609,19 +1612,19 @@ _detalhes_database = {
 										["counter"] = 1,
 										["total"] = 0,
 										["c_max"] = 0,
-										["MISS"] = 1,
+										["c_min"] = 0,
 										["id"] = 1,
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
+										["r_amt"] = 0,
 										["a_dmg"] = 0,
 										["m_crit"] = 0,
-										["a_amt"] = 0,
+										["b_dmg"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
-										["b_dmg"] = 0,
+										["a_amt"] = 0,
 										["n_amt"] = 0,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["spellschool"] = 1,
+										["MISS"] = 1,
 									}, -- [1]
 									["攻击"] = {
 										["c_amt"] = 0,
@@ -1641,83 +1644,69 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "攻击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 3,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 								},
+								["tipo"] = 2,
 							},
-							["friendlyfire"] = {
-							},
+							["damage_taken"] = 306.00585,
 							["end_time"] = 1567340019,
 							["last_dps"] = 0,
 							["custom"] = 0,
 							["tipo"] = 1,
-							["damage_taken"] = 306.00585,
+							["on_hold"] = false,
 							["start_time"] = 1567340011,
-							["delay"] = 0,
-							["last_event"] = 1567340015,
+							["serial"] = "Creature-0-4517-0-19174-157-0000EBB452",
+							["dps_started"] = false,
 						}, -- [2]
 					},
 				}, -- [1]
 				{
-					["combatId"] = 10,
 					["tipo"] = 3,
+					["combatId"] = 10,
 					["_ActorTable"] = {
 					},
 				}, -- [2]
 				{
-					["combatId"] = 10,
 					["tipo"] = 7,
+					["combatId"] = 10,
 					["_ActorTable"] = {
 					},
 				}, -- [3]
 				{
-					["combatId"] = 10,
 					["tipo"] = 9,
+					["combatId"] = 10,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1047,
-							["debuff_uptime"] = 9,
-							["debuff_uptime_targets"] = {
-							},
 							["debuff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 0,
+										["refreshamt"] = 0,
 										["id"] = 0,
+										["uptime"] = 9,
 										["targets"] = {
 										},
-										["uptime"] = 9,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
-							},
-							["buff_uptime_targets"] = {
-							},
-							["grupo"] = true,
-							["nome"] = "苍炎月影",
-							["spell_cast"] = {
-								[0] = 7,
-							},
-							["pets"] = {
+								["tipo"] = 9,
 							},
 							["buff_uptime"] = 39,
-							["tipo"] = 4,
-							["last_event"] = 1567340019,
+							["classe"] = "PRIEST",
 							["buff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
 										["activedamt"] = 1,
@@ -1726,68 +1715,82 @@ _detalhes_database = {
 										},
 										["actived_at"] = 1567340017,
 										["uptime"] = 0,
-										["appliedamt"] = 1,
+										["counter"] = 0,
 										["refreshamt"] = 0,
 										["actived"] = true,
-										["counter"] = 0,
-									},
-									[15271] = {
-										["activedamt"] = 1,
-										["id"] = 15271,
-										["targets"] = {
-										},
-										["uptime"] = 13,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[588] = {
-										["activedamt"] = 1,
-										["id"] = 588,
-										["targets"] = {
-										},
-										["uptime"] = 13,
-										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 									[1244] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 1,
+										["refreshamt"] = 0,
 										["id"] = 1244,
+										["uptime"] = 13,
 										["targets"] = {
 										},
-										["uptime"] = 13,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
+									},
+									[15271] = {
 										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 15271,
+										["uptime"] = 13,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+									[588] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 588,
+										["uptime"] = 13,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
 									},
 								},
+								["tipo"] = 9,
+							},
+							["debuff_uptime"] = 9,
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["spell_cast"] = {
+								[0] = 7,
+							},
+							["nome"] = "苍炎月影",
+							["tipo"] = 4,
+							["debuff_uptime_targets"] = {
+							},
+							["pets"] = {
 							},
 							["serial"] = "Player-4769-0052831A",
-							["classe"] = "PRIEST",
+							["last_event"] = 1567340019,
 						}, -- [1]
 						{
 							["flag_original"] = 68136,
 							["nome"] = "血牙野猪",
-							["pets"] = {
-							},
-							["tipo"] = 4,
-							["fight_component"] = true,
-							["last_event"] = 0,
 							["spell_cast"] = {
 								[0] = 1,
 							},
-							["serial"] = "Creature-0-4517-0-19174-157-0000EBB452",
+							["pets"] = {
+							},
 							["classe"] = "UNKNOW",
+							["tipo"] = 4,
+							["last_event"] = 0,
+							["serial"] = "Creature-0-4517-0-19174-157-0000EBB452",
+							["fight_component"] = true,
 						}, -- [2]
 					},
 				}, -- [4]
 				{
-					["combatId"] = 10,
 					["tipo"] = 2,
+					["combatId"] = 10,
 					["_ActorTable"] = {
 					},
 				}, -- [5]
@@ -1800,7 +1803,9 @@ _detalhes_database = {
 				},
 				["alternate_power"] = {
 				},
-				["combat_counter"] = 556,
+				["cleu_events"] = {
+					["n"] = 1,
+				},
 				["playing_solo"] = true,
 				["totals"] = {
 					357, -- [1]
@@ -1809,45 +1814,27 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
-					["frags_total"] = 0,
 					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
 				},
-				["totals_grupo"] = {
-					306, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 0,
-						["alternatepower"] = 0,
-						[3] = 0,
-						[6] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
-						["dead"] = 0,
-					}, -- [4]
+				["player_last_events"] = {
 				},
 				["frags_need_refresh"] = true,
 				["instance_type"] = "none",
+				["hasSaved"] = true,
 				["data_fim"] = "20:13:39",
 				["pvp"] = true,
 				["cleu_timeline"] = {
@@ -1859,11 +1846,52 @@ _detalhes_database = {
 				},
 				["__call"] = {
 				},
+				["data_inicio"] = "20:13:27",
+				["end_time"] = 33729.632,
+				["combat_id"] = 10,
+				["overall_added"] = true,
+				["spells_cast_timeline"] = {
+				},
+				["frags"] = {
+					["血牙野猪"] = 1,
+				},
+				["combat_counter"] = 556,
+				["CombatSkillCache"] = {
+				},
+				["totals_grupo"] = {
+					306, -- [1]
+					0, -- [2]
+					{
+						0, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+				},
+				["start_time"] = 33717.511,
+				["TimeData"] = {
+				},
 				["PhaseData"] = {
 					{
 						1, -- [1]
 						1, -- [2]
 					}, -- [1]
+					["damage"] = {
+						{
+							["苍炎月影"] = 306.003091,
+						}, -- [1]
+					},
 					["heal_section"] = {
 					},
 					["heal"] = {
@@ -1872,36 +1900,12 @@ _detalhes_database = {
 					},
 					["damage_section"] = {
 					},
-					["damage"] = {
-						{
-							["苍炎月影"] = 306.003091,
-						}, -- [1]
-					},
-				},
-				["end_time"] = 33729.632,
-				["combat_id"] = 10,
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["spells_cast_timeline"] = {
-				},
-				["overall_added"] = true,
-				["player_last_events"] = {
-				},
-				["CombatSkillCache"] = {
-				},
-				["data_inicio"] = "20:13:27",
-				["start_time"] = 33717.511,
-				["TimeData"] = {
-				},
-				["frags"] = {
-					["血牙野猪"] = 1,
 				},
 			}, -- [4]
 			{
 				{
-					["combatId"] = 9,
 					["tipo"] = 2,
+					["combatId"] = 9,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1297,
@@ -1914,20 +1918,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["on_hold"] = false,
 							["classe"] = "PRIEST",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 361.002026,
-							["friendlyfire"] = {
-							},
-							["colocacao"] = 1,
+							["delay"] = 0,
 							["dps_started"] = false,
 							["end_time"] = 1567339993,
-							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["total"] = 361.002026,
+							["damage_taken"] = 135.002026,
 							["nome"] = "苍炎月影",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["心灵震爆"] = {
 										["c_amt"] = 0,
@@ -1947,16 +1950,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "心灵震爆",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 1,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									["射击"] = {
 										["c_amt"] = 0,
@@ -1976,16 +1979,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "射击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 7,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 									["暗言术：痛"] = {
 										["c_amt"] = 0,
@@ -2005,16 +2008,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "暗言术：痛",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 3,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									[2] = {
 										["c_amt"] = 0,
@@ -2032,32 +2035,33 @@ _detalhes_database = {
 										["counter"] = 1,
 										["total"] = 0,
 										["c_max"] = 0,
-										["RESIST"] = 1,
+										["c_min"] = 0,
 										["id"] = 2,
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["r_amt"] = 0,
+										["n_amt"] = 0,
 										["m_crit"] = 0,
-										["a_amt"] = 0,
+										["b_dmg"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 0,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_amt"] = 0,
+										["RESIST"] = 1,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["grupo"] = true,
-							["total"] = 361.002026,
-							["serial"] = "Player-4769-0052831A",
-							["last_dps"] = 30.0885169194694,
 							["custom"] = 0,
+							["last_dps"] = 30.0885169194694,
+							["colocacao"] = 1,
 							["last_event"] = 1567339992,
-							["damage_taken"] = 135.002026,
+							["friendlyfire"] = {
+							},
 							["start_time"] = 1567339980,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Player-4769-0052831A",
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 68136,
@@ -2070,19 +2074,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["friendlyfire"] = {
+							},
 							["friendlyfire_total"] = 0,
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 135.008581,
-							["on_hold"] = false,
-							["dps_started"] = false,
+							["last_event"] = 1567339991,
+							["fight_component"] = true,
 							["total"] = 135.008581,
+							["delay"] = 0,
 							["classe"] = "UNKNOW",
-							["serial"] = "Creature-0-4517-0-19174-157-00006BB505",
 							["nome"] = "血牙野猪",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["攻击"] = {
 										["c_amt"] = 0,
@@ -2102,83 +2106,70 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "攻击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 5,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 								},
+								["tipo"] = 2,
 							},
-							["friendlyfire"] = {
-							},
+							["damage_taken"] = 361.008581,
 							["end_time"] = 1567339993,
 							["last_dps"] = 0,
 							["custom"] = 0,
 							["tipo"] = 1,
-							["damage_taken"] = 361.008581,
+							["on_hold"] = false,
 							["start_time"] = 1567339982,
-							["delay"] = 0,
-							["last_event"] = 1567339991,
+							["serial"] = "Creature-0-4517-0-19174-157-00006BB505",
+							["dps_started"] = false,
 						}, -- [2]
 					},
 				}, -- [1]
 				{
-					["combatId"] = 9,
 					["tipo"] = 3,
+					["combatId"] = 9,
 					["_ActorTable"] = {
 					},
 				}, -- [2]
 				{
-					["combatId"] = 9,
 					["tipo"] = 7,
+					["combatId"] = 9,
 					["_ActorTable"] = {
 					},
 				}, -- [3]
 				{
-					["combatId"] = 9,
 					["tipo"] = 9,
+					["combatId"] = 9,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1047,
-							["debuff_uptime"] = 12,
-							["nome"] = "苍炎月影",
 							["debuff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 0,
+										["refreshamt"] = 0,
 										["id"] = 0,
+										["uptime"] = 12,
 										["targets"] = {
 										},
-										["uptime"] = 12,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
-							},
-							["buff_uptime_targets"] = {
-							},
-							["grupo"] = true,
-							["debuff_uptime_targets"] = {
-							},
-							["buff_uptime"] = 26,
-							["spell_cast"] = {
-								[0] = 8,
+								["tipo"] = 9,
 							},
 							["pets"] = {
 							},
-							["tipo"] = 4,
-							["last_event"] = 1567339993,
+							["classe"] = "PRIEST",
 							["buff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
 										["activedamt"] = 1,
@@ -2187,68 +2178,81 @@ _detalhes_database = {
 										},
 										["actived_at"] = 1567339992,
 										["uptime"] = 0,
-										["appliedamt"] = 1,
+										["counter"] = 0,
 										["refreshamt"] = 0,
 										["actived"] = true,
-										["counter"] = 0,
-									},
-									[15271] = {
-										["activedamt"] = 0,
-										["id"] = 15271,
-										["targets"] = {
-										},
-										["uptime"] = 0,
-										["appliedamt"] = 0,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[588] = {
-										["activedamt"] = 1,
-										["id"] = 588,
-										["targets"] = {
-										},
-										["uptime"] = 13,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 									[1244] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 1,
+										["refreshamt"] = 0,
 										["id"] = 1244,
+										["uptime"] = 13,
 										["targets"] = {
 										},
-										["uptime"] = 13,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
+									},
+									[15271] = {
 										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 0,
+										["id"] = 15271,
+										["uptime"] = 0,
+										["targets"] = {
+										},
+										["appliedamt"] = 0,
+									},
+									[588] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 588,
+										["uptime"] = 13,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
 									},
 								},
+								["tipo"] = 9,
 							},
+							["debuff_uptime"] = 12,
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["spell_cast"] = {
+								[0] = 8,
+							},
+							["debuff_uptime_targets"] = {
+							},
+							["tipo"] = 4,
+							["nome"] = "苍炎月影",
+							["buff_uptime"] = 26,
 							["serial"] = "Player-4769-0052831A",
-							["classe"] = "PRIEST",
+							["last_event"] = 1567339993,
 						}, -- [1]
 						{
 							["flag_original"] = 68136,
 							["nome"] = "血牙野猪",
-							["pets"] = {
-							},
-							["tipo"] = 4,
-							["fight_component"] = true,
-							["last_event"] = 0,
 							["spell_cast"] = {
 								[0] = 1,
 							},
-							["serial"] = "Creature-0-4517-0-19174-157-00006BB505",
+							["pets"] = {
+							},
 							["classe"] = "UNKNOW",
+							["tipo"] = 4,
+							["last_event"] = 0,
+							["serial"] = "Creature-0-4517-0-19174-157-00006BB505",
+							["fight_component"] = true,
 						}, -- [2]
 					},
 				}, -- [4]
 				{
-					["combatId"] = 9,
 					["tipo"] = 2,
+					["combatId"] = 9,
 					["_ActorTable"] = {
 					},
 				}, -- [5]
@@ -2261,7 +2265,9 @@ _detalhes_database = {
 				},
 				["alternate_power"] = {
 				},
-				["combat_counter"] = 555,
+				["cleu_events"] = {
+					["n"] = 1,
+				},
 				["playing_solo"] = true,
 				["totals"] = {
 					496, -- [1]
@@ -2270,45 +2276,27 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
-					["frags_total"] = 0,
 					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
 				},
-				["totals_grupo"] = {
-					361, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 0,
-						["alternatepower"] = 0,
-						[3] = 0,
-						[6] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
-						["dead"] = 0,
-					}, -- [4]
+				["player_last_events"] = {
 				},
 				["frags_need_refresh"] = true,
 				["instance_type"] = "none",
+				["hasSaved"] = true,
 				["data_fim"] = "20:13:13",
 				["pvp"] = true,
 				["cleu_timeline"] = {
@@ -2320,11 +2308,52 @@ _detalhes_database = {
 				},
 				["__call"] = {
 				},
+				["data_inicio"] = "20:13:01",
+				["end_time"] = 33703.746,
+				["combat_id"] = 9,
+				["overall_added"] = true,
+				["spells_cast_timeline"] = {
+				},
+				["frags"] = {
+					["血牙野猪"] = 1,
+				},
+				["combat_counter"] = 555,
+				["CombatSkillCache"] = {
+				},
+				["totals_grupo"] = {
+					361, -- [1]
+					0, -- [2]
+					{
+						0, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+				},
+				["start_time"] = 33691.166,
+				["TimeData"] = {
+				},
 				["PhaseData"] = {
 					{
 						1, -- [1]
 						1, -- [2]
 					}, -- [1]
+					["damage"] = {
+						{
+							["苍炎月影"] = 361.002026,
+						}, -- [1]
+					},
 					["heal_section"] = {
 					},
 					["heal"] = {
@@ -2333,36 +2362,12 @@ _detalhes_database = {
 					},
 					["damage_section"] = {
 					},
-					["damage"] = {
-						{
-							["苍炎月影"] = 361.002026,
-						}, -- [1]
-					},
-				},
-				["end_time"] = 33703.746,
-				["combat_id"] = 9,
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["spells_cast_timeline"] = {
-				},
-				["overall_added"] = true,
-				["player_last_events"] = {
-				},
-				["CombatSkillCache"] = {
-				},
-				["data_inicio"] = "20:13:01",
-				["start_time"] = 33691.166,
-				["TimeData"] = {
-				},
-				["frags"] = {
-					["血牙野猪"] = 1,
 				},
 			}, -- [5]
 			{
 				{
-					["combatId"] = 8,
 					["tipo"] = 2,
+					["combatId"] = 8,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1297,
@@ -2375,20 +2380,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["on_hold"] = false,
 							["classe"] = "PRIEST",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 259.002087,
-							["friendlyfire"] = {
-							},
-							["colocacao"] = 1,
+							["delay"] = 0,
 							["dps_started"] = false,
 							["end_time"] = 1567339924,
-							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["total"] = 259.002087,
+							["damage_taken"] = 30.002087,
 							["nome"] = "苍炎月影",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["心灵震爆"] = {
 										["c_amt"] = 0,
@@ -2408,16 +2412,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "心灵震爆",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 1,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									["射击"] = {
 										["c_amt"] = 0,
@@ -2437,16 +2441,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "射击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 5,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 									["暗言术：痛"] = {
 										["c_amt"] = 0,
@@ -2466,29 +2470,30 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "暗言术：痛",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 2,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["grupo"] = true,
-							["total"] = 259.002087,
-							["serial"] = "Player-4769-0052831A",
-							["last_dps"] = 33.6759962293638,
 							["custom"] = 0,
+							["last_dps"] = 33.6759962293638,
+							["colocacao"] = 1,
 							["last_event"] = 1567339923,
-							["damage_taken"] = 30.002087,
+							["friendlyfire"] = {
+							},
 							["start_time"] = 1567339917,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Player-4769-0052831A",
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 68136,
@@ -2501,19 +2506,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["friendlyfire"] = {
+							},
 							["friendlyfire_total"] = 0,
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 30.006146,
-							["on_hold"] = false,
-							["dps_started"] = false,
+							["last_event"] = 1567339921,
+							["fight_component"] = true,
 							["total"] = 30.006146,
+							["delay"] = 0,
 							["classe"] = "UNKNOW",
-							["serial"] = "Creature-0-4517-0-19174-454-0000EBB4F0",
 							["nome"] = "幼年血牙野猪",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["攻击"] = {
 										["c_amt"] = 0,
@@ -2533,83 +2538,70 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "攻击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 2,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 								},
+								["tipo"] = 2,
 							},
-							["friendlyfire"] = {
-							},
+							["damage_taken"] = 259.006146,
 							["end_time"] = 1567339924,
 							["last_dps"] = 0,
 							["custom"] = 0,
 							["tipo"] = 1,
-							["damage_taken"] = 259.006146,
+							["on_hold"] = false,
 							["start_time"] = 1567339919,
-							["delay"] = 0,
-							["last_event"] = 1567339921,
+							["serial"] = "Creature-0-4517-0-19174-454-0000EBB4F0",
+							["dps_started"] = false,
 						}, -- [2]
 					},
 				}, -- [1]
 				{
-					["combatId"] = 8,
 					["tipo"] = 3,
+					["combatId"] = 8,
 					["_ActorTable"] = {
 					},
 				}, -- [2]
 				{
-					["combatId"] = 8,
 					["tipo"] = 7,
+					["combatId"] = 8,
 					["_ActorTable"] = {
 					},
 				}, -- [3]
 				{
-					["combatId"] = 8,
 					["tipo"] = 9,
+					["combatId"] = 8,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1047,
-							["debuff_uptime"] = 6,
-							["nome"] = "苍炎月影",
 							["debuff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 0,
+										["refreshamt"] = 0,
 										["id"] = 0,
+										["uptime"] = 6,
 										["targets"] = {
 										},
-										["uptime"] = 6,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
-							},
-							["buff_uptime_targets"] = {
-							},
-							["grupo"] = true,
-							["debuff_uptime_targets"] = {
-							},
-							["buff_uptime"] = 14,
-							["spell_cast"] = {
-								[0] = 5,
+								["tipo"] = 9,
 							},
 							["pets"] = {
 							},
-							["tipo"] = 4,
-							["last_event"] = 1567339924,
+							["classe"] = "PRIEST",
 							["buff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
 										["activedamt"] = 1,
@@ -2618,54 +2610,67 @@ _detalhes_database = {
 										},
 										["actived_at"] = 1567339923,
 										["uptime"] = 0,
-										["appliedamt"] = 1,
+										["counter"] = 0,
 										["refreshamt"] = 0,
 										["actived"] = true,
-										["counter"] = 0,
-									},
-									[15271] = {
-										["activedamt"] = 0,
-										["id"] = 15271,
-										["targets"] = {
-										},
-										["uptime"] = 0,
-										["appliedamt"] = 0,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[588] = {
-										["activedamt"] = 1,
-										["id"] = 588,
-										["targets"] = {
-										},
-										["uptime"] = 7,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 									[1244] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 1,
+										["refreshamt"] = 0,
 										["id"] = 1244,
+										["uptime"] = 7,
 										["targets"] = {
 										},
-										["uptime"] = 7,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
+									},
+									[15271] = {
 										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 0,
+										["id"] = 15271,
+										["uptime"] = 0,
+										["targets"] = {
+										},
+										["appliedamt"] = 0,
+									},
+									[588] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 588,
+										["uptime"] = 7,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
 									},
 								},
+								["tipo"] = 9,
 							},
+							["debuff_uptime"] = 6,
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["spell_cast"] = {
+								[0] = 5,
+							},
+							["debuff_uptime_targets"] = {
+							},
+							["tipo"] = 4,
+							["nome"] = "苍炎月影",
+							["buff_uptime"] = 14,
 							["serial"] = "Player-4769-0052831A",
-							["classe"] = "PRIEST",
+							["last_event"] = 1567339924,
 						}, -- [1]
 					},
 				}, -- [4]
 				{
-					["combatId"] = 8,
 					["tipo"] = 2,
+					["combatId"] = 8,
 					["_ActorTable"] = {
 					},
 				}, -- [5]
@@ -2678,7 +2683,9 @@ _detalhes_database = {
 				},
 				["alternate_power"] = {
 				},
-				["combat_counter"] = 554,
+				["cleu_events"] = {
+					["n"] = 1,
+				},
 				["playing_solo"] = true,
 				["totals"] = {
 					288.984416, -- [1]
@@ -2687,45 +2694,27 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
-					["frags_total"] = 0,
 					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
 				},
-				["totals_grupo"] = {
-					259, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 0,
-						["alternatepower"] = 0,
-						[3] = 0,
-						[6] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
-						["dead"] = 0,
-					}, -- [4]
+				["player_last_events"] = {
 				},
 				["frags_need_refresh"] = true,
 				["instance_type"] = "none",
+				["hasSaved"] = true,
 				["data_fim"] = "20:12:05",
 				["pvp"] = true,
 				["cleu_timeline"] = {
@@ -2737,11 +2726,53 @@ _detalhes_database = {
 				},
 				["__call"] = {
 				},
+				["data_inicio"] = "20:11:57",
+				["end_time"] = 33635.303,
+				["combat_id"] = 8,
+				["overall_added"] = true,
+				["spells_cast_timeline"] = {
+				},
+				["frags"] = {
+					["Inz"] = 1,
+					["幼年血牙野猪"] = 1,
+				},
+				["combat_counter"] = 554,
+				["CombatSkillCache"] = {
+				},
+				["totals_grupo"] = {
+					259, -- [1]
+					0, -- [2]
+					{
+						0, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+				},
+				["start_time"] = 33627.612,
+				["TimeData"] = {
+				},
 				["PhaseData"] = {
 					{
 						1, -- [1]
 						1, -- [2]
 					}, -- [1]
+					["damage"] = {
+						{
+							["苍炎月影"] = 259.002087,
+						}, -- [1]
+					},
 					["heal_section"] = {
 					},
 					["heal"] = {
@@ -2750,37 +2781,12 @@ _detalhes_database = {
 					},
 					["damage_section"] = {
 					},
-					["damage"] = {
-						{
-							["苍炎月影"] = 259.002087,
-						}, -- [1]
-					},
-				},
-				["end_time"] = 33635.303,
-				["combat_id"] = 8,
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["spells_cast_timeline"] = {
-				},
-				["overall_added"] = true,
-				["player_last_events"] = {
-				},
-				["CombatSkillCache"] = {
-				},
-				["data_inicio"] = "20:11:57",
-				["start_time"] = 33627.612,
-				["TimeData"] = {
-				},
-				["frags"] = {
-					["幼年血牙野猪"] = 1,
-					["Inz"] = 1,
 				},
 			}, -- [6]
 			{
 				{
-					["combatId"] = 7,
 					["tipo"] = 2,
+					["combatId"] = 7,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1297,
@@ -2793,20 +2799,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["on_hold"] = false,
 							["classe"] = "PRIEST",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 328.004415,
-							["friendlyfire"] = {
-							},
-							["colocacao"] = 1,
+							["delay"] = 0,
 							["dps_started"] = false,
 							["end_time"] = 1567339869,
-							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["total"] = 328.004415,
+							["damage_taken"] = 115.004415,
 							["nome"] = "苍炎月影",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["心灵震爆"] = {
 										["c_amt"] = 0,
@@ -2826,16 +2831,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "心灵震爆",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 1,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									["射击"] = {
 										["c_amt"] = 1,
@@ -2855,16 +2860,16 @@ _detalhes_database = {
 										["c_max"] = 65,
 										["id"] = "射击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 65,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 4,
-										["r_amt"] = 0,
-										["c_min"] = 65,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 									["暗言术：痛"] = {
 										["c_amt"] = 0,
@@ -2884,29 +2889,30 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "暗言术：痛",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 3,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["grupo"] = true,
-							["total"] = 328.004415,
-							["serial"] = "Player-4769-0052831A",
-							["last_dps"] = 31.1406451153641,
 							["custom"] = 0,
+							["last_dps"] = 31.1406451153641,
+							["colocacao"] = 1,
 							["last_event"] = 1567339868,
-							["damage_taken"] = 115.004415,
+							["friendlyfire"] = {
+							},
 							["start_time"] = 1567339859,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Player-4769-0052831A",
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 68168,
@@ -2919,19 +2925,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["dps_started"] = false,
 							["classe"] = "UNKNOW",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 115.003631,
+							["delay"] = 0,
 							["monster"] = true,
-							["fight_component"] = true,
-							["dps_started"] = false,
 							["end_time"] = 1567339869,
 							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["damage_taken"] = 328.003631,
 							["nome"] = "看守傀儡",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["攻击"] = {
 										["c_amt"] = 0,
@@ -2951,67 +2957,71 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "攻击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 5,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["total"] = 115.003631,
-							["serial"] = "Creature-0-4517-0-19174-114-00016BB539",
+							["last_dps"] = 0,
 							["friendlyfire"] = {
 							},
-							["last_dps"] = 0,
 							["custom"] = 0,
 							["last_event"] = 1567339867,
-							["damage_taken"] = 328.003631,
+							["on_hold"] = false,
 							["start_time"] = 1567339859,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Creature-0-4517-0-19174-114-00016BB539",
+							["fight_component"] = true,
 						}, -- [2]
 					},
 				}, -- [1]
 				{
-					["combatId"] = 7,
 					["tipo"] = 3,
+					["combatId"] = 7,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1297,
 							["totalabsorb"] = 93.004008,
 							["last_hps"] = 0,
-							["healing_from"] = {
-								["苍炎月影"] = true,
+							["targets_overheal"] = {
 							},
 							["targets"] = {
 								["苍炎月影"] = 93,
 							},
+							["total"] = 93.004008,
+							["pets"] = {
+							},
+							["iniciar_hps"] = false,
+							["healing_from"] = {
+								["苍炎月影"] = true,
+							},
+							["healing_taken"] = 93.004008,
+							["totalover"] = 0.004008,
+							["total_without_pet"] = 93.004008,
+							["totalover_without_pet"] = 0.004008,
+							["totaldenied"] = 0.004008,
+							["fight_component"] = true,
+							["end_time"] = 1567339869,
+							["classe"] = "PRIEST",
+							["heal_enemy_amt"] = 0,
+							["nome"] = "苍炎月影",
 							["targets_absorbs"] = {
 								["苍炎月影"] = 93,
 							},
-							["pets"] = {
+							["grupo"] = true,
+							["tipo"] = 2,
+							["heal_enemy"] = {
 							},
-							["totalover_without_pet"] = 0.004008,
-							["targets_overheal"] = {
-							},
-							["classe"] = "PRIEST",
-							["totalover"] = 0.004008,
-							["total_without_pet"] = 93.004008,
-							["iniciar_hps"] = false,
-							["heal_enemy_amt"] = 0,
-							["fight_component"] = true,
-							["end_time"] = 1567339869,
-							["serial"] = "Player-4769-0052831A",
-							["healing_taken"] = 93.004008,
-							["nome"] = "苍炎月影",
 							["spells"] = {
-								["tipo"] = 3,
 								["_ActorTable"] = {
 									[592] = {
 										["c_amt"] = 0,
@@ -3031,65 +3041,60 @@ _detalhes_database = {
 										["targets_absorbs"] = {
 											["苍炎月影"] = 93,
 										},
-										["m_healed"] = 0,
 										["c_curado"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 0,
 										["m_amt"] = 0,
-										["n_curado"] = 93,
-										["n_amt"] = 4,
+										["m_crit"] = 0,
 										["totaldenied"] = 0,
+										["c_min"] = 0,
+										["n_amt"] = 4,
+										["n_curado"] = 93,
+										["m_healed"] = 0,
 										["is_shield"] = true,
 										["absorbed"] = 0,
 									},
 								},
+								["tipo"] = 3,
 							},
-							["grupo"] = true,
-							["total"] = 93.004008,
-							["heal_enemy"] = {
-							},
-							["start_time"] = 1567339861,
 							["custom"] = 0,
 							["last_event"] = 1567339867,
 							["on_hold"] = false,
-							["totaldenied"] = 0.004008,
+							["start_time"] = 1567339861,
+							["serial"] = "Player-4769-0052831A",
 							["delay"] = 0,
-							["tipo"] = 2,
 						}, -- [1]
 					},
 				}, -- [2]
 				{
-					["combatId"] = 7,
 					["tipo"] = 7,
+					["combatId"] = 7,
 					["_ActorTable"] = {
 					},
 				}, -- [3]
 				{
-					["combatId"] = 7,
 					["tipo"] = 9,
+					["combatId"] = 7,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1047,
 							["debuff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 0,
+										["refreshamt"] = 0,
 										["id"] = 0,
+										["uptime"] = 7,
 										["targets"] = {
 										},
-										["uptime"] = 7,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
+								["tipo"] = 9,
 							},
 							["buff_uptime"] = 20,
 							["classe"] = "PRIEST",
 							["buff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
 										["activedamt"] = 1,
@@ -3098,68 +3103,69 @@ _detalhes_database = {
 										},
 										["actived_at"] = 1567339861,
 										["uptime"] = 0,
-										["appliedamt"] = 1,
+										["counter"] = 0,
 										["refreshamt"] = 0,
 										["actived"] = true,
-										["counter"] = 0,
+										["appliedamt"] = 1,
 									},
 									[592] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 0,
+										["refreshamt"] = 0,
 										["id"] = 592,
+										["uptime"] = 0,
 										["targets"] = {
 										},
-										["uptime"] = 0,
 										["appliedamt"] = 0,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 									[588] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 1,
+										["refreshamt"] = 0,
 										["id"] = 588,
+										["uptime"] = 10,
 										["targets"] = {
 										},
-										["uptime"] = 10,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 									[1244] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 1,
+										["refreshamt"] = 0,
 										["id"] = 1244,
+										["uptime"] = 10,
 										["targets"] = {
 										},
-										["uptime"] = 10,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
+								["tipo"] = 9,
 							},
 							["fight_component"] = true,
 							["debuff_uptime"] = 7,
-							["buff_uptime_targets"] = {
+							["debuff_uptime_targets"] = {
 							},
 							["grupo"] = true,
 							["spell_cast"] = {
 								[0] = 6,
 							},
-							["debuff_uptime_targets"] = {
-							},
+							["tipo"] = 4,
 							["last_event"] = 1567339869,
-							["nome"] = "苍炎月影",
+							["buff_uptime_targets"] = {
+							},
 							["pets"] = {
 							},
 							["serial"] = "Player-4769-0052831A",
-							["tipo"] = 4,
+							["nome"] = "苍炎月影",
 						}, -- [1]
 					},
 				}, -- [4]
 				{
-					["combatId"] = 7,
 					["tipo"] = 2,
+					["combatId"] = 7,
 					["_ActorTable"] = {
 					},
 				}, -- [5]
@@ -3167,12 +3173,14 @@ _detalhes_database = {
 					["苍炎月影"] = true,
 				},
 				["CombatStartedAt"] = 33627.612,
-				["tempo_start"] = 1567339859,
+				["overall_added"] = true,
 				["last_events_tables"] = {
 				},
 				["alternate_power"] = {
 				},
-				["combat_counter"] = 553,
+				["cleu_events"] = {
+					["n"] = 1,
+				},
 				["playing_solo"] = true,
 				["totals"] = {
 					442.985992, -- [1]
@@ -3181,21 +3189,21 @@ _detalhes_database = {
 						-0.00479999999999947, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
-					["frags_total"] = 0,
 					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
 				},
 				["totals_grupo"] = {
 					328, -- [1]
@@ -3204,22 +3212,23 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
 				},
 				["frags_need_refresh"] = true,
 				["instance_type"] = "none",
+				["hasSaved"] = true,
 				["data_fim"] = "20:11:10",
 				["cleu_timeline"] = {
 				},
@@ -3230,11 +3239,28 @@ _detalhes_database = {
 				},
 				["__call"] = {
 				},
+				["data_inicio"] = "20:11:00",
+				["end_time"] = 33580.577,
+				["combat_id"] = 7,
+				["player_last_events"] = {
+				},
+				["tempo_start"] = 1567339859,
+				["spells_cast_timeline"] = {
+				},
+				["contra"] = "看守傀儡",
+				["combat_counter"] = 553,
+				["CombatSkillCache"] = {
+				},
 				["PhaseData"] = {
 					{
 						1, -- [1]
 						1, -- [2]
 					}, -- [1]
+					["damage"] = {
+						{
+							["苍炎月影"] = 328.004415,
+						}, -- [1]
+					},
 					["heal_section"] = {
 					},
 					["heal"] = {
@@ -3244,37 +3270,18 @@ _detalhes_database = {
 					},
 					["damage_section"] = {
 					},
-					["damage"] = {
-						{
-							["苍炎月影"] = 328.004415,
-						}, -- [1]
-					},
-				},
-				["end_time"] = 33580.577,
-				["combat_id"] = 7,
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["overall_added"] = true,
-				["spells_cast_timeline"] = {
-				},
-				["player_last_events"] = {
-				},
-				["data_inicio"] = "20:11:00",
-				["CombatSkillCache"] = {
-				},
-				["frags"] = {
-					["看守傀儡"] = 1,
 				},
 				["start_time"] = 33570.044,
 				["TimeData"] = {
 				},
-				["contra"] = "看守傀儡",
+				["frags"] = {
+					["看守傀儡"] = 1,
+				},
 			}, -- [7]
 			{
 				{
-					["combatId"] = 6,
 					["tipo"] = 2,
+					["combatId"] = 6,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1297,
@@ -3287,21 +3294,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
-							["on_hold"] = false,
+							["tipo"] = 1,
+							["total"] = 332.004748,
 							["classe"] = "PRIEST",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 332.004748,
-							["friendlyfire"] = {
-							},
-							["end_time"] = 1567339844,
+							["delay"] = 0,
 							["dps_started"] = false,
-							["total"] = 332.004748,
-							["colocacao"] = 1,
+							["end_time"] = 1567339844,
 							["friendlyfire_total"] = 0,
+							["damage_taken"] = 77.004748,
 							["nome"] = "苍炎月影",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["心灵震爆"] = {
 										["c_amt"] = 0,
@@ -3321,16 +3326,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "心灵震爆",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 1,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									["射击"] = {
 										["c_amt"] = 1,
@@ -3350,16 +3355,16 @@ _detalhes_database = {
 										["c_max"] = 56,
 										["id"] = "射击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 56,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 5,
-										["r_amt"] = 0,
-										["c_min"] = 56,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 									["暗言术：痛"] = {
 										["c_amt"] = 0,
@@ -3379,16 +3384,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "暗言术：痛",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 3,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									[0] = {
 										["c_amt"] = 0,
@@ -3406,38 +3411,40 @@ _detalhes_database = {
 										["counter"] = 1,
 										["total"] = 0,
 										["c_max"] = 0,
+										["c_min"] = 0,
 										["EVADE"] = 1,
-										["id"] = 0,
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
+										["r_amt"] = 0,
 										["a_dmg"] = 0,
 										["m_crit"] = 0,
-										["a_amt"] = 0,
+										["b_dmg"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
-										["b_dmg"] = 0,
+										["a_amt"] = 0,
 										["n_amt"] = 0,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["spellschool"] = 32,
+										["id"] = 0,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["grupo"] = true,
-							["serial"] = "Player-4769-0052831A",
-							["last_dps"] = 32.6166369977285,
 							["custom"] = 0,
+							["last_dps"] = 32.6166369977285,
+							["colocacao"] = 1,
 							["last_event"] = 1567339851,
-							["damage_taken"] = 77.004748,
+							["on_hold"] = false,
 							["start_time"] = 1567339833,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Player-4769-0052831A",
+							["friendlyfire"] = {
+							},
 						}, -- [1]
 						{
 							["flag_original"] = 68168,
 							["totalabsorbed"] = 0.006463,
 							["damage_from"] = {
-								["花京院丶典明"] = true,
 								["苍炎月影"] = true,
+								["花京院丶典明"] = true,
 							},
 							["targets"] = {
 								["秃头强"] = 57,
@@ -3445,20 +3452,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
-							["serial"] = "Creature-0-4517-0-19174-114-0002EBB539",
+							["tipo"] = 1,
+							["end_time"] = 1567339859,
 							["classe"] = "UNKNOW",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 134.006463,
+							["delay"] = 1567339848,
 							["monster"] = true,
-							["fight_component"] = true,
-							["dps_started"] = false,
 							["total"] = 134.006463,
-							["end_time"] = 1567339859,
-							["friendlyfire_total"] = 0,
+							["dps_started"] = false,
+							["damage_taken"] = 535.006463,
 							["nome"] = "看守傀儡",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									{
 										["c_amt"] = 0,
@@ -3476,19 +3482,19 @@ _detalhes_database = {
 										["counter"] = 1,
 										["total"] = 0,
 										["c_max"] = 0,
-										["DODGE"] = 1,
+										["c_min"] = 0,
 										["id"] = 1,
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
+										["r_amt"] = 0,
 										["a_dmg"] = 0,
 										["m_crit"] = 0,
-										["a_amt"] = 0,
+										["b_dmg"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
-										["b_dmg"] = 0,
+										["a_amt"] = 0,
 										["n_amt"] = 0,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["spellschool"] = 1,
+										["DODGE"] = 1,
 									}, -- [1]
 									["攻击"] = {
 										["c_amt"] = 0,
@@ -3509,83 +3515,70 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "攻击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 7,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 								},
+								["tipo"] = 2,
 							},
-							["on_hold"] = false,
+							["friendlyfire_total"] = 0,
+							["last_dps"] = 0,
 							["friendlyfire"] = {
 							},
-							["last_dps"] = 0,
 							["custom"] = 0,
 							["last_event"] = 1567339848,
-							["damage_taken"] = 535.006463,
+							["on_hold"] = false,
 							["start_time"] = 1567339845,
-							["delay"] = 1567339848,
-							["tipo"] = 1,
+							["serial"] = "Creature-0-4517-0-19174-114-0002EBB539",
+							["fight_component"] = true,
 						}, -- [2]
 					},
 				}, -- [1]
 				{
-					["combatId"] = 6,
 					["tipo"] = 3,
+					["combatId"] = 6,
 					["_ActorTable"] = {
 					},
 				}, -- [2]
 				{
-					["combatId"] = 6,
 					["tipo"] = 7,
+					["combatId"] = 6,
 					["_ActorTable"] = {
 					},
 				}, -- [3]
 				{
-					["combatId"] = 6,
 					["tipo"] = 9,
+					["combatId"] = 6,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1047,
-							["debuff_uptime"] = 9,
-							["debuff_uptime_targets"] = {
-							},
 							["debuff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 0,
+										["refreshamt"] = 0,
 										["id"] = 0,
+										["uptime"] = 9,
 										["targets"] = {
 										},
-										["uptime"] = 9,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
-							},
-							["buff_uptime_targets"] = {
-							},
-							["grupo"] = true,
-							["nome"] = "苍炎月影",
-							["spell_cast"] = {
-								[0] = 7,
-							},
-							["pets"] = {
+								["tipo"] = 9,
 							},
 							["buff_uptime"] = 33,
-							["tipo"] = 4,
-							["last_event"] = 1567339844,
+							["classe"] = "PRIEST",
 							["buff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
 										["activedamt"] = 1,
@@ -3594,54 +3587,68 @@ _detalhes_database = {
 										},
 										["actived_at"] = 1567339843,
 										["uptime"] = 0,
-										["appliedamt"] = 1,
+										["counter"] = 0,
 										["refreshamt"] = 0,
 										["actived"] = true,
-										["counter"] = 0,
-									},
-									[15271] = {
-										["activedamt"] = 1,
-										["id"] = 15271,
-										["targets"] = {
-										},
-										["uptime"] = 11,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[588] = {
-										["activedamt"] = 1,
-										["id"] = 588,
-										["targets"] = {
-										},
-										["uptime"] = 11,
-										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 									[1244] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 1,
+										["refreshamt"] = 0,
 										["id"] = 1244,
+										["uptime"] = 11,
 										["targets"] = {
 										},
-										["uptime"] = 11,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
+									},
+									[15271] = {
 										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 15271,
+										["uptime"] = 11,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+									[588] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 588,
+										["uptime"] = 11,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
 									},
 								},
+								["tipo"] = 9,
+							},
+							["debuff_uptime"] = 9,
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["spell_cast"] = {
+								[0] = 7,
+							},
+							["nome"] = "苍炎月影",
+							["tipo"] = 4,
+							["debuff_uptime_targets"] = {
+							},
+							["pets"] = {
 							},
 							["serial"] = "Player-4769-0052831A",
-							["classe"] = "PRIEST",
+							["last_event"] = 1567339844,
 						}, -- [1]
 					},
 				}, -- [4]
 				{
-					["combatId"] = 6,
 					["tipo"] = 2,
+					["combatId"] = 6,
 					["_ActorTable"] = {
 					},
 				}, -- [5]
@@ -3649,12 +3656,14 @@ _detalhes_database = {
 					["苍炎月影"] = true,
 				},
 				["CombatStartedAt"] = 33562.272,
-				["tempo_start"] = 1567339833,
+				["overall_added"] = true,
 				["last_events_tables"] = {
 				},
 				["alternate_power"] = {
 				},
-				["combat_counter"] = 552,
+				["cleu_events"] = {
+					["n"] = 1,
+				},
 				["playing_solo"] = true,
 				["totals"] = {
 					465.986284, -- [1]
@@ -3663,21 +3672,21 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
-					["frags_total"] = 0,
 					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
 				},
 				["totals_grupo"] = {
 					332, -- [1]
@@ -3686,22 +3695,23 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
 				},
 				["frags_need_refresh"] = true,
 				["instance_type"] = "none",
+				["hasSaved"] = true,
 				["data_fim"] = "20:10:44",
 				["cleu_timeline"] = {
 				},
@@ -3712,11 +3722,28 @@ _detalhes_database = {
 				},
 				["__call"] = {
 				},
+				["data_inicio"] = "20:10:34",
+				["end_time"] = 33554.654,
+				["combat_id"] = 6,
+				["player_last_events"] = {
+				},
+				["tempo_start"] = 1567339833,
+				["spells_cast_timeline"] = {
+				},
+				["contra"] = "看守傀儡",
+				["combat_counter"] = 552,
+				["CombatSkillCache"] = {
+				},
 				["PhaseData"] = {
 					{
 						1, -- [1]
 						1, -- [2]
 					}, -- [1]
+					["damage"] = {
+						{
+							["苍炎月影"] = 332.004748,
+						}, -- [1]
+					},
 					["heal_section"] = {
 					},
 					["heal"] = {
@@ -3725,37 +3752,18 @@ _detalhes_database = {
 					},
 					["damage_section"] = {
 					},
-					["damage"] = {
-						{
-							["苍炎月影"] = 332.004748,
-						}, -- [1]
-					},
-				},
-				["end_time"] = 33554.654,
-				["combat_id"] = 6,
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["overall_added"] = true,
-				["spells_cast_timeline"] = {
-				},
-				["player_last_events"] = {
-				},
-				["data_inicio"] = "20:10:34",
-				["CombatSkillCache"] = {
-				},
-				["frags"] = {
-					["看守傀儡"] = 1,
 				},
 				["start_time"] = 33544.475,
 				["TimeData"] = {
 				},
-				["contra"] = "看守傀儡",
+				["frags"] = {
+					["看守傀儡"] = 1,
+				},
 			}, -- [8]
 			{
 				{
-					["combatId"] = 5,
 					["tipo"] = 2,
+					["combatId"] = 5,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1297,
@@ -3768,20 +3776,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["on_hold"] = false,
 							["classe"] = "PRIEST",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 335.00617,
-							["friendlyfire"] = {
-							},
-							["colocacao"] = 1,
+							["delay"] = 0,
 							["dps_started"] = false,
 							["end_time"] = 1567339825,
-							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["total"] = 335.00617,
+							["damage_taken"] = 61.00617,
 							["nome"] = "苍炎月影",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["心灵震爆"] = {
 										["c_amt"] = 1,
@@ -3801,16 +3808,16 @@ _detalhes_database = {
 										["c_max"] = 109,
 										["id"] = "心灵震爆",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 109,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 0,
-										["r_amt"] = 0,
-										["c_min"] = 109,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									["射击"] = {
 										["c_amt"] = 0,
@@ -3830,16 +3837,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "射击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 6,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 									["暗言术：痛"] = {
 										["c_amt"] = 0,
@@ -3859,29 +3866,30 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "暗言术：痛",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 2,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["grupo"] = true,
-							["total"] = 335.00617,
-							["serial"] = "Player-4769-0052831A",
-							["last_dps"] = 31.6940558183547,
 							["custom"] = 0,
+							["last_dps"] = 31.6940558183547,
+							["colocacao"] = 1,
 							["last_event"] = 1567339823,
-							["damage_taken"] = 61.00617,
+							["friendlyfire"] = {
+							},
 							["start_time"] = 1567339814,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Player-4769-0052831A",
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 68168,
@@ -3898,19 +3906,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["dps_started"] = false,
 							["classe"] = "UNKNOW",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 173.004789,
+							["delay"] = 0,
 							["monster"] = true,
-							["fight_component"] = true,
-							["dps_started"] = false,
 							["end_time"] = 1567339825,
 							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["damage_taken"] = 786.004789,
 							["nome"] = "看守傀儡",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									{
 										["c_amt"] = 0,
@@ -3923,26 +3931,26 @@ _detalhes_database = {
 										},
 										["m_dmg"] = 0,
 										["n_dmg"] = 0,
-										["DODGE"] = 1,
+										["c_min"] = 0,
 										["n_min"] = 0,
 										["g_dmg"] = 0,
 										["counter"] = 4,
-										["a_amt"] = 0,
+										["r_amt"] = 0,
 										["total"] = 0,
 										["c_max"] = 0,
 										["MISS"] = 2,
 										["id"] = 1,
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
+										["b_dmg"] = 0,
 										["a_dmg"] = 0,
 										["m_crit"] = 0,
 										["PARRY"] = 1,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
-										["b_dmg"] = 0,
+										["spellschool"] = 1,
 										["n_amt"] = 0,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_amt"] = 0,
+										["DODGE"] = 1,
 									}, -- [1]
 									["攻击"] = {
 										["c_amt"] = 0,
@@ -3964,84 +3972,70 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "攻击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 8,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["total"] = 173.004789,
-							["serial"] = "Creature-0-4517-0-19174-114-00016BB50F",
+							["last_dps"] = 0,
 							["friendlyfire"] = {
 							},
-							["last_dps"] = 0,
 							["custom"] = 0,
 							["last_event"] = 1567339827,
-							["damage_taken"] = 786.004789,
+							["on_hold"] = false,
 							["start_time"] = 1567339815,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Creature-0-4517-0-19174-114-00016BB50F",
+							["fight_component"] = true,
 						}, -- [2]
 					},
 				}, -- [1]
 				{
-					["combatId"] = 5,
 					["tipo"] = 3,
+					["combatId"] = 5,
 					["_ActorTable"] = {
 					},
 				}, -- [2]
 				{
-					["combatId"] = 5,
 					["tipo"] = 7,
+					["combatId"] = 5,
 					["_ActorTable"] = {
 					},
 				}, -- [3]
 				{
-					["combatId"] = 5,
 					["tipo"] = 9,
+					["combatId"] = 5,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1047,
-							["debuff_uptime"] = 9,
-							["debuff_uptime_targets"] = {
-							},
 							["debuff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 0,
+										["refreshamt"] = 0,
 										["id"] = 0,
+										["uptime"] = 9,
 										["targets"] = {
 										},
-										["uptime"] = 9,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
-							},
-							["buff_uptime_targets"] = {
-							},
-							["grupo"] = true,
-							["nome"] = "苍炎月影",
-							["spell_cast"] = {
-								[0] = 7,
-							},
-							["pets"] = {
+								["tipo"] = 9,
 							},
 							["buff_uptime"] = 22,
-							["tipo"] = 4,
-							["last_event"] = 1567339825,
+							["classe"] = "PRIEST",
 							["buff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
 										["activedamt"] = 1,
@@ -4050,54 +4044,68 @@ _detalhes_database = {
 										},
 										["actived_at"] = 1567339823,
 										["uptime"] = 0,
-										["appliedamt"] = 1,
+										["counter"] = 0,
 										["refreshamt"] = 0,
 										["actived"] = true,
-										["counter"] = 0,
-									},
-									[15271] = {
-										["activedamt"] = 0,
-										["id"] = 15271,
-										["targets"] = {
-										},
-										["uptime"] = 0,
-										["appliedamt"] = 0,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[588] = {
-										["activedamt"] = 1,
-										["id"] = 588,
-										["targets"] = {
-										},
-										["uptime"] = 11,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 									[1244] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 1,
+										["refreshamt"] = 0,
 										["id"] = 1244,
+										["uptime"] = 11,
 										["targets"] = {
 										},
-										["uptime"] = 11,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
+									},
+									[15271] = {
 										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 0,
+										["id"] = 15271,
+										["uptime"] = 0,
+										["targets"] = {
+										},
+										["appliedamt"] = 0,
+									},
+									[588] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 588,
+										["uptime"] = 11,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
 									},
 								},
+								["tipo"] = 9,
+							},
+							["debuff_uptime"] = 9,
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["spell_cast"] = {
+								[0] = 7,
+							},
+							["nome"] = "苍炎月影",
+							["tipo"] = 4,
+							["debuff_uptime_targets"] = {
+							},
+							["pets"] = {
 							},
 							["serial"] = "Player-4769-0052831A",
-							["classe"] = "PRIEST",
+							["last_event"] = 1567339825,
 						}, -- [1]
 					},
 				}, -- [4]
 				{
-					["combatId"] = 5,
 					["tipo"] = 2,
+					["combatId"] = 5,
 					["_ActorTable"] = {
 					},
 				}, -- [5]
@@ -4105,12 +4113,14 @@ _detalhes_database = {
 					["苍炎月影"] = true,
 				},
 				["CombatStartedAt"] = 33544.475,
-				["tempo_start"] = 1567339814,
+				["overall_added"] = true,
 				["last_events_tables"] = {
 				},
 				["alternate_power"] = {
 				},
-				["combat_counter"] = 551,
+				["cleu_events"] = {
+					["n"] = 1,
+				},
 				["playing_solo"] = true,
 				["totals"] = {
 					507.993279, -- [1]
@@ -4119,21 +4129,21 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
-					["frags_total"] = 0,
 					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
 				},
 				["totals_grupo"] = {
 					335, -- [1]
@@ -4142,22 +4152,23 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
 				},
 				["frags_need_refresh"] = true,
 				["instance_type"] = "none",
+				["hasSaved"] = true,
 				["data_fim"] = "20:10:25",
 				["cleu_timeline"] = {
 				},
@@ -4168,11 +4179,28 @@ _detalhes_database = {
 				},
 				["__call"] = {
 				},
+				["data_inicio"] = "20:10:15",
+				["end_time"] = 33535.62,
+				["combat_id"] = 5,
+				["player_last_events"] = {
+				},
+				["tempo_start"] = 1567339814,
+				["spells_cast_timeline"] = {
+				},
+				["contra"] = "看守傀儡",
+				["combat_counter"] = 551,
+				["CombatSkillCache"] = {
+				},
 				["PhaseData"] = {
 					{
 						1, -- [1]
 						1, -- [2]
 					}, -- [1]
+					["damage"] = {
+						{
+							["苍炎月影"] = 335.00617,
+						}, -- [1]
+					},
 					["heal_section"] = {
 					},
 					["heal"] = {
@@ -4181,37 +4209,18 @@ _detalhes_database = {
 					},
 					["damage_section"] = {
 					},
-					["damage"] = {
-						{
-							["苍炎月影"] = 335.00617,
-						}, -- [1]
-					},
-				},
-				["end_time"] = 33535.62,
-				["combat_id"] = 5,
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["overall_added"] = true,
-				["spells_cast_timeline"] = {
-				},
-				["player_last_events"] = {
-				},
-				["data_inicio"] = "20:10:15",
-				["CombatSkillCache"] = {
-				},
-				["frags"] = {
-					["看守傀儡"] = 2,
 				},
 				["start_time"] = 33525.05,
 				["TimeData"] = {
 				},
-				["contra"] = "看守傀儡",
+				["frags"] = {
+					["看守傀儡"] = 2,
+				},
 			}, -- [9]
 			{
 				{
-					["combatId"] = 4,
 					["tipo"] = 2,
+					["combatId"] = 4,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1297,
@@ -4224,20 +4233,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["on_hold"] = false,
 							["classe"] = "PRIEST",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 338.006367,
-							["friendlyfire"] = {
-							},
-							["colocacao"] = 1,
+							["delay"] = 0,
 							["dps_started"] = false,
 							["end_time"] = 1567339802,
-							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["total"] = 338.006367,
+							["damage_taken"] = 57.006367,
 							["nome"] = "苍炎月影",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["心灵震爆"] = {
 										["c_amt"] = 0,
@@ -4257,16 +4265,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "心灵震爆",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 1,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									["射击"] = {
 										["c_amt"] = 0,
@@ -4286,16 +4294,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "射击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 6,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 									["暗言术：痛"] = {
 										["c_amt"] = 0,
@@ -4315,29 +4323,30 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "暗言术：痛",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 2,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["grupo"] = true,
-							["total"] = 338.006367,
-							["serial"] = "Player-4769-0052831A",
-							["last_dps"] = 30.9926982395143,
 							["custom"] = 0,
+							["last_dps"] = 30.9926982395143,
+							["colocacao"] = 1,
 							["last_event"] = 1567339799,
-							["damage_taken"] = 57.006367,
+							["friendlyfire"] = {
+							},
 							["start_time"] = 1567339791,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Player-4769-0052831A",
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 68168,
@@ -4348,24 +4357,24 @@ _detalhes_database = {
 								["花京院丶典明"] = true,
 							},
 							["targets"] = {
-								["花京院丶典明"] = 74,
 								["苍炎月影"] = 57,
+								["花京院丶典明"] = 74,
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["dps_started"] = false,
 							["classe"] = "UNKNOW",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 131.003993,
+							["delay"] = 0,
 							["monster"] = true,
-							["fight_component"] = true,
-							["dps_started"] = false,
 							["end_time"] = 1567339814,
 							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["damage_taken"] = 588.003993,
 							["nome"] = "看守傀儡",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									{
 										["c_amt"] = 0,
@@ -4383,19 +4392,19 @@ _detalhes_database = {
 										["counter"] = 1,
 										["total"] = 0,
 										["c_max"] = 0,
-										["MISS"] = 1,
+										["c_min"] = 0,
 										["id"] = 1,
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
+										["r_amt"] = 0,
 										["a_dmg"] = 0,
 										["m_crit"] = 0,
-										["a_amt"] = 0,
+										["b_dmg"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
-										["b_dmg"] = 0,
+										["a_amt"] = 0,
 										["n_amt"] = 0,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["spellschool"] = 1,
+										["MISS"] = 1,
 									}, -- [1]
 									["攻击"] = {
 										["c_amt"] = 0,
@@ -4404,8 +4413,8 @@ _detalhes_database = {
 										["g_amt"] = 0,
 										["n_max"] = 30,
 										["targets"] = {
-											["花京院丶典明"] = 74,
 											["苍炎月影"] = 57,
+											["花京院丶典明"] = 74,
 										},
 										["m_dmg"] = 0,
 										["n_dmg"] = 131,
@@ -4416,117 +4425,117 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "攻击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 6,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["total"] = 131.003993,
-							["serial"] = "Creature-0-4517-0-19174-114-00026BB50F",
+							["last_dps"] = 0,
 							["friendlyfire"] = {
 							},
-							["last_dps"] = 0,
 							["custom"] = 0,
 							["last_event"] = 1567339812,
-							["damage_taken"] = 588.003993,
+							["on_hold"] = false,
 							["start_time"] = 1567339793,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Creature-0-4517-0-19174-114-00026BB50F",
+							["fight_component"] = true,
 						}, -- [2]
 					},
 				}, -- [1]
 				{
-					["combatId"] = 4,
 					["tipo"] = 3,
+					["combatId"] = 4,
 					["_ActorTable"] = {
 					},
 				}, -- [2]
 				{
-					["combatId"] = 4,
 					["tipo"] = 7,
+					["combatId"] = 4,
 					["_ActorTable"] = {
 					},
 				}, -- [3]
 				{
-					["combatId"] = 4,
 					["tipo"] = 9,
+					["combatId"] = 4,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1047,
-							["debuff_uptime"] = 7,
-							["debuff_uptime_targets"] = {
-							},
 							["debuff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 0,
+										["refreshamt"] = 0,
 										["id"] = 0,
+										["uptime"] = 7,
 										["targets"] = {
 										},
-										["uptime"] = 7,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
+								["tipo"] = 9,
 							},
+							["buff_uptime"] = 22,
+							["classe"] = "PRIEST",
+							["buff_uptime_spells"] = {
+								["_ActorTable"] = {
+									[1244] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 1244,
+										["uptime"] = 11,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+									[588] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 588,
+										["uptime"] = 11,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+								},
+								["tipo"] = 9,
+							},
+							["debuff_uptime"] = 7,
 							["buff_uptime_targets"] = {
 							},
 							["grupo"] = true,
-							["nome"] = "苍炎月影",
 							["spell_cast"] = {
 								[0] = 7,
 							},
+							["nome"] = "苍炎月影",
+							["tipo"] = 4,
+							["debuff_uptime_targets"] = {
+							},
 							["pets"] = {
 							},
-							["buff_uptime"] = 22,
-							["tipo"] = 4,
-							["last_event"] = 1567339802,
-							["buff_uptime_spells"] = {
-								["tipo"] = 9,
-								["_ActorTable"] = {
-									[1244] = {
-										["activedamt"] = 1,
-										["id"] = 1244,
-										["targets"] = {
-										},
-										["uptime"] = 11,
-										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[588] = {
-										["activedamt"] = 1,
-										["id"] = 588,
-										["targets"] = {
-										},
-										["uptime"] = 11,
-										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-								},
-							},
 							["serial"] = "Player-4769-0052831A",
-							["classe"] = "PRIEST",
+							["last_event"] = 1567339802,
 						}, -- [1]
 					},
 				}, -- [4]
 				{
-					["combatId"] = 4,
 					["tipo"] = 2,
+					["combatId"] = 4,
 					["_ActorTable"] = {
 					},
 				}, -- [5]
@@ -4534,12 +4543,14 @@ _detalhes_database = {
 					["苍炎月影"] = true,
 				},
 				["CombatStartedAt"] = 33525.05,
-				["tempo_start"] = 1567339791,
+				["overall_added"] = true,
 				["last_events_tables"] = {
 				},
 				["alternate_power"] = {
 				},
-				["combat_counter"] = 550,
+				["cleu_events"] = {
+					["n"] = 1,
+				},
 				["playing_solo"] = true,
 				["totals"] = {
 					468.991991, -- [1]
@@ -4548,21 +4559,21 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
-					["frags_total"] = 0,
 					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
 				},
 				["totals_grupo"] = {
 					338, -- [1]
@@ -4571,22 +4582,23 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
 				},
 				["frags_need_refresh"] = true,
 				["instance_type"] = "none",
+				["hasSaved"] = true,
 				["data_fim"] = "20:10:02",
 				["cleu_timeline"] = {
 				},
@@ -4597,11 +4609,28 @@ _detalhes_database = {
 				},
 				["__call"] = {
 				},
+				["data_inicio"] = "20:09:52",
+				["end_time"] = 33512.897,
+				["combat_id"] = 4,
+				["player_last_events"] = {
+				},
+				["tempo_start"] = 1567339791,
+				["spells_cast_timeline"] = {
+				},
+				["contra"] = "看守傀儡",
+				["combat_counter"] = 550,
+				["CombatSkillCache"] = {
+				},
 				["PhaseData"] = {
 					{
 						1, -- [1]
 						1, -- [2]
 					}, -- [1]
+					["damage"] = {
+						{
+							["苍炎月影"] = 338.006367,
+						}, -- [1]
+					},
 					["heal_section"] = {
 					},
 					["heal"] = {
@@ -4610,37 +4639,18 @@ _detalhes_database = {
 					},
 					["damage_section"] = {
 					},
-					["damage"] = {
-						{
-							["苍炎月影"] = 338.006367,
-						}, -- [1]
-					},
-				},
-				["end_time"] = 33512.897,
-				["combat_id"] = 4,
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["overall_added"] = true,
-				["spells_cast_timeline"] = {
-				},
-				["player_last_events"] = {
-				},
-				["data_inicio"] = "20:09:52",
-				["CombatSkillCache"] = {
-				},
-				["frags"] = {
-					["看守傀儡"] = 1,
 				},
 				["start_time"] = 33501.991,
 				["TimeData"] = {
 				},
-				["contra"] = "看守傀儡",
+				["frags"] = {
+					["看守傀儡"] = 1,
+				},
 			}, -- [10]
 			{
 				{
-					["combatId"] = 3,
 					["tipo"] = 2,
+					["combatId"] = 3,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 68136,
@@ -4653,19 +4663,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["friendlyfire"] = {
+							},
 							["friendlyfire_total"] = 0,
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 45.002401,
-							["on_hold"] = false,
-							["dps_started"] = false,
+							["last_event"] = 1567339748,
+							["fight_component"] = true,
 							["total"] = 45.002401,
+							["delay"] = 0,
 							["classe"] = "UNKNOW",
-							["serial"] = "Creature-0-4517-0-19174-454-00006BB478",
 							["nome"] = "幼年血牙野猪",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									{
 										["c_amt"] = 0,
@@ -4683,19 +4693,19 @@ _detalhes_database = {
 										["counter"] = 2,
 										["total"] = 0,
 										["c_max"] = 0,
-										["MISS"] = 2,
+										["c_min"] = 0,
 										["id"] = 1,
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
+										["r_amt"] = 0,
 										["a_dmg"] = 0,
 										["m_crit"] = 0,
-										["a_amt"] = 0,
+										["b_dmg"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
-										["b_dmg"] = 0,
+										["a_amt"] = 0,
 										["n_amt"] = 0,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["spellschool"] = 1,
+										["MISS"] = 2,
 									}, -- [1]
 									["攻击"] = {
 										["c_amt"] = 0,
@@ -4715,29 +4725,29 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "攻击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 3,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 								},
+								["tipo"] = 2,
 							},
-							["friendlyfire"] = {
-							},
+							["damage_taken"] = 279.002401,
 							["end_time"] = 1567339751,
 							["last_dps"] = 0,
 							["custom"] = 0,
 							["tipo"] = 1,
-							["damage_taken"] = 279.002401,
+							["on_hold"] = false,
 							["start_time"] = 1567339740,
-							["delay"] = 0,
-							["last_event"] = 1567339748,
+							["serial"] = "Creature-0-4517-0-19174-454-00006BB478",
+							["dps_started"] = false,
 						}, -- [1]
 						{
 							["flag_original"] = 1297,
@@ -4750,20 +4760,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["on_hold"] = false,
 							["classe"] = "PRIEST",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 279.004048,
-							["friendlyfire"] = {
-							},
-							["colocacao"] = 1,
+							["delay"] = 0,
 							["dps_started"] = false,
 							["end_time"] = 1567339751,
-							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["total"] = 279.004048,
+							["damage_taken"] = 45.004048,
 							["nome"] = "苍炎月影",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["心灵震爆"] = {
 										["c_amt"] = 0,
@@ -4783,16 +4792,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "心灵震爆",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 1,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									["射击"] = {
 										["c_amt"] = 0,
@@ -4812,16 +4821,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "射击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 5,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 									["暗言术：痛"] = {
 										["c_amt"] = 0,
@@ -4841,55 +4850,52 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "暗言术：痛",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 3,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["grupo"] = true,
-							["total"] = 279.004048,
-							["serial"] = "Player-4769-0052831A",
-							["last_dps"] = 28.7573745619534,
 							["custom"] = 0,
+							["last_dps"] = 28.7573745619534,
+							["colocacao"] = 1,
 							["last_event"] = 1567339750,
-							["damage_taken"] = 45.004048,
+							["friendlyfire"] = {
+							},
 							["start_time"] = 1567339743,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Player-4769-0052831A",
+							["friendlyfire_total"] = 0,
 						}, -- [2]
 					},
 				}, -- [1]
 				{
-					["combatId"] = 3,
 					["tipo"] = 3,
+					["combatId"] = 3,
 					["_ActorTable"] = {
 					},
 				}, -- [2]
 				{
-					["combatId"] = 3,
 					["tipo"] = 7,
+					["combatId"] = 3,
 					["_ActorTable"] = {
 					},
 				}, -- [3]
 				{
-					["combatId"] = 3,
 					["tipo"] = 9,
+					["combatId"] = 3,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1047,
-							["debuff_uptime"] = 0,
-							["debuff_uptime_targets"] = {
-							},
 							["debuff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
 										["activedamt"] = -1,
@@ -4898,27 +4904,17 @@ _detalhes_database = {
 										},
 										["actived_at"] = 1567339750,
 										["uptime"] = 0,
-										["appliedamt"] = 0,
+										["counter"] = 0,
 										["refreshamt"] = 0,
 										["actived"] = false,
-										["counter"] = 0,
+										["appliedamt"] = 0,
 									},
 								},
-							},
-							["buff_uptime_targets"] = {
-							},
-							["grupo"] = true,
-							["nome"] = "苍炎月影",
-							["spell_cast"] = {
-								[0] = 6,
-							},
-							["pets"] = {
+								["tipo"] = 9,
 							},
 							["buff_uptime"] = 22,
-							["tipo"] = 4,
-							["last_event"] = 1567339751,
+							["classe"] = "PRIEST",
 							["buff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
 										["activedamt"] = 1,
@@ -4927,54 +4923,68 @@ _detalhes_database = {
 										},
 										["actived_at"] = 1567339750,
 										["uptime"] = 0,
-										["appliedamt"] = 1,
+										["counter"] = 0,
 										["refreshamt"] = 0,
 										["actived"] = true,
-										["counter"] = 0,
-									},
-									[15271] = {
-										["activedamt"] = 0,
-										["id"] = 15271,
-										["targets"] = {
-										},
-										["uptime"] = 0,
-										["appliedamt"] = 0,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[588] = {
-										["activedamt"] = 1,
-										["id"] = 588,
-										["targets"] = {
-										},
-										["uptime"] = 11,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 									[1244] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 1,
+										["refreshamt"] = 0,
 										["id"] = 1244,
+										["uptime"] = 11,
 										["targets"] = {
 										},
-										["uptime"] = 11,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
+									},
+									[15271] = {
 										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 0,
+										["id"] = 15271,
+										["uptime"] = 0,
+										["targets"] = {
+										},
+										["appliedamt"] = 0,
+									},
+									[588] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 588,
+										["uptime"] = 11,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
 									},
 								},
+								["tipo"] = 9,
+							},
+							["debuff_uptime"] = 0,
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["spell_cast"] = {
+								[0] = 6,
+							},
+							["nome"] = "苍炎月影",
+							["tipo"] = 4,
+							["debuff_uptime_targets"] = {
+							},
+							["pets"] = {
 							},
 							["serial"] = "Player-4769-0052831A",
-							["classe"] = "PRIEST",
+							["last_event"] = 1567339751,
 						}, -- [1]
 					},
 				}, -- [4]
 				{
-					["combatId"] = 3,
 					["tipo"] = 2,
+					["combatId"] = 3,
 					["_ActorTable"] = {
 					},
 				}, -- [5]
@@ -4987,7 +4997,9 @@ _detalhes_database = {
 				},
 				["alternate_power"] = {
 				},
-				["combat_counter"] = 549,
+				["cleu_events"] = {
+					["n"] = 1,
+				},
 				["playing_solo"] = true,
 				["totals"] = {
 					324, -- [1]
@@ -4996,45 +5008,27 @@ _detalhes_database = {
 						-0.00685399999999992, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
-					["frags_total"] = 0,
 					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
 				},
-				["totals_grupo"] = {
-					279, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 0,
-						["alternatepower"] = 0,
-						[3] = 0,
-						[6] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
-						["dead"] = 0,
-					}, -- [4]
+				["player_last_events"] = {
 				},
 				["frags_need_refresh"] = true,
 				["instance_type"] = "none",
+				["hasSaved"] = true,
 				["data_fim"] = "20:09:12",
 				["pvp"] = true,
 				["cleu_timeline"] = {
@@ -5046,11 +5040,52 @@ _detalhes_database = {
 				},
 				["__call"] = {
 				},
+				["data_inicio"] = "20:09:01",
+				["end_time"] = 33462.276,
+				["combat_id"] = 3,
+				["overall_added"] = true,
+				["spells_cast_timeline"] = {
+				},
+				["frags"] = {
+					["幼年血牙野猪"] = 1,
+				},
+				["combat_counter"] = 549,
+				["CombatSkillCache"] = {
+				},
+				["totals_grupo"] = {
+					279, -- [1]
+					0, -- [2]
+					{
+						0, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+				},
+				["start_time"] = 33451.463,
+				["TimeData"] = {
+				},
 				["PhaseData"] = {
 					{
 						1, -- [1]
 						1, -- [2]
 					}, -- [1]
+					["damage"] = {
+						{
+							["苍炎月影"] = 279.004048,
+						}, -- [1]
+					},
 					["heal_section"] = {
 					},
 					["heal"] = {
@@ -5059,36 +5094,12 @@ _detalhes_database = {
 					},
 					["damage_section"] = {
 					},
-					["damage"] = {
-						{
-							["苍炎月影"] = 279.004048,
-						}, -- [1]
-					},
-				},
-				["end_time"] = 33462.276,
-				["combat_id"] = 3,
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["spells_cast_timeline"] = {
-				},
-				["overall_added"] = true,
-				["player_last_events"] = {
-				},
-				["CombatSkillCache"] = {
-				},
-				["data_inicio"] = "20:09:01",
-				["start_time"] = 33451.463,
-				["TimeData"] = {
-				},
-				["frags"] = {
-					["幼年血牙野猪"] = 1,
 				},
 			}, -- [11]
 			{
 				{
-					["combatId"] = 2,
 					["tipo"] = 2,
+					["combatId"] = 2,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1297,
@@ -5100,20 +5111,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["on_hold"] = false,
 							["classe"] = "PRIEST",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 196.002362,
-							["friendlyfire"] = {
-							},
-							["colocacao"] = 1,
+							["delay"] = 0,
 							["dps_started"] = false,
 							["end_time"] = 1567339583,
-							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["total"] = 196.002362,
+							["damage_taken"] = 0.002362,
 							["nome"] = "苍炎月影",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["心灵震爆"] = {
 										["c_amt"] = 0,
@@ -5133,16 +5143,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "心灵震爆",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 1,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									["射击"] = {
 										["c_amt"] = 0,
@@ -5162,16 +5172,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "射击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 3,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 									["暗言术：痛"] = {
 										["c_amt"] = 0,
@@ -5191,29 +5201,30 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "暗言术：痛",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 1,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["grupo"] = true,
-							["total"] = 196.002362,
-							["serial"] = "Player-4769-0052831A",
-							["last_dps"] = 32.2903397034612,
 							["custom"] = 0,
+							["last_dps"] = 32.2903397034612,
+							["colocacao"] = 1,
 							["last_event"] = 1567339581,
-							["damage_taken"] = 0.002362,
+							["friendlyfire"] = {
+							},
 							["start_time"] = 1567339577,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Player-4769-0052831A",
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 68168,
@@ -5223,122 +5234,122 @@ _detalhes_database = {
 							},
 							["targets"] = {
 							},
-							["monster"] = true,
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["last_event"] = 0,
+							["friendlyfire"] = {
+							},
 							["friendlyfire_total"] = 0,
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 0.004405,
-							["on_hold"] = false,
-							["dps_started"] = false,
+							["delay"] = 0,
+							["monster"] = true,
 							["total"] = 0.004405,
 							["classe"] = "UNKNOW",
-							["serial"] = "Creature-0-4505-0-17547-116-00006BAA6B",
+							["damage_taken"] = 196.004405,
 							["nome"] = "迪菲亚强盗",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 								},
+								["tipo"] = 2,
 							},
-							["friendlyfire"] = {
-							},
-							["end_time"] = 1567339583,
+							["dps_started"] = false,
 							["last_dps"] = 0,
+							["end_time"] = 1567339583,
 							["custom"] = 0,
 							["tipo"] = 1,
-							["damage_taken"] = 196.004405,
+							["on_hold"] = false,
 							["start_time"] = 1567339583,
-							["delay"] = 0,
-							["last_event"] = 0,
+							["serial"] = "Creature-0-4505-0-17547-116-00006BAA6B",
+							["fight_component"] = true,
 						}, -- [2]
 					},
 				}, -- [1]
 				{
-					["combatId"] = 2,
 					["tipo"] = 3,
+					["combatId"] = 2,
 					["_ActorTable"] = {
 					},
 				}, -- [2]
 				{
-					["combatId"] = 2,
 					["tipo"] = 7,
+					["combatId"] = 2,
 					["_ActorTable"] = {
 					},
 				}, -- [3]
 				{
-					["combatId"] = 2,
 					["tipo"] = 9,
+					["combatId"] = 2,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1047,
-							["debuff_uptime"] = 4,
-							["nome"] = "苍炎月影",
 							["debuff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 0,
+										["refreshamt"] = 0,
 										["id"] = 0,
+										["uptime"] = 4,
 										["targets"] = {
 										},
-										["uptime"] = 4,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
-							},
-							["buff_uptime_targets"] = {
-							},
-							["grupo"] = true,
-							["debuff_uptime_targets"] = {
-							},
-							["buff_uptime"] = 12,
-							["spell_cast"] = {
-								[0] = 3,
+								["tipo"] = 9,
 							},
 							["pets"] = {
 							},
-							["tipo"] = 4,
-							["last_event"] = 1567339583,
+							["classe"] = "PRIEST",
 							["buff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[1244] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 1,
+										["refreshamt"] = 0,
 										["id"] = 1244,
+										["uptime"] = 6,
 										["targets"] = {
 										},
-										["uptime"] = 6,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 									[588] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 1,
+										["refreshamt"] = 0,
 										["id"] = 588,
+										["uptime"] = 6,
 										["targets"] = {
 										},
-										["uptime"] = 6,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
+								["tipo"] = 9,
 							},
+							["debuff_uptime"] = 4,
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["spell_cast"] = {
+								[0] = 3,
+							},
+							["debuff_uptime_targets"] = {
+							},
+							["tipo"] = 4,
+							["nome"] = "苍炎月影",
+							["buff_uptime"] = 12,
 							["serial"] = "Player-4769-0052831A",
-							["classe"] = "PRIEST",
+							["last_event"] = 1567339583,
 						}, -- [1]
 					},
 				}, -- [4]
 				{
-					["combatId"] = 2,
 					["tipo"] = 2,
+					["combatId"] = 2,
 					["_ActorTable"] = {
 					},
 				}, -- [5]
@@ -5346,12 +5357,14 @@ _detalhes_database = {
 					["苍炎月影"] = true,
 				},
 				["CombatStartedAt"] = 33450.923,
-				["tempo_start"] = 1567339577,
+				["overall_added"] = true,
 				["last_events_tables"] = {
 				},
 				["alternate_power"] = {
 				},
-				["combat_counter"] = 548,
+				["cleu_events"] = {
+					["n"] = 1,
+				},
 				["playing_solo"] = true,
 				["totals"] = {
 					195.962036, -- [1]
@@ -5360,21 +5373,21 @@ _detalhes_database = {
 						-0.00574199999999792, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
-					["frags_total"] = 0,
 					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
 				},
 				["totals_grupo"] = {
 					196, -- [1]
@@ -5383,22 +5396,23 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
 				},
 				["frags_need_refresh"] = true,
 				["instance_type"] = "none",
+				["hasSaved"] = true,
 				["data_fim"] = "20:06:24",
 				["cleu_timeline"] = {
 				},
@@ -5409,11 +5423,28 @@ _detalhes_database = {
 				},
 				["__call"] = {
 				},
+				["data_inicio"] = "20:06:18",
+				["end_time"] = 33294.142,
+				["combat_id"] = 2,
+				["player_last_events"] = {
+				},
+				["tempo_start"] = 1567339577,
+				["spells_cast_timeline"] = {
+				},
+				["contra"] = "迪菲亚强盗",
+				["combat_counter"] = 548,
+				["CombatSkillCache"] = {
+				},
 				["PhaseData"] = {
 					{
 						1, -- [1]
 						1, -- [2]
 					}, -- [1]
+					["damage"] = {
+						{
+							["苍炎月影"] = 196.002362,
+						}, -- [1]
+					},
 					["heal_section"] = {
 					},
 					["heal"] = {
@@ -5422,37 +5453,18 @@ _detalhes_database = {
 					},
 					["damage_section"] = {
 					},
-					["damage"] = {
-						{
-							["苍炎月影"] = 196.002362,
-						}, -- [1]
-					},
-				},
-				["end_time"] = 33294.142,
-				["combat_id"] = 2,
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["overall_added"] = true,
-				["spells_cast_timeline"] = {
-				},
-				["player_last_events"] = {
-				},
-				["data_inicio"] = "20:06:18",
-				["CombatSkillCache"] = {
-				},
-				["frags"] = {
-					["迪菲亚强盗"] = 1,
 				},
 				["start_time"] = 33288.072,
 				["TimeData"] = {
 				},
-				["contra"] = "迪菲亚强盗",
+				["frags"] = {
+					["迪菲亚强盗"] = 1,
+				},
 			}, -- [12]
 			{
 				{
-					["combatId"] = 1,
 					["tipo"] = 2,
+					["combatId"] = 1,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1297,
@@ -5464,20 +5476,19 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
+							["tipo"] = 1,
+							["on_hold"] = false,
 							["classe"] = "PRIEST",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 120.00117,
-							["friendlyfire"] = {
-							},
-							["colocacao"] = 1,
+							["delay"] = 0,
 							["dps_started"] = false,
 							["end_time"] = 1567339559,
-							["friendlyfire_total"] = 0,
-							["on_hold"] = false,
+							["total"] = 120.00117,
+							["damage_taken"] = 0.00117,
 							["nome"] = "苍炎月影",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 									["心灵震爆"] = {
 										["c_amt"] = 0,
@@ -5497,16 +5508,16 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "心灵震爆",
 										["r_dmg"] = 0,
-										["spellschool"] = 32,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 1,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 32,
 									},
 									["射击"] = {
 										["c_amt"] = 0,
@@ -5526,29 +5537,30 @@ _detalhes_database = {
 										["c_max"] = 0,
 										["id"] = "射击",
 										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
+										["c_min"] = 0,
+										["r_amt"] = 0,
 										["m_crit"] = 0,
 										["a_amt"] = 0,
 										["m_amt"] = 0,
 										["successful_casted"] = 0,
 										["b_dmg"] = 0,
 										["n_amt"] = 1,
-										["r_amt"] = 0,
-										["c_min"] = 0,
+										["a_dmg"] = 0,
+										["spellschool"] = 1,
 									},
 								},
+								["tipo"] = 2,
 							},
 							["grupo"] = true,
-							["total"] = 120.00117,
-							["serial"] = "Player-4769-0052831A",
-							["last_dps"] = 37.9270448798472,
 							["custom"] = 0,
+							["last_dps"] = 37.9270448798472,
+							["colocacao"] = 1,
 							["last_event"] = 1567339558,
-							["damage_taken"] = 0.00117,
+							["friendlyfire"] = {
+							},
 							["start_time"] = 1567339555,
-							["delay"] = 0,
-							["tipo"] = 1,
+							["serial"] = "Player-4769-0052831A",
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 68168,
@@ -5558,122 +5570,122 @@ _detalhes_database = {
 							},
 							["targets"] = {
 							},
-							["monster"] = true,
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["last_event"] = 0,
+							["friendlyfire"] = {
+							},
 							["friendlyfire_total"] = 0,
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 0.00101,
-							["on_hold"] = false,
-							["dps_started"] = false,
+							["delay"] = 0,
+							["monster"] = true,
 							["total"] = 0.00101,
 							["classe"] = "UNKNOW",
-							["serial"] = "Creature-0-4505-0-17547-525-00006BAAA5",
+							["damage_taken"] = 120.00101,
 							["nome"] = "癞皮狼",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 								},
+								["tipo"] = 2,
 							},
-							["friendlyfire"] = {
-							},
-							["end_time"] = 1567339559,
+							["dps_started"] = false,
 							["last_dps"] = 0,
+							["end_time"] = 1567339559,
 							["custom"] = 0,
 							["tipo"] = 1,
-							["damage_taken"] = 120.00101,
+							["on_hold"] = false,
 							["start_time"] = 1567339559,
-							["delay"] = 0,
-							["last_event"] = 0,
+							["serial"] = "Creature-0-4505-0-17547-525-00006BAAA5",
+							["fight_component"] = true,
 						}, -- [2]
 					},
 				}, -- [1]
 				{
-					["combatId"] = 1,
 					["tipo"] = 3,
+					["combatId"] = 1,
 					["_ActorTable"] = {
 					},
 				}, -- [2]
 				{
-					["combatId"] = 1,
 					["tipo"] = 7,
+					["combatId"] = 1,
 					["_ActorTable"] = {
 					},
 				}, -- [3]
 				{
-					["combatId"] = 1,
 					["tipo"] = 9,
+					["combatId"] = 1,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1047,
-							["debuff_uptime"] = 2,
-							["debuff_uptime_targets"] = {
-							},
 							["debuff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[0] = {
+										["counter"] = 0,
+										["actived"] = false,
 										["activedamt"] = 0,
+										["refreshamt"] = 0,
 										["id"] = 0,
+										["uptime"] = 2,
 										["targets"] = {
 										},
-										["uptime"] = 2,
 										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
 									},
 								},
+								["tipo"] = 9,
 							},
+							["buff_uptime"] = 8,
+							["classe"] = "PRIEST",
+							["buff_uptime_spells"] = {
+								["_ActorTable"] = {
+									[1244] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 1244,
+										["uptime"] = 4,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+									[588] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 588,
+										["uptime"] = 4,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+								},
+								["tipo"] = 9,
+							},
+							["debuff_uptime"] = 2,
 							["buff_uptime_targets"] = {
 							},
 							["grupo"] = true,
-							["nome"] = "苍炎月影",
 							["spell_cast"] = {
 								[0] = 2,
 							},
+							["nome"] = "苍炎月影",
+							["tipo"] = 4,
+							["debuff_uptime_targets"] = {
+							},
 							["pets"] = {
 							},
-							["buff_uptime"] = 8,
-							["tipo"] = 4,
-							["last_event"] = 1567339559,
-							["buff_uptime_spells"] = {
-								["tipo"] = 9,
-								["_ActorTable"] = {
-									[1244] = {
-										["activedamt"] = 1,
-										["id"] = 1244,
-										["targets"] = {
-										},
-										["uptime"] = 4,
-										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[588] = {
-										["activedamt"] = 1,
-										["id"] = 588,
-										["targets"] = {
-										},
-										["uptime"] = 4,
-										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-								},
-							},
 							["serial"] = "Player-4769-0052831A",
-							["classe"] = "PRIEST",
+							["last_event"] = 1567339559,
 						}, -- [1]
 					},
 				}, -- [4]
 				{
-					["combatId"] = 1,
 					["tipo"] = 2,
+					["combatId"] = 1,
 					["_ActorTable"] = {
 					},
 				}, -- [5]
@@ -5681,12 +5693,14 @@ _detalhes_database = {
 					["苍炎月影"] = true,
 				},
 				["CombatStartedAt"] = 33288.072,
-				["tempo_start"] = 1567339555,
+				["overall_added"] = true,
 				["last_events_tables"] = {
 				},
 				["alternate_power"] = {
 				},
-				["combat_counter"] = 547,
+				["cleu_events"] = {
+					["n"] = 1,
+				},
 				["playing_solo"] = true,
 				["totals"] = {
 					120, -- [1]
@@ -5695,45 +5709,27 @@ _detalhes_database = {
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
-						[3] = 0,
 						[6] = 0,
+						[3] = 0,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
 						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
 					}, -- [4]
-					["frags_total"] = 0,
 					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
 				},
-				["totals_grupo"] = {
-					120, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 0,
-						["alternatepower"] = 0,
-						[3] = 0,
-						[6] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
-						["dead"] = 0,
-					}, -- [4]
+				["player_last_events"] = {
 				},
 				["frags_need_refresh"] = true,
 				["instance_type"] = "none",
+				["hasSaved"] = true,
 				["data_fim"] = "20:06:00",
 				["cleu_timeline"] = {
 				},
@@ -5749,6 +5745,11 @@ _detalhes_database = {
 						1, -- [1]
 						1, -- [2]
 					}, -- [1]
+					["damage"] = {
+						{
+							["苍炎月影"] = 120.00117,
+						}, -- [1]
+					},
 					["heal_section"] = {
 					},
 					["heal"] = {
@@ -5757,36 +5758,48 @@ _detalhes_database = {
 					},
 					["damage_section"] = {
 					},
-					["damage"] = {
-						{
-							["苍炎月影"] = 120.00117,
-						}, -- [1]
-					},
 				},
 				["end_time"] = 33270.601,
 				["combat_id"] = 1,
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["overall_added"] = true,
+				["data_inicio"] = "20:05:56",
+				["tempo_start"] = 1567339555,
 				["spells_cast_timeline"] = {
 				},
-				["player_last_events"] = {
-				},
-				["data_inicio"] = "20:05:56",
+				["contra"] = "癞皮狼",
+				["combat_counter"] = 547,
 				["CombatSkillCache"] = {
 				},
-				["frags"] = {
-					["癞皮狼"] = 1,
+				["totals_grupo"] = {
+					120, -- [1]
+					0, -- [2]
+					{
+						0, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
 				},
 				["start_time"] = 33266.157,
 				["TimeData"] = {
 				},
-				["contra"] = "癞皮狼",
+				["frags"] = {
+					["癞皮狼"] = 1,
+				},
 			}, -- [13]
 		},
 	},
-	["last_version"] = "v1.13.2.7176",
+	["last_version"] = "v1.13.2.153",
 	["SoloTablesSaved"] = {
 		["Mode"] = 1,
 	},
@@ -5794,7 +5807,7 @@ _detalhes_database = {
 	},
 	["on_death_menu"] = true,
 	["nick_tag_cache"] = {
-		["nextreset"] = 1568294076,
+		["nextreset"] = 1569771739,
 		["last_version"] = 11,
 	},
 	["last_instance_id"] = 36,
@@ -5820,59 +5833,326 @@ _detalhes_database = {
 	},
 	["ignore_nicktag"] = false,
 	["plugin_database"] = {
+		["DETAILS_PLUGIN_TINY_THREAT"] = {
+			["updatespeed"] = 1,
+			["useclasscolors"] = false,
+			["animate"] = false,
+			["useplayercolor"] = false,
+			["showamount"] = false,
+			["author"] = "Details! Team",
+			["playercolor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+			},
+			["enabled"] = true,
+		},
+	},
+	["cached_talents"] = {
+		["Player-4769-0052831A"] = {
+			{
+				135995, -- [1]
+				0, -- [2]
+				1, -- [3]
+				2, -- [4]
+			}, -- [1]
+			{
+				135463, -- [1]
+				5, -- [2]
+				1, -- [3]
+				3, -- [4]
+			}, -- [2]
+			{
+				136053, -- [1]
+				0, -- [2]
+				2, -- [3]
+				1, -- [4]
+			}, -- [3]
+			{
+				135987, -- [1]
+				0, -- [2]
+				2, -- [3]
+				2, -- [4]
+			}, -- [4]
+			{
+				135940, -- [1]
+				0, -- [2]
+				2, -- [3]
+				3, -- [4]
+			}, -- [5]
+			{
+				136107, -- [1]
+				0, -- [2]
+				2, -- [3]
+				4, -- [4]
+			}, -- [6]
+			{
+				135863, -- [1]
+				0, -- [2]
+				3, -- [3]
+				2, -- [4]
+			}, -- [7]
+			{
+				136090, -- [1]
+				0, -- [2]
+				3, -- [3]
+				3, -- [4]
+			}, -- [8]
+			{
+				135926, -- [1]
+				0, -- [2]
+				4, -- [3]
+				1, -- [4]
+			}, -- [9]
+			{
+				132156, -- [1]
+				0, -- [2]
+				4, -- [3]
+				2, -- [4]
+			}, -- [10]
+			{
+				136170, -- [1]
+				0, -- [2]
+				4, -- [3]
+				4, -- [4]
+			}, -- [11]
+			{
+				136031, -- [1]
+				0, -- [2]
+				5, -- [3]
+				2, -- [4]
+			}, -- [12]
+			{
+				135898, -- [1]
+				0, -- [2]
+				5, -- [3]
+				3, -- [4]
+			}, -- [13]
+			{
+				136092, -- [1]
+				0, -- [2]
+				6, -- [3]
+				3, -- [4]
+			}, -- [14]
+			{
+				135939, -- [1]
+				0, -- [2]
+				7, -- [3]
+				2, -- [4]
+			}, -- [15]
+			{
+				135918, -- [1]
+				0, -- [2]
+				1, -- [3]
+				1, -- [4]
+			}, -- [16]
+			{
+				135953, -- [1]
+				0, -- [2]
+				1, -- [3]
+				2, -- [4]
+			}, -- [17]
+			{
+				135967, -- [1]
+				0, -- [2]
+				1, -- [3]
+				3, -- [4]
+			}, -- [18]
+			{
+				135976, -- [1]
+				0, -- [2]
+				2, -- [3]
+				2, -- [4]
+			}, -- [19]
+			{
+				135971, -- [1]
+				0, -- [2]
+				2, -- [3]
+				3, -- [4]
+			}, -- [20]
+			{
+				135922, -- [1]
+				0, -- [2]
+				3, -- [3]
+				1, -- [4]
+			}, -- [21]
+			{
+				135877, -- [1]
+				0, -- [2]
+				3, -- [3]
+				2, -- [4]
+			}, -- [22]
+			{
+				135928, -- [1]
+				0, -- [2]
+				3, -- [3]
+				4, -- [4]
+			}, -- [23]
+			{
+				135949, -- [1]
+				0, -- [2]
+				4, -- [3]
+				1, -- [4]
+			}, -- [24]
+			{
+				135916, -- [1]
+				0, -- [2]
+				4, -- [3]
+				2, -- [4]
+			}, -- [25]
+			{
+				135973, -- [1]
+				0, -- [2]
+				4, -- [3]
+				3, -- [4]
+			}, -- [26]
+			{
+				135943, -- [1]
+				0, -- [2]
+				5, -- [3]
+				1, -- [4]
+			}, -- [27]
+			{
+				132864, -- [1]
+				0, -- [2]
+				5, -- [3]
+				2, -- [4]
+			}, -- [28]
+			{
+				135977, -- [1]
+				0, -- [2]
+				5, -- [3]
+				3, -- [4]
+			}, -- [29]
+			{
+				136057, -- [1]
+				0, -- [2]
+				6, -- [3]
+				3, -- [4]
+			}, -- [30]
+			{
+				135980, -- [1]
+				0, -- [2]
+				7, -- [3]
+				2, -- [4]
+			}, -- [31]
+			{
+				136188, -- [1]
+				4, -- [2]
+				1, -- [3]
+				2, -- [4]
+			}, -- [32]
+			{
+				136160, -- [1]
+				0, -- [2]
+				1, -- [3]
+				3, -- [4]
+			}, -- [33]
+			{
+				136205, -- [1]
+				0, -- [2]
+				2, -- [3]
+				1, -- [4]
+			}, -- [34]
+			{
+				136207, -- [1]
+				0, -- [2]
+				2, -- [3]
+				2, -- [4]
+			}, -- [35]
+			{
+				136126, -- [1]
+				0, -- [2]
+				2, -- [3]
+				3, -- [4]
+			}, -- [36]
+			{
+				136184, -- [1]
+				0, -- [2]
+				3, -- [3]
+				1, -- [4]
+			}, -- [37]
+			{
+				136224, -- [1]
+				0, -- [2]
+				3, -- [3]
+				2, -- [4]
+			}, -- [38]
+			{
+				136208, -- [1]
+				0, -- [2]
+				3, -- [3]
+				3, -- [4]
+			}, -- [39]
+			{
+				135994, -- [1]
+				0, -- [2]
+				4, -- [3]
+				2, -- [4]
+			}, -- [40]
+			{
+				136130, -- [1]
+				0, -- [2]
+				4, -- [3]
+				3, -- [4]
+			}, -- [41]
+			{
+				136123, -- [1]
+				0, -- [2]
+				4, -- [3]
+				4, -- [4]
+			}, -- [42]
+			{
+				136164, -- [1]
+				0, -- [2]
+				5, -- [3]
+				1, -- [4]
+			}, -- [43]
+			{
+				136230, -- [1]
+				0, -- [2]
+				5, -- [3]
+				2, -- [4]
+			}, -- [44]
+			{
+				136165, -- [1]
+				0, -- [2]
+				5, -- [3]
+				3, -- [4]
+			}, -- [45]
+			{
+				136223, -- [1]
+				0, -- [2]
+				6, -- [3]
+				3, -- [4]
+			}, -- [46]
+			{
+				136200, -- [1]
+				0, -- [2]
+				7, -- [3]
+				2, -- [4]
+			}, -- [47]
+		},
 	},
 	["announce_prepots"] = {
 		["enabled"] = true,
 		["channel"] = "SELF",
 		["reverse"] = false,
 	},
-	["last_day"] = "01",
-	["cached_talents"] = {
-	},
+	["last_day"] = "14",
 	["benchmark_db"] = {
 		["frame"] = {
 		},
 	},
-	["character_data"] = {
-		["logons"] = 24,
-	},
+	["last_realversion"] = 140,
 	["combat_id"] = 13,
 	["savedStyles"] = {
 	},
-	["local_instances_config"] = {
-		{
-			["segment"] = 0,
-			["sub_attribute"] = 1,
-			["sub_atributo_last"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-				1, -- [5]
-			},
-			["is_open"] = true,
-			["isLocked"] = true,
-			["snap"] = {
-			},
-			["mode"] = 2,
-			["attribute"] = 1,
-			["pos"] = {
-				["normal"] = {
-					["y"] = -420.000770568848,
-					["x"] = 797.001831054688,
-					["w"] = 320,
-					["h"] = 190.000045776367,
-				},
-				["solo"] = {
-					["y"] = 2,
-					["x"] = 1,
-					["w"] = 300,
-					["h"] = 200,
-				},
-			},
-		}, -- [1]
+	["announce_firsthit"] = {
+		["enabled"] = true,
+		["channel"] = "SELF",
 	},
-	["force_font_outline"] = "",
+	["combat_counter"] = 560,
 	["announce_deaths"] = {
 		["enabled"] = false,
 		["last_hits"] = 1,
@@ -5889,131 +6169,53 @@ _detalhes_database = {
 					["damage_from"] = {
 						["血牙野猪"] = true,
 						["看守傀儡"] = true,
-						["河爪蛮兵"] = true,
+						["碎尸鸟"] = true,
 						["幼年血牙野猪"] = true,
 						["河爪强盗"] = true,
-						["碎尸鸟"] = true,
+						["河爪蛮兵"] = true,
 					},
 					["targets"] = {
-						["河爪蛮兵"] = 359,
-						["血牙野猪"] = 667,
 						["看守傀儡"] = 1333,
+						["血牙野猪"] = 667,
+						["河爪蛮兵"] = 359,
 						["河爪强盗"] = 398,
-						["碎尸鸟"] = 317,
 						["幼年血牙野猪"] = 538,
+						["碎尸鸟"] = 317,
 						["迪菲亚强盗"] = 196,
 						["癞皮狼"] = 120,
 					},
 					["pets"] = {
 					},
-					["friendlyfire"] = {
-					},
+					["last_dps"] = 0,
 					["friendlyfire_total"] = 0,
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 3928.061404,
-					["last_event"] = 0,
+					["damage_taken"] = 797.061404,
 					["dps_started"] = false,
 					["total"] = 3928.061404,
-					["classe"] = "PRIEST",
-					["end_time"] = 1567339560,
+					["delay"] = 0,
+					["on_hold"] = false,
 					["nome"] = "苍炎月影",
 					["spells"] = {
-						["tipo"] = 2,
 						["_ActorTable"] = {
-							["心灵震爆"] = {
-								["c_amt"] = 1,
-								["b_amt"] = 0,
-								["c_dmg"] = 109,
-								["g_amt"] = 0,
-								["n_max"] = 79,
-								["targets"] = {
-									["河爪蛮兵"] = 73,
-									["血牙野猪"] = 150,
-									["看守傀儡"] = 345,
-									["河爪强盗"] = 74,
-									["碎尸鸟"] = 76,
-									["幼年血牙野猪"] = 149,
-									["迪菲亚强盗"] = 72,
-									["癞皮狼"] = 75,
-								},
-								["m_dmg"] = 0,
-								["n_dmg"] = 905,
-								["n_min"] = 0,
-								["g_dmg"] = 0,
-								["counter"] = 13,
-								["total"] = 1014,
-								["c_max"] = 109,
-								["id"] = "心灵震爆",
-								["r_dmg"] = 0,
-								["a_dmg"] = 0,
-								["m_crit"] = 0,
-								["a_amt"] = 0,
-								["m_amt"] = 0,
-								["successful_casted"] = 0,
-								["b_dmg"] = 0,
-								["n_amt"] = 12,
-								["r_amt"] = 0,
-								["c_min"] = 0,
-							},
-							["射击"] = {
-								["c_amt"] = 3,
-								["b_amt"] = 0,
-								["c_dmg"] = 164,
-								["g_amt"] = 0,
-								["n_max"] = 47,
-								["targets"] = {
-									["河爪蛮兵"] = 253,
-									["血牙野猪"] = 451,
-									["看守傀儡"] = 878,
-									["河爪强盗"] = 291,
-									["碎尸鸟"] = 219,
-									["幼年血牙野猪"] = 334,
-									["迪菲亚强盗"] = 113,
-									["癞皮狼"] = 45,
-								},
-								["m_dmg"] = 0,
-								["n_dmg"] = 2420,
-								["n_min"] = 0,
-								["g_dmg"] = 0,
-								["counter"] = 70,
-								["total"] = 2584,
-								["c_max"] = 65,
-								["id"] = "射击",
-								["r_dmg"] = 0,
-								["a_dmg"] = 0,
-								["m_crit"] = 0,
-								["a_amt"] = 0,
-								["m_amt"] = 0,
-								["successful_casted"] = 0,
-								["b_dmg"] = 0,
-								["n_amt"] = 67,
-								["r_amt"] = 0,
-								["c_min"] = 0,
-							},
-							["暗言术：痛"] = {
+							[0] = {
 								["c_amt"] = 0,
 								["b_amt"] = 0,
 								["c_dmg"] = 0,
 								["g_amt"] = 0,
-								["n_max"] = 11,
+								["n_max"] = 0,
 								["targets"] = {
-									["血牙野猪"] = 66,
-									["看守傀儡"] = 110,
-									["河爪蛮兵"] = 33,
-									["河爪强盗"] = 33,
-									["幼年血牙野猪"] = 55,
-									["迪菲亚强盗"] = 11,
-									["碎尸鸟"] = 22,
+									["看守傀儡"] = 0,
 								},
 								["m_dmg"] = 0,
-								["n_dmg"] = 330,
+								["n_dmg"] = 0,
 								["n_min"] = 0,
 								["g_dmg"] = 0,
-								["counter"] = 30,
-								["total"] = 330,
+								["counter"] = 0,
+								["total"] = 0,
 								["c_max"] = 0,
-								["id"] = "暗言术：痛",
+								["id"] = 0,
 								["r_dmg"] = 0,
 								["a_dmg"] = 0,
 								["m_crit"] = 0,
@@ -6021,7 +6223,7 @@ _detalhes_database = {
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
 								["b_dmg"] = 0,
-								["n_amt"] = 30,
+								["n_amt"] = 0,
 								["r_amt"] = 0,
 								["c_min"] = 0,
 							},
@@ -6043,33 +6245,138 @@ _detalhes_database = {
 								["c_max"] = 0,
 								["id"] = 2,
 								["r_dmg"] = 0,
-								["RESIST"] = 1,
-								["a_dmg"] = 0,
+								["c_min"] = 0,
+								["r_amt"] = 0,
 								["m_crit"] = 0,
-								["a_amt"] = 0,
+								["n_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
 								["b_dmg"] = 0,
-								["n_amt"] = 0,
-								["r_amt"] = 0,
+								["RESIST"] = 1,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
+							},
+							["心灵震爆"] = {
+								["c_amt"] = 1,
+								["b_amt"] = 0,
+								["c_dmg"] = 109,
+								["g_amt"] = 0,
+								["n_max"] = 79,
+								["targets"] = {
+									["看守傀儡"] = 345,
+									["血牙野猪"] = 150,
+									["河爪蛮兵"] = 73,
+									["河爪强盗"] = 74,
+									["幼年血牙野猪"] = 149,
+									["碎尸鸟"] = 76,
+									["迪菲亚强盗"] = 72,
+									["癞皮狼"] = 75,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 905,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 13,
+								["total"] = 1014,
+								["c_max"] = 109,
+								["id"] = "心灵震爆",
+								["r_dmg"] = 0,
 								["c_min"] = 0,
+								["m_crit"] = 0,
+								["r_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 0,
+								["n_amt"] = 12,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
+							},
+							["射击"] = {
+								["c_amt"] = 3,
+								["b_amt"] = 0,
+								["c_dmg"] = 164,
+								["g_amt"] = 0,
+								["n_max"] = 47,
+								["targets"] = {
+									["看守傀儡"] = 878,
+									["血牙野猪"] = 451,
+									["河爪蛮兵"] = 253,
+									["河爪强盗"] = 291,
+									["幼年血牙野猪"] = 334,
+									["碎尸鸟"] = 219,
+									["迪菲亚强盗"] = 113,
+									["癞皮狼"] = 45,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 2420,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 70,
+								["total"] = 2584,
+								["c_max"] = 65,
+								["id"] = "射击",
+								["r_dmg"] = 0,
+								["c_min"] = 0,
+								["m_crit"] = 0,
+								["r_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 0,
+								["n_amt"] = 67,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
+							},
+							["暗言术：痛"] = {
+								["c_amt"] = 0,
+								["b_amt"] = 0,
+								["c_dmg"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 11,
+								["targets"] = {
+									["血牙野猪"] = 66,
+									["看守傀儡"] = 110,
+									["碎尸鸟"] = 22,
+									["河爪强盗"] = 33,
+									["幼年血牙野猪"] = 55,
+									["迪菲亚强盗"] = 11,
+									["河爪蛮兵"] = 33,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 330,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 30,
+								["total"] = 330,
+								["c_max"] = 0,
+								["id"] = "暗言术：痛",
+								["r_dmg"] = 0,
+								["c_min"] = 0,
+								["m_crit"] = 0,
+								["r_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 0,
+								["n_amt"] = 30,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
 							},
 						},
+						["tipo"] = 2,
 					},
 					["grupo"] = true,
-					["on_hold"] = false,
-					["serial"] = "Player-4769-0052831A",
-					["custom"] = 0,
 					["tipo"] = 1,
-					["last_dps"] = 0,
+					["end_time"] = 1567339560,
+					["custom"] = 0,
+					["last_event"] = 0,
+					["friendlyfire"] = {
+					},
 					["start_time"] = 1567339433,
-					["delay"] = 0,
-					["damage_taken"] = 797.061404,
+					["serial"] = "Player-4769-0052831A",
+					["classe"] = "PRIEST",
 				}, -- [1]
 				{
 					["flag_original"] = 68168,
 					["totalabsorbed"] = 0.007405,
-					["on_hold"] = false,
 					["damage_from"] = {
 						["苍炎月影"] = true,
 					},
@@ -6077,37 +6384,37 @@ _detalhes_database = {
 					},
 					["pets"] = {
 					},
-					["fight_component"] = true,
+					["last_dps"] = 0,
+					["monster"] = true,
 					["classe"] = "UNKNOW",
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 0.007405,
-					["last_event"] = 0,
-					["dps_started"] = false,
+					["delay"] = 0,
+					["fight_component"] = true,
 					["end_time"] = 1567339560,
-					["friendlyfire"] = {
-					},
 					["friendlyfire_total"] = 0,
+					["damage_taken"] = 120.007405,
 					["nome"] = "癞皮狼",
 					["spells"] = {
-						["tipo"] = 2,
 						["_ActorTable"] = {
 						},
+						["tipo"] = 2,
 					},
-					["monster"] = true,
-					["total"] = 0.007405,
-					["serial"] = "Creature-0-4505-0-17547-525-00006BAAA5",
-					["custom"] = 0,
 					["tipo"] = 1,
-					["damage_taken"] = 120.007405,
+					["friendlyfire"] = {
+					},
+					["total"] = 0.007405,
+					["custom"] = 0,
+					["last_event"] = 0,
+					["on_hold"] = false,
 					["start_time"] = 1567339557,
-					["delay"] = 0,
-					["last_dps"] = 0,
+					["serial"] = "Creature-0-4505-0-17547-525-00006BAAA5",
+					["dps_started"] = false,
 				}, -- [2]
 				{
 					["flag_original"] = 68168,
 					["totalabsorbed"] = 0.009104,
-					["on_hold"] = false,
 					["damage_from"] = {
 						["苍炎月影"] = true,
 					},
@@ -6115,37 +6422,37 @@ _detalhes_database = {
 					},
 					["pets"] = {
 					},
-					["fight_component"] = true,
+					["last_dps"] = 0,
+					["monster"] = true,
 					["classe"] = "UNKNOW",
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 0.009104,
-					["last_event"] = 0,
-					["dps_started"] = false,
+					["delay"] = 0,
+					["fight_component"] = true,
 					["end_time"] = 1567339584,
-					["friendlyfire"] = {
-					},
 					["friendlyfire_total"] = 0,
+					["damage_taken"] = 196.009104,
 					["nome"] = "迪菲亚强盗",
 					["spells"] = {
-						["tipo"] = 2,
 						["_ActorTable"] = {
 						},
+						["tipo"] = 2,
 					},
-					["monster"] = true,
-					["total"] = 0.009104,
-					["serial"] = "Creature-0-4505-0-17547-116-00006BAA6B",
-					["custom"] = 0,
 					["tipo"] = 1,
-					["damage_taken"] = 196.009104,
+					["friendlyfire"] = {
+					},
+					["total"] = 0.009104,
+					["custom"] = 0,
+					["last_event"] = 0,
+					["on_hold"] = false,
 					["start_time"] = 1567339581,
-					["delay"] = 0,
-					["last_dps"] = 0,
+					["serial"] = "Creature-0-4505-0-17547-116-00006BAA6B",
+					["dps_started"] = false,
 				}, -- [3]
 				{
 					["flag_original"] = 68136,
 					["totalabsorbed"] = 0.014133,
-					["fight_component"] = true,
 					["damage_from"] = {
 						["苍炎月影"] = true,
 					},
@@ -6154,20 +6461,18 @@ _detalhes_database = {
 					},
 					["pets"] = {
 					},
-					["on_hold"] = false,
+					["tipo"] = 1,
 					["classe"] = "UNKNOW",
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 75.014133,
-					["friendlyfire"] = {
-					},
-					["dps_started"] = false,
+					["last_dps"] = 0,
+					["fight_component"] = true,
 					["end_time"] = 1567339752,
-					["last_event"] = 0,
+					["delay"] = 0,
 					["friendlyfire_total"] = 0,
 					["nome"] = "幼年血牙野猪",
 					["spells"] = {
-						["tipo"] = 2,
 						["_ActorTable"] = {
 							{
 								["c_amt"] = 0,
@@ -6187,16 +6492,16 @@ _detalhes_database = {
 								["c_max"] = 0,
 								["id"] = 1,
 								["r_dmg"] = 0,
-								["MISS"] = 2,
-								["a_dmg"] = 0,
+								["c_min"] = 0,
+								["r_amt"] = 0,
 								["m_crit"] = 0,
 								["a_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
 								["b_dmg"] = 0,
 								["n_amt"] = 0,
-								["r_amt"] = 0,
-								["c_min"] = 0,
+								["a_dmg"] = 0,
+								["MISS"] = 2,
 							}, -- [1]
 							["攻击"] = {
 								["c_amt"] = 0,
@@ -6216,26 +6521,29 @@ _detalhes_database = {
 								["c_max"] = 0,
 								["id"] = "攻击",
 								["r_dmg"] = 0,
-								["a_dmg"] = 0,
+								["c_min"] = 0,
 								["m_crit"] = 0,
-								["a_amt"] = 0,
+								["r_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
 								["b_dmg"] = 0,
 								["n_amt"] = 5,
-								["r_amt"] = 0,
-								["c_min"] = 0,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
 							},
 						},
+						["tipo"] = 2,
 					},
-					["total"] = 75.014133,
-					["serial"] = "Creature-0-4517-0-19174-454-00006BB478",
-					["custom"] = 0,
-					["tipo"] = 1,
 					["damage_taken"] = 538.014133,
+					["total"] = 75.014133,
+					["dps_started"] = false,
+					["custom"] = 0,
+					["last_event"] = 0,
+					["on_hold"] = false,
 					["start_time"] = 1567339733,
-					["delay"] = 0,
-					["last_dps"] = 0,
+					["serial"] = "Creature-0-4517-0-19174-454-00006BB478",
+					["friendlyfire"] = {
+					},
 				}, -- [4]
 				{
 					["flag_original"] = 68168,
@@ -6246,25 +6554,27 @@ _detalhes_database = {
 						["花京院丶典明"] = true,
 					},
 					["targets"] = {
+						["秃头强"] = 0,
 						["苍炎月影"] = 310,
 						["小光头灬隐刃"] = 59,
 						["花京院丶典明"] = 53,
 					},
 					["pets"] = {
 					},
+					["damage_taken"] = 1908.024544,
+					["dps_started"] = false,
 					["friendlyfire_total"] = 0,
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 422.024544,
-					["last_event"] = 0,
-					["on_hold"] = false,
+					["delay"] = 0,
 					["monster"] = true,
 					["total"] = 422.024544,
-					["fight_component"] = true,
-					["classe"] = "UNKNOW",
+					["friendlyfire"] = {
+					},
+					["last_dps"] = 0,
 					["nome"] = "看守傀儡",
 					["spells"] = {
-						["tipo"] = 2,
 						["_ActorTable"] = {
 							{
 								["c_amt"] = 0,
@@ -6281,22 +6591,22 @@ _detalhes_database = {
 								["n_min"] = 0,
 								["g_dmg"] = 0,
 								["counter"] = 4,
-								["DODGE"] = 1,
+								["c_min"] = 0,
 								["total"] = 0,
 								["c_max"] = 0,
-								["a_amt"] = 0,
+								["r_amt"] = 0,
 								["id"] = 1,
 								["r_dmg"] = 0,
 								["MISS"] = 2,
-								["a_dmg"] = 0,
+								["b_dmg"] = 0,
 								["m_crit"] = 0,
 								["PARRY"] = 1,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
-								["b_dmg"] = 0,
+								["a_dmg"] = 0,
 								["n_amt"] = 0,
-								["r_amt"] = 0,
-								["c_min"] = 0,
+								["a_amt"] = 0,
+								["DODGE"] = 1,
 							}, -- [1]
 							["攻击"] = {
 								["c_amt"] = 0,
@@ -6305,6 +6615,7 @@ _detalhes_database = {
 								["g_amt"] = 0,
 								["n_max"] = 38,
 								["targets"] = {
+									["秃头强"] = 0,
 									["苍炎月影"] = 310,
 									["小光头灬隐刃"] = 59,
 									["花京院丶典明"] = 53,
@@ -6318,29 +6629,28 @@ _detalhes_database = {
 								["c_max"] = 0,
 								["id"] = "攻击",
 								["r_dmg"] = 0,
-								["a_dmg"] = 0,
+								["c_min"] = 0,
 								["m_crit"] = 0,
-								["a_amt"] = 0,
+								["r_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
 								["b_dmg"] = 0,
 								["n_amt"] = 20,
-								["r_amt"] = 0,
-								["c_min"] = 0,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
 							},
 						},
+						["tipo"] = 2,
 					},
-					["friendlyfire"] = {
-					},
-					["dps_started"] = false,
-					["end_time"] = 1567339802,
-					["serial"] = "Creature-0-4517-0-19174-114-00026BB50F",
-					["custom"] = 0,
 					["tipo"] = 1,
-					["last_dps"] = 0,
+					["classe"] = "UNKNOW",
+					["end_time"] = 1567339802,
+					["custom"] = 0,
+					["last_event"] = 0,
+					["on_hold"] = false,
 					["start_time"] = 1567339761,
-					["delay"] = 0,
-					["damage_taken"] = 1908.024544,
+					["serial"] = "Creature-0-4517-0-19174-114-00026BB50F",
+					["fight_component"] = true,
 				}, -- [5]
 				{
 					["flag_original"] = 68136,
@@ -6353,20 +6663,18 @@ _detalhes_database = {
 					},
 					["pets"] = {
 					},
-					["on_hold"] = false,
+					["tipo"] = 1,
 					["classe"] = "UNKNOW",
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 186.02182,
+					["last_dps"] = 0,
 					["fight_component"] = true,
-					["dps_started"] = false,
 					["end_time"] = 1567339993,
-					["friendlyfire"] = {
-					},
-					["last_event"] = 0,
+					["delay"] = 0,
+					["friendlyfire_total"] = 0,
 					["nome"] = "血牙野猪",
 					["spells"] = {
-						["tipo"] = 2,
 						["_ActorTable"] = {
 							{
 								["c_amt"] = 0,
@@ -6386,16 +6694,16 @@ _detalhes_database = {
 								["c_max"] = 0,
 								["id"] = 1,
 								["r_dmg"] = 0,
-								["MISS"] = 1,
-								["a_dmg"] = 0,
+								["c_min"] = 0,
+								["r_amt"] = 0,
 								["m_crit"] = 0,
 								["a_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
 								["b_dmg"] = 0,
 								["n_amt"] = 0,
-								["r_amt"] = 0,
-								["c_min"] = 0,
+								["a_dmg"] = 0,
+								["MISS"] = 1,
 							}, -- [1]
 							["攻击"] = {
 								["c_amt"] = 0,
@@ -6415,32 +6723,33 @@ _detalhes_database = {
 								["c_max"] = 0,
 								["id"] = "攻击",
 								["r_dmg"] = 0,
-								["a_dmg"] = 0,
+								["c_min"] = 0,
 								["m_crit"] = 0,
-								["a_amt"] = 0,
+								["r_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
 								["b_dmg"] = 0,
 								["n_amt"] = 8,
-								["r_amt"] = 0,
-								["c_min"] = 0,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
 							},
 						},
+						["tipo"] = 2,
 					},
-					["friendlyfire_total"] = 0,
-					["total"] = 186.02182,
-					["serial"] = "Creature-0-4517-0-19174-157-00006BB505",
-					["custom"] = 0,
-					["tipo"] = 1,
 					["damage_taken"] = 667.02182,
+					["total"] = 186.02182,
+					["friendlyfire"] = {
+					},
+					["custom"] = 0,
+					["last_event"] = 0,
+					["on_hold"] = false,
 					["start_time"] = 1567339971,
-					["delay"] = 0,
-					["last_dps"] = 0,
+					["serial"] = "Creature-0-4517-0-19174-157-00006BB505",
+					["dps_started"] = false,
 				}, -- [6]
 				{
 					["flag_original"] = 68168,
 					["totalabsorbed"] = 0.011349,
-					["on_hold"] = false,
 					["damage_from"] = {
 						["Warriorxx"] = true,
 						["苍炎月影"] = true,
@@ -6451,20 +6760,19 @@ _detalhes_database = {
 					},
 					["pets"] = {
 					},
-					["fight_component"] = true,
+					["last_dps"] = 0,
+					["monster"] = true,
 					["classe"] = "UNKNOW",
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 139.011349,
-					["last_event"] = 0,
-					["dps_started"] = false,
+					["delay"] = 0,
+					["fight_component"] = true,
 					["end_time"] = 1567340038,
-					["friendlyfire"] = {
-					},
 					["friendlyfire_total"] = 0,
+					["damage_taken"] = 444.011349,
 					["nome"] = "碎尸鸟",
 					["spells"] = {
-						["tipo"] = 2,
 						["_ActorTable"] = {
 							{
 								["c_amt"] = 0,
@@ -6484,16 +6792,16 @@ _detalhes_database = {
 								["c_max"] = 0,
 								["id"] = 1,
 								["r_dmg"] = 0,
-								["DODGE"] = 1,
-								["a_dmg"] = 0,
+								["c_min"] = 0,
+								["r_amt"] = 0,
 								["m_crit"] = 0,
 								["a_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
 								["b_dmg"] = 0,
 								["n_amt"] = 0,
-								["r_amt"] = 0,
-								["c_min"] = 0,
+								["a_dmg"] = 0,
+								["DODGE"] = 1,
 							}, -- [1]
 							[0] = {
 								["c_amt"] = 0,
@@ -6512,15 +6820,15 @@ _detalhes_database = {
 								["c_max"] = 0,
 								["id"] = 0,
 								["r_dmg"] = 0,
-								["a_dmg"] = 0,
+								["c_min"] = 0,
 								["m_crit"] = 0,
-								["a_amt"] = 0,
+								["r_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 1,
 								["b_dmg"] = 0,
 								["n_amt"] = 0,
-								["r_amt"] = 0,
-								["c_min"] = 0,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
 							},
 							["攻击"] = {
 								["c_amt"] = 1,
@@ -6541,15 +6849,15 @@ _detalhes_database = {
 								["c_max"] = 23,
 								["id"] = "攻击",
 								["r_dmg"] = 0,
-								["a_dmg"] = 0,
+								["c_min"] = 0,
 								["m_crit"] = 0,
-								["a_amt"] = 0,
+								["r_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
 								["b_dmg"] = 0,
 								["n_amt"] = 6,
-								["r_amt"] = 0,
-								["c_min"] = 0,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
 							},
 							["撕裂肌肉"] = {
 								["c_amt"] = 0,
@@ -6569,32 +6877,33 @@ _detalhes_database = {
 								["c_max"] = 0,
 								["id"] = "撕裂肌肉",
 								["r_dmg"] = 0,
-								["a_dmg"] = 0,
+								["c_min"] = 0,
 								["m_crit"] = 0,
-								["a_amt"] = 0,
+								["r_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
 								["b_dmg"] = 0,
 								["n_amt"] = 1,
-								["r_amt"] = 0,
-								["c_min"] = 0,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
 							},
 						},
+						["tipo"] = 2,
 					},
-					["monster"] = true,
-					["total"] = 139.011349,
-					["serial"] = "Creature-0-4517-0-19174-1109-00006BB4A2",
-					["custom"] = 0,
 					["tipo"] = 1,
-					["damage_taken"] = 444.011349,
+					["friendlyfire"] = {
+					},
+					["total"] = 139.011349,
+					["custom"] = 0,
+					["last_event"] = 0,
+					["on_hold"] = false,
 					["start_time"] = 1567340021,
-					["delay"] = 0,
-					["last_dps"] = 0,
+					["serial"] = "Creature-0-4517-0-19174-1109-00006BB4A2",
+					["dps_started"] = false,
 				}, -- [7]
 				{
 					["flag_original"] = 68168,
 					["totalabsorbed"] = 0.006828,
-					["on_hold"] = false,
 					["damage_from"] = {
 						["苍炎月影"] = true,
 					},
@@ -6603,20 +6912,19 @@ _detalhes_database = {
 					},
 					["pets"] = {
 					},
-					["fight_component"] = true,
+					["last_dps"] = 0,
+					["monster"] = true,
 					["classe"] = "UNKNOW",
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 100.006828,
-					["last_event"] = 0,
-					["dps_started"] = false,
+					["delay"] = 0,
+					["fight_component"] = true,
 					["end_time"] = 1567340060,
-					["friendlyfire"] = {
-					},
 					["friendlyfire_total"] = 0,
+					["damage_taken"] = 398.006828,
 					["nome"] = "河爪强盗",
 					["spells"] = {
-						["tipo"] = 2,
 						["_ActorTable"] = {
 							[0] = {
 								["c_amt"] = 0,
@@ -6635,15 +6943,15 @@ _detalhes_database = {
 								["c_max"] = 0,
 								["id"] = 0,
 								["r_dmg"] = 0,
-								["a_dmg"] = 0,
+								["c_min"] = 0,
 								["m_crit"] = 0,
-								["a_amt"] = 0,
+								["r_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 1,
 								["b_dmg"] = 0,
 								["n_amt"] = 0,
-								["r_amt"] = 0,
-								["c_min"] = 0,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
 							},
 							["攻击"] = {
 								["c_amt"] = 0,
@@ -6663,15 +6971,15 @@ _detalhes_database = {
 								["c_max"] = 0,
 								["id"] = "攻击",
 								["r_dmg"] = 0,
-								["a_dmg"] = 0,
+								["c_min"] = 0,
 								["m_crit"] = 0,
-								["a_amt"] = 0,
+								["r_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
 								["b_dmg"] = 0,
 								["n_amt"] = 4,
-								["r_amt"] = 0,
-								["c_min"] = 0,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
 							},
 							["含毒之刺"] = {
 								["c_amt"] = 0,
@@ -6691,32 +6999,33 @@ _detalhes_database = {
 								["c_max"] = 0,
 								["id"] = "含毒之刺",
 								["r_dmg"] = 0,
-								["a_dmg"] = 0,
+								["c_min"] = 0,
 								["m_crit"] = 0,
-								["a_amt"] = 0,
+								["r_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
 								["b_dmg"] = 0,
 								["n_amt"] = 1,
-								["r_amt"] = 0,
-								["c_min"] = 0,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
 							},
 						},
+						["tipo"] = 2,
 					},
-					["monster"] = true,
-					["total"] = 100.006828,
-					["serial"] = "Creature-0-4517-0-19174-452-00006BB568",
-					["custom"] = 0,
 					["tipo"] = 1,
-					["damage_taken"] = 398.006828,
+					["friendlyfire"] = {
+					},
+					["total"] = 100.006828,
+					["custom"] = 0,
+					["last_event"] = 0,
+					["on_hold"] = false,
 					["start_time"] = 1567340049,
-					["delay"] = 0,
-					["last_dps"] = 0,
+					["serial"] = "Creature-0-4517-0-19174-452-00006BB568",
+					["dps_started"] = false,
 				}, -- [8]
 				{
 					["flag_original"] = 68168,
 					["totalabsorbed"] = 0.008275,
-					["on_hold"] = false,
 					["damage_from"] = {
 						["苍炎月影"] = true,
 					},
@@ -6725,20 +7034,19 @@ _detalhes_database = {
 					},
 					["pets"] = {
 					},
-					["fight_component"] = true,
+					["last_dps"] = 0,
+					["monster"] = true,
 					["classe"] = "UNKNOW",
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 80.008275,
-					["last_event"] = 0,
-					["dps_started"] = false,
+					["delay"] = 0,
+					["fight_component"] = true,
 					["end_time"] = 1567340083,
-					["friendlyfire"] = {
-					},
 					["friendlyfire_total"] = 0,
+					["damage_taken"] = 359.008275,
 					["nome"] = "河爪蛮兵",
 					["spells"] = {
-						["tipo"] = 2,
 						["_ActorTable"] = {
 							["攻击"] = {
 								["c_amt"] = 0,
@@ -6758,27 +7066,29 @@ _detalhes_database = {
 								["c_max"] = 0,
 								["id"] = "攻击",
 								["r_dmg"] = 0,
-								["a_dmg"] = 0,
+								["c_min"] = 0,
 								["m_crit"] = 0,
-								["a_amt"] = 0,
+								["r_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
 								["b_dmg"] = 0,
 								["n_amt"] = 3,
-								["r_amt"] = 0,
-								["c_min"] = 0,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
 							},
 						},
+						["tipo"] = 2,
 					},
-					["monster"] = true,
-					["total"] = 80.008275,
-					["serial"] = "Creature-0-4517-0-19174-124-00006BB4CC",
-					["custom"] = 0,
 					["tipo"] = 1,
-					["damage_taken"] = 359.008275,
+					["friendlyfire"] = {
+					},
+					["total"] = 80.008275,
+					["custom"] = 0,
+					["last_event"] = 0,
+					["on_hold"] = false,
 					["start_time"] = 1567340074,
-					["delay"] = 0,
-					["last_dps"] = 0,
+					["serial"] = "Creature-0-4517-0-19174-124-00006BB4CC",
+					["dps_started"] = false,
 				}, -- [9]
 			},
 		}, -- [1]
@@ -6789,13 +7099,29 @@ _detalhes_database = {
 					["flag_original"] = 1297,
 					["totalabsorb"] = 93.00963,
 					["last_hps"] = 0,
-					["targets_overheal"] = {
+					["healing_from"] = {
+						["苍炎月影"] = true,
 					},
 					["targets"] = {
-						["苍炎月影"] = 93,
+						["苍炎月影"] = 0,
 					},
+					["end_time"] = 1567339870,
+					["pets"] = {
+					},
+					["iniciar_hps"] = false,
+					["targets_overheal"] = {
+					},
+					["heal_enemy_amt"] = 0,
+					["totalover"] = 0.00963,
+					["total_without_pet"] = 93.00963,
+					["totalover_without_pet"] = 0.00963,
+					["totaldenied"] = 0.00963,
+					["fight_component"] = true,
+					["total"] = 93.00963,
+					["classe"] = "PRIEST",
+					["healing_taken"] = 93.00963,
+					["nome"] = "苍炎月影",
 					["spells"] = {
-						["tipo"] = 3,
 						["_ActorTable"] = {
 							[592] = {
 								["c_amt"] = 0,
@@ -6817,46 +7143,30 @@ _detalhes_database = {
 								},
 								["c_curado"] = 0,
 								["m_crit"] = 0,
-								["c_min"] = 0,
-								["m_amt"] = 0,
-								["n_curado"] = 93,
-								["n_amt"] = 4,
-								["totaldenied"] = 0,
 								["m_healed"] = 0,
+								["c_min"] = 0,
+								["totaldenied"] = 0,
+								["n_amt"] = 4,
+								["n_curado"] = 93,
+								["m_amt"] = 0,
 								["absorbed"] = 0,
 							},
 						},
-					},
-					["pets"] = {
-					},
-					["totalover_without_pet"] = 0.00963,
-					["healing_from"] = {
-						["苍炎月影"] = true,
-					},
-					["classe"] = "PRIEST",
-					["totalover"] = 0.00963,
-					["total_without_pet"] = 93.00963,
-					["healing_taken"] = 93.00963,
-					["iniciar_hps"] = false,
-					["fight_component"] = true,
-					["total"] = 93.00963,
-					["heal_enemy_amt"] = 0,
-					["end_time"] = 1567339870,
-					["nome"] = "苍炎月影",
-					["targets_absorbs"] = {
-						["苍炎月影"] = 93,
+						["tipo"] = 3,
 					},
 					["grupo"] = true,
-					["start_time"] = 1567339859,
+					["last_event"] = 0,
 					["heal_enemy"] = {
 					},
-					["serial"] = "Player-4769-0052831A",
+					["targets_absorbs"] = {
+						["苍炎月影"] = 0,
+					},
 					["custom"] = 0,
 					["tipo"] = 2,
 					["on_hold"] = false,
-					["totaldenied"] = 0.00963,
+					["start_time"] = 1567339859,
+					["serial"] = "Player-4769-0052831A",
 					["delay"] = 0,
-					["last_event"] = 0,
 				}, -- [1]
 			},
 		}, -- [2]
@@ -6871,125 +7181,125 @@ _detalhes_database = {
 				{
 					["flag_original"] = 1047,
 					["debuff_uptime_spells"] = {
-						["tipo"] = 9,
 						["_ActorTable"] = {
 							[0] = {
-								["actived_at"] = 1567339750,
+								["counter"] = 0,
 								["refreshamt"] = 0,
 								["activedamt"] = -1,
-								["appliedamt"] = 12,
-								["id"] = 0,
 								["uptime"] = 91,
+								["id"] = 0,
+								["appliedamt"] = 12,
 								["targets"] = {
 								},
-								["counter"] = 0,
+								["actived_at"] = 1567339750,
 							},
 						},
+						["tipo"] = 9,
 					},
 					["buff_uptime"] = 298,
 					["classe"] = "PRIEST",
 					["buff_uptime_spells"] = {
-						["tipo"] = 9,
 						["_ActorTable"] = {
 							[0] = {
-								["refreshamt"] = 0,
+								["counter"] = 0,
 								["appliedamt"] = 10,
 								["activedamt"] = 10,
-								["uptime"] = 0,
-								["id"] = 0,
 								["actived_at"] = 15673399387,
+								["id"] = 0,
+								["uptime"] = 0,
 								["targets"] = {
 								},
-								["counter"] = 0,
+								["refreshamt"] = 0,
 							},
 							[1244] = {
-								["refreshamt"] = 0,
+								["counter"] = 0,
 								["activedamt"] = 13,
 								["appliedamt"] = 13,
 								["id"] = 1244,
 								["uptime"] = 127,
 								["targets"] = {
 								},
-								["counter"] = 0,
+								["refreshamt"] = 0,
 							},
 							[592] = {
-								["refreshamt"] = 0,
+								["counter"] = 0,
 								["activedamt"] = 0,
 								["appliedamt"] = 0,
 								["id"] = 592,
 								["uptime"] = 0,
 								["targets"] = {
 								},
-								["counter"] = 0,
+								["refreshamt"] = 0,
 							},
 							[15271] = {
-								["refreshamt"] = 0,
+								["counter"] = 0,
 								["activedamt"] = 5,
 								["appliedamt"] = 5,
 								["id"] = 15271,
 								["uptime"] = 54,
 								["targets"] = {
 								},
-								["counter"] = 0,
+								["refreshamt"] = 0,
 							},
 							[588] = {
-								["actived_at"] = 1567340072,
+								["counter"] = 0,
 								["refreshamt"] = 0,
 								["activedamt"] = 13,
-								["appliedamt"] = 13,
-								["id"] = 588,
 								["uptime"] = 117,
+								["id"] = 588,
+								["appliedamt"] = 13,
 								["targets"] = {
 								},
-								["counter"] = 0,
+								["actived_at"] = 1567340072,
 							},
 						},
+						["tipo"] = 9,
 					},
 					["fight_component"] = true,
 					["debuff_uptime"] = 91,
-					["buff_uptime_targets"] = {
+					["debuff_uptime_targets"] = {
 					},
 					["grupo"] = true,
 					["spell_cast"] = {
 						[0] = 81,
 					},
-					["debuff_uptime_targets"] = {
-					},
-					["last_event"] = 0,
-					["nome"] = "苍炎月影",
-					["tipo"] = 4,
-					["serial"] = "Player-4769-0052831A",
 					["pets"] = {
 					},
+					["last_event"] = 0,
+					["buff_uptime_targets"] = {
+					},
+					["tipo"] = 4,
+					["serial"] = "Player-4769-0052831A",
+					["nome"] = "苍炎月影",
 				}, -- [1]
 				{
 					["fight_component"] = true,
 					["nome"] = "血牙野猪",
-					["tipo"] = 4,
-					["pets"] = {
-					},
-					["flag_original"] = 68136,
-					["classe"] = "UNKNOW",
 					["spell_cast"] = {
 						[0] = 2,
 					},
-					["serial"] = "Creature-0-4517-0-19174-157-00006BB505",
+					["pets"] = {
+					},
 					["last_event"] = 0,
+					["tipo"] = 4,
+					["classe"] = "UNKNOW",
+					["serial"] = "Creature-0-4517-0-19174-157-00006BB505",
+					["flag_original"] = 68136,
 				}, -- [2]
 				{
 					["monster"] = true,
-					["tipo"] = 4,
+					["last_event"] = 0,
 					["nome"] = "河爪强盗",
 					["pets"] = {
 					},
+					["classe"] = "UNKNOW",
+					["flag_original"] = 68168,
+					["tipo"] = 4,
+					["fight_component"] = true,
+					["serial"] = "Creature-0-4517-0-19174-452-00006BB568",
 					["spell_cast"] = {
 						[0] = 1,
 					},
-					["flag_original"] = 68168,
-					["last_event"] = 0,
-					["fight_component"] = true,
-					["serial"] = "Creature-0-4517-0-19174-452-00006BB568",
-					["classe"] = "UNKNOW",
 				}, -- [3]
 			},
 		}, -- [4]
@@ -7005,6 +7315,8 @@ _detalhes_database = {
 		},
 		["alternate_power"] = {
 		},
+		["cleu_timeline"] = {
+		},
 		["combat_counter"] = 546,
 		["totals"] = {
 			4930.10353, -- [1]
@@ -7013,25 +7325,23 @@ _detalhes_database = {
 				-0.00186099999999989, -- [1]
 				[0] = 0,
 				["alternatepower"] = 0,
-				[3] = 0,
 				[6] = 0,
+				[3] = 0,
 			}, -- [3]
 			{
 				["buff_uptime"] = 0,
 				["ress"] = 0,
-				["debuff_uptime"] = 0,
-				["cooldowns_defensive"] = 0,
-				["interrupt"] = 0,
-				["dispell"] = 0,
-				["cc_break"] = 0,
 				["dead"] = 0,
+				["cc_break"] = 0,
+				["interrupt"] = 0,
+				["debuff_uptime"] = 0,
+				["dispell"] = 0,
+				["cooldowns_defensive"] = 0,
 			}, -- [4]
-			["frags_total"] = 0,
 			["voidzone_damage"] = 0,
+			["frags_total"] = 0,
 		},
 		["player_last_events"] = {
-		},
-		["spells_cast_timeline"] = {
 		},
 		["frags_need_refresh"] = false,
 		["aura_timeline"] = {
@@ -7040,8 +7350,41 @@ _detalhes_database = {
 		},
 		["data_inicio"] = "20:05:56",
 		["end_time"] = 33793.546,
-		["cleu_events"] = {
-			["n"] = 1,
+		["totals_grupo"] = {
+			3928.057023, -- [1]
+			93.004008, -- [2]
+			{
+				0, -- [1]
+				[0] = 0,
+				["alternatepower"] = 0,
+				[6] = 0,
+				[3] = 0,
+			}, -- [3]
+			{
+				["buff_uptime"] = 0,
+				["ress"] = 0,
+				["dead"] = 0,
+				["cc_break"] = 0,
+				["interrupt"] = 0,
+				["debuff_uptime"] = 0,
+				["dispell"] = 0,
+				["cooldowns_defensive"] = 0,
+			}, -- [4]
+		},
+		["overall_refreshed"] = true,
+		["PhaseData"] = {
+			{
+				1, -- [1]
+				1, -- [2]
+			}, -- [1]
+			["damage"] = {
+			},
+			["heal_section"] = {
+			},
+			["heal"] = {
+			},
+			["damage_section"] = {
+			},
 		},
 		["segments_added"] = {
 			{
@@ -7123,63 +7466,63 @@ _detalhes_database = {
 				["clock"] = "20:05:56",
 			}, -- [13]
 		},
-		["totals_grupo"] = {
-			3928.057023, -- [1]
-			93.004008, -- [2]
-			{
-				0, -- [1]
-				[0] = 0,
-				["alternatepower"] = 0,
-				[3] = 0,
-				[6] = 0,
-			}, -- [3]
-			{
-				["buff_uptime"] = 0,
-				["ress"] = 0,
-				["debuff_uptime"] = 0,
-				["cooldowns_defensive"] = 0,
-				["interrupt"] = 0,
-				["dispell"] = 0,
-				["cc_break"] = 0,
-				["dead"] = 0,
-			}, -- [4]
-		},
-		["frags"] = {
+		["hasSaved"] = true,
+		["spells_cast_timeline"] = {
 		},
 		["data_fim"] = "20:14:43",
 		["overall_enemy_name"] = "-- x -- x --",
 		["CombatSkillCache"] = {
 		},
-		["cleu_timeline"] = {
+		["frags"] = {
 		},
 		["start_time"] = 33668.078,
 		["TimeData"] = {
 		},
-		["PhaseData"] = {
-			{
+		["cleu_events"] = {
+			["n"] = 1,
+		},
+	},
+	["force_font_outline"] = "",
+	["local_instances_config"] = {
+		{
+			["segment"] = 0,
+			["sub_attribute"] = 1,
+			["sub_atributo_last"] = {
 				1, -- [1]
 				1, -- [2]
-			}, -- [1]
-			["heal_section"] = {
+				1, -- [3]
+				1, -- [4]
+				1, -- [5]
 			},
-			["heal"] = {
+			["is_open"] = true,
+			["isLocked"] = true,
+			["snap"] = {
 			},
-			["damage_section"] = {
+			["mode"] = 2,
+			["attribute"] = 1,
+			["pos"] = {
+				["normal"] = {
+					["y"] = -420.000770568848,
+					["x"] = 797.001831054688,
+					["w"] = 320,
+					["h"] = 190.000045776367,
+				},
+				["solo"] = {
+					["y"] = 2,
+					["x"] = 1,
+					["w"] = 300,
+					["h"] = 200,
+				},
 			},
-			["damage"] = {
-			},
-		},
+		}, -- [1]
 	},
-	["combat_counter"] = 559,
-	["announce_firsthit"] = {
-		["enabled"] = true,
-		["channel"] = "SELF",
+	["character_data"] = {
+		["logons"] = 25,
 	},
-	["last_realversion"] = 140,
 	["announce_cooldowns"] = {
+		["enabled"] = false,
 		["ignored_cooldowns"] = {
 		},
-		["enabled"] = false,
 		["custom"] = "",
 		["channel"] = "RAID",
 	},
@@ -7192,5 +7535,6 @@ _detalhes_database = {
 		["channel"] = "SELF",
 	},
 	["cached_specs"] = {
+		["Player-4769-0052831A"] = 256,
 	},
 }

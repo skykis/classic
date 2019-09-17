@@ -1,0 +1,18 @@
+{
+    "addonsMap": [
+        "MikScrollingBattleText",
+        "MSBTOptions"
+    ],
+    "interfaceMap": [],
+    "children": [
+        "MSBTOptions"
+    ],
+    "localName": "MikScrollingBattleText",
+    "searchName": "MikScrollingBattleText（MSBT）：浮动战斗文字",
+    "name": "MikScrollingBattleText",
+    "fileName": "MikScrollingBattleText%EF%BC%88MSBT%EF%BC%89%EF%BC%9A%E6%B5%AE%E5%8A%A8%E6%88%98%E6%96%97%E6%96%87%E5%AD%97",
+    "target": "_178",
+    "version": "5.7.150",
+    "gameVersion": "8.2.0",
+    "remark": "MSBT浮动战斗信息"
+}

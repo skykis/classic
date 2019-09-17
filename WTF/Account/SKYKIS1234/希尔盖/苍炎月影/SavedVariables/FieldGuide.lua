@@ -2,7 +2,7 @@
 FieldGuideOptions = {
 	["minimapTable"] = {
 	},
-	["showKnownSpells"] = false,
+	["showKnownSpells"] = true,
 	["unwantedSpells"] = {
 		[72] = true,
 	},

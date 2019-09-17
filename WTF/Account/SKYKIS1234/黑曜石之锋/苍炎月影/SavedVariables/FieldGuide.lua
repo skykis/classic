@@ -1,0 +1,9 @@
+
+FieldGuideOptions = {
+	["minimapTable"] = {
+	},
+	["unwantedSpells"] = {
+	},
+	["pins"] = {
+	},
+}

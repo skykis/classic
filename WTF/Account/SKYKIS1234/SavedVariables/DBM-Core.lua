@@ -10,7 +10,7 @@ DBM_AllSavedOptions = {
 		["StatusEnabled"] = true,
 		["DontRestoreIcons"] = false,
 		["DontShowNameplateIcons"] = false,
-		["CoreSavedRevision"] = 20190831173730,
+		["CoreSavedRevision"] = 20190908214359,
 		["RangeFrameX"] = 50,
 		["RangeFrameY"] = -50,
 		["FilterInterruptNoteName"] = false,
@@ -96,24 +96,24 @@ DBM_AllSavedOptions = {
 		},
 		["WarningColors"] = {
 			{
-				["r"] = 0.41,
+				["r"] = 0.411764705882353,
 				["g"] = 0.8,
-				["b"] = 0.94,
+				["b"] = 0.941176470588235,
 			}, -- [1]
 			{
-				["r"] = 0.95,
-				["g"] = 0.95,
+				["r"] = 0.949019607843137,
+				["g"] = 0.949019607843137,
 				["b"] = 0,
 			}, -- [2]
 			{
 				["r"] = 1,
-				["g"] = 0.5,
+				["g"] = 0.501960784313726,
 				["b"] = 0,
 			}, -- [3]
 			{
 				["r"] = 1,
-				["g"] = 0.1,
-				["b"] = 0.1,
+				["g"] = 0.101960784313725,
+				["b"] = 0.101960784313725,
 			}, -- [4]
 		},
 		["SWarningAlphabetical"] = true,

@@ -1,6 +1,7 @@
 
 NRunDB_Global = {
 	["nptextureName"] = "Armory",
+	["textureName"] = "Armory",
 	["np_width"] = 72,
 	["nameFont"] = {
 		["font"] = "伤害数字",
@@ -25,11 +26,10 @@ NRunDB_Global = {
 	["localNames"] = true,
 	["charspec"] = {
 	},
-	["textureName"] = "Armory",
 }
 NugRunningConfigCustom = {
-	["WARRIOR"] = {
-	},
 	["PRIEST"] = {
+	},
+	["WARRIOR"] = {
 	},
 }

@@ -1,3 +1,4 @@
 
 BaudErrorFrameConfig = {
+	["enableSound"] = false,
 }
