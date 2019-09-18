@@ -24,9 +24,10 @@ DBM`不用多说`<br>
 Details`伤害统计`<br>
 EZJunk`自动卖垃圾`<br>
 FieldGuide`显示各个职业可学技能`<br>
-Guidelime`任务路线`<br>
+Guidelime`任务路线`(目前没在用)<br>
 MerInspect`观察装备增强`<br>
-NugRunning`dot计时条`<br>
+msbt`伤害数字增强`<br>
+NugRunning`dot计时条`(目前没在用，ndui这部分很强很好用)<br>
 QuestFrameFixer`任务指示修复`<br>
 QuestLogEx`任务面板单列变双列`<br>
 RealMobHealth`怀旧服显示具体血量`<br>
