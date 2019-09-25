@@ -6,7 +6,7 @@ NDuiADB = {
 	["NumberFormat"] = 1,
 	["SystemInfoType"] = 1,
 	["Changelog"] = {
-		["Version"] = "1.5.0",
+		["Version"] = "1.7.2",
 	},
 	["ChatFilterList"] = "%*",
 	["totalGold"] = {
@@ -18,7 +18,7 @@ NDuiADB = {
 		},
 		["德姆塞卡尔"] = {
 			["苍炎胧影"] = {
-				114446, -- [1]
+				1531078, -- [1]
 				"WARRIOR", -- [2]
 			},
 			["苍炎月影"] = {
@@ -33,12 +33,13 @@ NDuiADB = {
 			},
 		},
 	},
+	["UIScale"] = 0.71111,
 	["RepairType"] = 1,
 	["AutoBubbles"] = false,
-	["UIScale"] = 0.71111,
-	["GuildSortBy"] = 1,
+	["GuildSortOrder"] = true,
 	["BWRequest"] = true,
 	["SkadaRequest"] = true,
+	["ResetDetails"] = false,
 	["TexStyle"] = 2,
 	["VersionCheck"] = true,
 	["NameplateFilter"] = {
@@ -47,6 +48,10 @@ NDuiADB = {
 		{
 		}, -- [2]
 	},
+	["DBMRequest"] = false,
+	["RaidDebuffs"] = {
+	},
+	["DetectVersion"] = "1.0.1",
 	["CornerBuffs"] = {
 		["WARRIOR"] = {
 			[57723] = {
@@ -199,14 +204,10 @@ NDuiADB = {
 			},
 		},
 	},
-	["RaidDebuffs"] = {
-	},
-	["DetectVersion"] = "1.0.1",
-	["DBMRequest"] = false,
 	["LockUIScale"] = true,
-	["ResetDetails"] = false,
+	["GuildSortBy"] = 1,
 	["Timestamp"] = true,
 	["RaidAuraWatch"] = {
 	},
-	["GuildSortOrder"] = true,
+	["DisableInfobars"] = false,
 }

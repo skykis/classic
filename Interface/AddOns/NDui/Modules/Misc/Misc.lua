@@ -37,7 +37,6 @@ function M:OnLogin()
 	self:MailBox()
 	self:ShowItemLevel()
 	self:QuestNotifier()
-	self:ExtendInstance()
 	self:UIWidgetFrameMover()
 	self:MoveDurabilityFrame()
 	self:MoveTicketStatusFrame()
@@ -46,6 +45,7 @@ function M:OnLogin()
 	self:UpdateErrorBlocker()
 	self:TradeTargetInfo()
 	self:MenuButton_Add()
+	self:AutoDismount()
 
 	-- Max camera distancee
 	if tonumber(GetCVar("cameraDistanceMaxZoomFactor")) ~= 2.6 then
@@ -77,34 +77,6 @@ function M:OnLogin()
 
 	-- Fix blizz error
 	MAIN_MENU_MICRO_ALERT_PRIORITY = MAIN_MENU_MICRO_ALERT_PRIORITY or {}
-end
-
--- Extend Instance
-function M:ExtendInstance()
-	local bu = CreateFrame("Button", nil, RaidInfoFrame)
-	bu:SetPoint("TOPRIGHT", -35, -5)
-	bu:SetSize(25, 25)
-	B.PixelIcon(bu, GetSpellTexture(80353), true)
-	B.AddTooltip(bu, "ANCHOR_RIGHT", L["Extend Instance"], "system")
-
-	bu:SetScript("OnMouseUp", function(_, btn)
-		for i = 1, GetNumSavedInstances() do
-			local _, _, _, _, _, extended, _, isRaid = GetSavedInstanceInfo(i)
-			if isRaid then
-				if btn == "LeftButton" then
-					if not extended then
-						SetSavedInstanceExtend(i, true)		-- extend
-					end
-				else
-					if extended then
-						SetSavedInstanceExtend(i, false)	-- cancel
-					end
-				end
-			end
-		end
-		RequestRaidInfo()
-		RaidInfoFrame_Update()
-	end)
 end
 
 -- Reanchor Vehicle
@@ -427,4 +399,31 @@ function M:MenuButton_Add()
 		["guild"] = gsub(CHAT_GUILD_INVITE_SEND, HEADER_COLON, ""),
 	}
 	hooksecurefunc("UnitPopup_ShowMenu", M.MenuButton_Show)
+end
+
+-- Auto dismount and auto stand
+function M:AutoDismount()
+	if not NDuiDB["Misc"]["AutoDismount"] then return end
+
+	local standString = {
+		[ERR_LOOT_NOTSTANDING] = true,
+		[SPELL_FAILED_NOT_STANDING] = true,
+	}
+
+	local dismountString = {
+		[ERR_ATTACK_MOUNTED] = true,
+		[ERR_NOT_WHILE_MOUNTED] = true,
+		[ERR_TAXIPLAYERALREADYMOUNTED] = true,
+		[SPELL_FAILED_NOT_MOUNTED] = true,
+	}
+
+	local function updateEvent(event, ...)
+		local _, msg = ...
+		if standString[msg] then
+			DoEmote("STAND")
+		elseif dismountString[msg] then
+			Dismount()
+		end
+	end
+	B:RegisterEvent("UI_ERROR_MESSAGE", updateEvent)
 end

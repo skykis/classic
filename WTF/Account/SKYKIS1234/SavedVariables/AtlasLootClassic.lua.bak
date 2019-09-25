@@ -7,7 +7,7 @@ AtlasLootClassicDB = {
 		["苍炎月影 - 黑曜石之锋"] = "苍炎月影 - 黑曜石之锋",
 	},
 	["global"] = {
-		["__addonrevision"] = 1010010,
+		["__addonrevision"] = 1010012,
 	},
 	["profiles"] = {
 		["苍炎胧影 - 德姆塞卡尔"] = {
@@ -21,8 +21,8 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"Scholomance", -- [2]
-					14, -- [3]
+					"ScarletMonasteryCathedral", -- [2]
+					4, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},

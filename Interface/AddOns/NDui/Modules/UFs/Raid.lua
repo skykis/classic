@@ -30,11 +30,6 @@ function UF:CreateRaidIcons(self)
 	role:SetSize(12, 12)
 	role:SetPoint("TOPLEFT", 12, 8)
 	self.RaidRoleIndicator = role
---[[
-	local summon = parent:CreateTexture(nil, "OVERLAY")
-	summon:SetSize(32, 32)
-	summon:SetPoint("CENTER", parent)
-	self.SummonIndicator = summon]]
 end
 
 function UF:UpdateTargetBorder()
@@ -80,19 +75,19 @@ end
 local debuffList = {}
 function UF:UpdateRaidDebuffs()
 	wipe(debuffList)
-	for instName, value in pairs(C.RaidDebuffs) do
-		for spell, priority in pairs(value) do
-			if not (NDuiADB["RaidDebuffs"][instName] and NDuiADB["RaidDebuffs"][instName][spell]) then
-				if not debuffList[instName] then debuffList[instName] = {} end
-				debuffList[instName][spell] = priority
+	for instType, value in pairs(C.RaidDebuffs) do
+		for spellID, priority in pairs(value) do
+			if not (NDuiADB["RaidDebuffs"][instType] and NDuiADB["RaidDebuffs"][instType][spellID]) then
+				if not debuffList[instType] then debuffList[instType] = {} end
+				debuffList[instType][spellID] = priority
 			end
 		end
 	end
-	for instName, value in pairs(NDuiADB["RaidDebuffs"]) do
-		for spell, priority in pairs(value) do
+	for instType, value in pairs(NDuiADB["RaidDebuffs"]) do
+		for spellID, priority in pairs(value) do
 			if priority > 0 then
-				if not debuffList[instName] then debuffList[instName] = {} end
-				debuffList[instName][spell] = priority
+				if not debuffList[instType] then debuffList[instType] = {} end
+				debuffList[instType][spellID] = priority
 			end
 		end
 	end
@@ -178,23 +173,9 @@ local keyList = {
 
 local defaultSpellList = {
 	["DRUID"] = {
-		[2] = 88423,		-- 驱散
 		[5] = 774,			-- 回春术
-		[6] = 33763,		-- 生命绽放
-	},
-	["HUNTER"] = {
-		[21] = 90361,		-- 灵魂治愈
-		[25] = 34477,		-- 误导
-	},
-	["ROGUE"] = {
-		[6] = 57934,		-- 嫁祸
-	},
-	["WARRIOR"] = {
-		[6] = 198304,		-- 拦截
 	},
 	["SHAMAN"] = {
-		[2] = 77130,		-- 驱散
-		[5] = 61295,		-- 激流
 		[6] = 546,			-- 水上行走
 	},
 	["PALADIN"] = {
@@ -207,16 +188,13 @@ local defaultSpellList = {
 		[5] = 17,			-- 真言术盾
 		[6] = 1706,			-- 漂浮术
 	},
-	["MONK"] = {
-		[2] = 115450,		-- 驱散
-		[5] = 119611,		-- 复苏之雾
-	},
 	["MAGE"] = {
 		[6] = 130,			-- 缓落
 	},
-	["DEMONHUNTER"] = {},
+	["ROGUE"] = {},
+	["HUNTER"] = {},
+	["WARRIOR"] = {},
 	["WARLOCK"] = {},
-	["DEATHKNIGHT"] = {},
 }
 
 function UF:DefaultClickSets()

@@ -64,23 +64,6 @@ function module:AddNewAuraWatch(class, list)
 	end
 end
 
-function module:AddDeprecatedGroup()
-	if DB.isClassic then return end
-	if not NDuiDB["AuraWatch"]["DeprecatedAuras"] then return end
-
-	for name, value in pairs(C.DeprecatedAuras) do
-		for _, list in pairs(AuraWatchList["ALL"]) do
-			if list.Name == name then
-				local newTable = newAuraFormat(value)
-				for spellID, v in pairs(newTable) do
-					list.List[spellID] = v
-				end
-			end
-		end
-	end
-	wipe(C.DeprecatedAuras)
-end
-
 -- RaidFrame spells
 local RaidBuffs = {}
 function module:AddClassSpells(list)
@@ -93,19 +76,14 @@ end
 
 -- RaidFrame debuffs
 local RaidDebuffs = {}
-function module:RegisterDebuff(_, instID, _, spellID, level)
-	--local instName = EJ_GetInstanceInfo(instID)
-	local instName = instID
-	if not instName then print("Invalid instance ID: "..instID) return end
-
-	if not RaidDebuffs[instName] then RaidDebuffs[instName] = {} end
-	if level then
-		if level > 6 then level = 6 end
-	else
-		level = 2
+function module:AddRaidDebuffs(list)
+	for instType, value in pairs(list) do
+		for spellID, prio in pairs(value) do
+			if not RaidDebuffs[instType] then RaidDebuffs[instType] = {} end
+			if prio > 6 then prio = 6 end
+			RaidDebuffs[instType][spellID] = prio
+		end
 	end
-
-	RaidDebuffs[instName][spellID] = level
 end
 
 function module:BuildNameListFromID()
@@ -124,20 +102,18 @@ function module:BuildNameListFromID()
 end
 
 function module:OnLogin()
-	for instName, value in pairs(RaidDebuffs) do
-		for spell, priority in pairs(value) do
-			if NDuiADB["RaidDebuffs"][instName] and NDuiADB["RaidDebuffs"][instName][spell] and NDuiADB["RaidDebuffs"][instName][spell] == priority then
-				NDuiADB["RaidDebuffs"][instName][spell] = nil
+	-- Cleanup data
+	if next(NDuiADB["RaidDebuffs"]) and not NDuiADB["RaidDebuffs"]["raid"] and not NDuiADB["RaidDebuffs"]["other"] then
+		wipe(NDuiADB["RaidDebuffs"])
+	end
+	for instType, value in pairs(RaidDebuffs) do
+		for spellID, prio in pairs(value) do
+			if NDuiADB["RaidDebuffs"][instType] and NDuiADB["RaidDebuffs"][instType][spellID] and NDuiADB["RaidDebuffs"][instType][spellID] == prio then
+				NDuiADB["RaidDebuffs"][instType][spellID] = nil
 			end
 		end
 	end
-	for instName, value in pairs(NDuiADB["RaidDebuffs"]) do
-		if not next(value) then
-			NDuiADB["RaidDebuffs"][instName] = nil
-		end
-	end
 
-	self:AddDeprecatedGroup()
 	C.AuraWatchList = AuraWatchList
 	C.RaidBuffs = RaidBuffs
 	C.RaidDebuffs = RaidDebuffs
@@ -147,15 +123,4 @@ function module:OnLogin()
 		B.CopyTable(C.CornerBuffs[DB.MyClass], NDuiADB["CornerBuffs"][DB.MyClass])
 	end
 	self:BuildNameListFromID()
-
-	--[[ Filter bloodlust for healers
-	local bloodlustList = {57723, 57724, 80354, 264689}
-	local function filterBloodlust()
-		for _, spellID in pairs(bloodlustList) do
-			NDuiADB["CornerBuffs"][DB.MyClass][spellID] = DB.Role ~= "Healer" and {"BOTTOMLEFT", {1, .8, 0}, true} or nil
-			C.RaidBuffs["WARNING"][spellID] = (DB.Role ~= "Healer")
-		end
-	end
-	filterBloodlust()
-	B:RegisterEvent("CHARACTER_POINTS_CHANGED", filterBloodlust)]]
 end

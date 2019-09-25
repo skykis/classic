@@ -6,7 +6,7 @@ NDuiADB = {
 	["NumberFormat"] = 1,
 	["SystemInfoType"] = 1,
 	["Changelog"] = {
-		["Version"] = "1.5.0",
+		["Version"] = "1.7.2",
 	},
 	["ChatFilterList"] = "%*",
 	["totalGold"] = {
@@ -18,7 +18,7 @@ NDuiADB = {
 		},
 		["德姆塞卡尔"] = {
 			["苍炎胧影"] = {
-				129303, -- [1]
+				646066, -- [1]
 				"WARRIOR", -- [2]
 			},
 			["苍炎月影"] = {
@@ -33,22 +33,20 @@ NDuiADB = {
 			},
 		},
 	},
+	["DisableInfobars"] = false,
 	["RepairType"] = 1,
 	["AutoBubbles"] = false,
 	["GuildSortOrder"] = true,
-	["SkadaRequest"] = true,
 	["Timestamp"] = true,
-	["ResetDetails"] = false,
 	["GuildSortBy"] = 1,
+	["TexStyle"] = 2,
+	["SkadaRequest"] = true,
 	["VersionCheck"] = true,
 	["NameplateFilter"] = {
 		{
 		}, -- [1]
 		{
 		}, -- [2]
-	},
-	["DetectVersion"] = "1.0.1",
-	["RaidDebuffs"] = {
 	},
 	["CornerBuffs"] = {
 		["PRIEST"] = {
@@ -202,9 +200,12 @@ NDuiADB = {
 			},
 		},
 	},
+	["RaidDebuffs"] = {
+	},
 	["DBMRequest"] = false,
+	["DetectVersion"] = "1.0.1",
 	["LockUIScale"] = true,
-	["TexStyle"] = 2,
+	["ResetDetails"] = false,
 	["BWRequest"] = true,
 	["RaidAuraWatch"] = {
 	},

@@ -70,6 +70,9 @@ function M:CreateItemString(frame, strType)
 	for index, slot in pairs(inspectSlots) do
 		if index ~= 4 then
 			local slotFrame = _G[strType..slot.."Slot"]
+			slotFrame.iLvlText = B.CreateFS(slotFrame, DB.Font[2]+1)
+			slotFrame.iLvlText:ClearAllPoints()
+			slotFrame.iLvlText:SetPoint("BOTTOMLEFT", slotFrame, 1, 1)
 			local relF, x, y = M:GetSlotAnchor(index)
 			slotFrame.enchantText = B.CreateFS(slotFrame, DB.Font[2]+1)
 			slotFrame.enchantText:ClearAllPoints()
@@ -103,10 +106,14 @@ function M:RefreshButtonInfo()
 		for index, slotFrame in pairs(pending) do
 			local link = GetInventoryItemLink(InspectFrame.unit, index)
 			if link then
-				local quality = select(3, GetItemInfo(link))
+				local quality, level = select(3, GetItemInfo(link))
 				if quality then
 					local color = BAG_ITEM_QUALITY_COLORS[quality]
 					M:ItemBorderSetColor(slotFrame, color.r, color.g, color.b)
+					if NDuiDB["Misc"]["ShowItemLevel"] and level and level > 1 and quality > 1 then
+						slotFrame.iLvlText:SetText(level)
+						slotFrame.iLvlText:SetTextColor(color.r, color.g, color.b)
+					end
 					pending[index] = nil
 				end
 			end
@@ -130,6 +137,7 @@ function M:ItemLevel_SetupLevel(frame, strType, unit)
 	for index, slot in pairs(inspectSlots) do
 		if index ~= 4 then
 			local slotFrame = _G[strType..slot.."Slot"]
+			slotFrame.iLvlText:SetText("")
 			slotFrame.enchantText:SetText("")
 			for i = 1, 5 do
 				local texture = slotFrame["textureIcon"..i]
@@ -142,28 +150,34 @@ function M:ItemLevel_SetupLevel(frame, strType, unit)
 			if itemTexture then
 				local link = GetInventoryItemLink(unit, index)
 				if link then
-					local quality = select(3, GetItemInfo(link))
+					local quality, level = select(3, GetItemInfo(link))
 					if quality then
 						local color = BAG_ITEM_QUALITY_COLORS[quality]
 						M:ItemBorderSetColor(slotFrame, color.r, color.g, color.b)
+						if NDuiDB["Misc"]["ShowItemLevel"] and level and level > 1 and quality > 1 then
+							slotFrame.iLvlText:SetText(level)
+							slotFrame.iLvlText:SetTextColor(color.r, color.g, color.b)
+						end
 					else
 						pending[index] = slotFrame
 						M.QualityUpdater:Show()
 					end
 
-					local _, enchant, gems = B.GetItemLevel(link, unit, index, NDuiDB["Misc"]["GemNEnchant"])
-					if enchant then
-						slotFrame.enchantText:SetText(enchant)
-					end
+					if NDuiDB["Misc"]["GemNEnchant"] then
+						local _, enchant, gems = B.GetItemLevel(link, unit, index, true)
+						if enchant then
+							slotFrame.enchantText:SetText(enchant)
+						end
 
-					for i = 1, 5 do
-						local texture = slotFrame["textureIcon"..i]
-						if gems and next(gems) then
-							local index, gem = next(gems)
-							texture:SetTexture(gem)
-							texture.bg:Show()
+						for i = 1, 5 do
+							local texture = slotFrame["textureIcon"..i]
+							if gems and next(gems) then
+								local index, gem = next(gems)
+								texture:SetTexture(gem)
+								texture.bg:Show()
 
-							gems[index] = nil
+								gems[index] = nil
+							end
 						end
 					end
 				else

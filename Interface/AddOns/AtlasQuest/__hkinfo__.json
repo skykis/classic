@@ -1,0 +1,14 @@
+{
+    "target": "curse",
+    "searchName": "AtlasQuest - Fan Update",
+    "localName": "AtlasQuest",
+    "version": "Classic 4.11.54",
+    "fileName": "atlas-quest-fan-update",
+    "addonsMap": [
+        "AtlasQuest"
+    ],
+    "interfaceMap": [],
+    "children": [],
+    "name": "AtlasQuest - Fan Update",
+    "gameVersion": "1.13.2"
+}

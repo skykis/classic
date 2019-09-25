@@ -136,7 +136,7 @@ local function CreateRaidStyle(self)
 	UF:CreatePrediction(self)
 	UF:CreateClickSets(self)
 	UF:CreateRaidDebuffs(self)
-	UF:CreateThreatBorder(self)
+	--UF:CreateThreatBorder(self)
 	UF:CreateAuras(self)
 	UF:CreateBuffIndicator(self)
 end
@@ -172,7 +172,6 @@ function UF:OnLogin()
 		self:CreateUnitTable()
 		self:CreatePowerUnitTable()
 		self:AddInterruptInfo()
-		--self:UpdateGroupRoles()
 		self:QuestIconCheck()
 
 		oUF:RegisterStyle("Nameplates", UF.CreatePlates)
@@ -185,6 +184,8 @@ function UF:OnLogin()
 		oUF:SetActiveStyle("PlayerPlate")
 		local plate = oUF:Spawn("player", "oUF_PlayerPlate", true)
 		B.Mover(plate, L["PlayerNP"], "PlayerPlate", C.UFs.PlayerPlate, plate:GetWidth(), 20)
+
+		UF:TogglePlayerPlateElements()
 	end
 
 	-- Default Clicksets for RaidFrame

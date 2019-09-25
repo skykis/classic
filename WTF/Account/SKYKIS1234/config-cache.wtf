@@ -7,7 +7,6 @@ SET flaggedTutorials "v##M##$##&##'##6##8##(##/##*##)##+##,##;##5##:##E##N##1##
 SET actionedAdventureJournalEntries "v"
 SET profanityFilter "0"
 SET removeChatDelay "1"
-SET guildShowOffline "0"
 SET wholeChatWindowClickable "0"
 SET showTimestamps "|cff7b8489[%H:%M:%S]|r "
 SET lockActionBars "1"

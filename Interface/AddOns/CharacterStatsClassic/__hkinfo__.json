@@ -2,5 +2,13 @@
     "target": "curse",
     "searchName": "CharacterStatsClassic",
     "localName": "CharacterStatsClassic",
-    "version": "1.0"
+    "version": "CharacterStatsClassic_1.9.1.zip",
+    "fileName": "characterstatsclassic",
+    "addonsMap": [
+        "CharacterStatsClassic"
+    ],
+    "interfaceMap": [],
+    "children": [],
+    "name": "CharacterStatsClassic",
+    "gameVersion": "1.13.2"
 }

@@ -8,10 +8,8 @@ local UnitThreatSituation, UnitIsTapDenied, UnitPlayerControlled, UnitIsUnit = U
 local UnitReaction, UnitIsConnected, UnitIsPlayer, UnitSelectionColor = UnitReaction, UnitIsConnected, UnitIsPlayer, UnitSelectionColor
 local GetInstanceInfo, UnitClassification, UnitExists, InCombatLockdown = GetInstanceInfo, UnitClassification, UnitExists, InCombatLockdown
 local C_NamePlate_GetNamePlates = C_NamePlate.GetNamePlates
-local UnitGUID, GetPlayerInfoByGUID, Ambiguate = UnitGUID, GetPlayerInfoByGUID, Ambiguate
+local UnitGUID, GetPlayerInfoByGUID, Ambiguate, UnitName = UnitGUID, GetPlayerInfoByGUID, Ambiguate, UnitName
 local SetCVar, UIFrameFadeIn, UIFrameFadeOut = SetCVar, UIFrameFadeIn, UIFrameFadeOut
-local IsInRaid, IsInGroup, UnitName = IsInRaid, IsInGroup, UnitName
-local GetNumGroupMembers, GetNumSubgroupMembers, UnitGroupRolesAssigned = GetNumGroupMembers, GetNumSubgroupMembers, UnitGroupRolesAssigned
 local UNKNOWN, INTERRUPTED = UNKNOWN, INTERRUPTED
 
 -- Init
@@ -44,6 +42,7 @@ function UF:UpdatePlateSpacing()
 end
 
 function UF:UpdateClickableSize()
+	if InCombatLockdown() then return end
 	C_NamePlate.SetNamePlateEnemySize(NDuiDB["Nameplate"]["PlateWidth"], NDuiDB["Nameplate"]["PlateHeight"]+40)
 	C_NamePlate.SetNamePlateFriendlySize(NDuiDB["Nameplate"]["PlateWidth"], NDuiDB["Nameplate"]["PlateHeight"]+40)
 end
@@ -107,62 +106,17 @@ function UF:UpdateUnitPower()
 	end
 end
 
--- Off-tank threat color
-local groupRoles, isInGroup = {}
-local function refreshGroupRoles()
-	local isInRaid = IsInRaid()
-	isInGroup = isInRaid or IsInGroup()
-	wipe(groupRoles)
-
-	if isInGroup then
-		local numPlayers = (isInRaid and GetNumGroupMembers()) or GetNumSubgroupMembers()
-		local unit = (isInRaid and "raid") or "party"
-		for i = 1, numPlayers do
-			local index = unit..i
-			if UnitExists(index) then
-				groupRoles[UnitName(index)] = UnitGroupRolesAssigned(index)
-			end
-		end
-	end
-end
-
-local function resetGroupRoles()
-	isInGroup = IsInRaid() or IsInGroup()
-	wipe(groupRoles)
-end
-
-function UF:UpdateGroupRoles()
-	refreshGroupRoles()
-	B:RegisterEvent("GROUP_ROSTER_UPDATE", refreshGroupRoles)
-	B:RegisterEvent("GROUP_LEFT", resetGroupRoles)
-end
-
-function UF:CheckTankStatus(unit)
-	local index = unit.."target"
-	local unitRole = isInGroup and UnitExists(index) and not UnitIsUnit(index, "player") and groupRoles[UnitName(index)] or "NONE"
-	if unitRole == "TANK" and DB.Role == "Tank" then
-		self.feedbackUnit = index
-		self.isOffTank = true
-	else
-		self.feedbackUnit = "player"
-		self.isOffTank = false
-	end
-end
-
 -- Update unit color
 function UF.UpdateColor(element, unit)
 	local self = element.__owner
 	local name = self.unitName
 	local npcID = self.npcID
 	local isCustomUnit = customUnits[name] or customUnits[npcID]
-	local status = false
+	local isPlayer = UnitIsPlayer(unit)
+	local isTargeting = UnitIsUnit(unit.."target", "player")
 	local reaction = UnitReaction(unit, "player")
 	local customColor = NDuiDB["Nameplate"]["CustomColor"]
 	local secureColor = NDuiDB["Nameplate"]["SecureColor"]
-	local transColor = NDuiDB["Nameplate"]["TransColor"]
-	local insecureColor = NDuiDB["Nameplate"]["InsecureColor"]
-	local revertThreat = NDuiDB["Nameplate"]["DPSRevertThreat"]
-	local offTankColor = NDuiDB["Nameplate"]["OffTankColor"]
 	local r, g, b
 
 	if not UnitIsConnected(unit) then
@@ -170,38 +124,20 @@ function UF.UpdateColor(element, unit)
 	else
 		if isCustomUnit then
 			r, g, b = customColor.r, customColor.g, customColor.b
-		elseif UnitIsPlayer(unit) and (reaction and reaction >= 5) then
+		elseif isPlayer and (reaction and reaction >= 5) then
 			if NDuiDB["Nameplate"]["FriendlyCC"] then
 				r, g, b = B.UnitColor(unit)
 			else
 				r, g, b = .3, .3, 1
 			end
-		elseif UnitIsPlayer(unit) and (reaction and reaction <= 4) and NDuiDB["Nameplate"]["HostileCC"] then
+		elseif isPlayer and (reaction and reaction <= 4) and NDuiDB["Nameplate"]["HostileCC"] then
 			r, g, b = B.UnitColor(unit)
 		elseif UnitIsTapDenied(unit) and not UnitPlayerControlled(unit) then
 			r, g, b = .6, .6, .6
 		else
 			r, g, b = UnitSelectionColor(unit, true)
-			if status and (NDuiDB["Nameplate"]["TankMode"] or DB.Role == "Tank") then
-				if status == 3 then
-					if DB.Role ~= "Tank" and revertThreat then
-						r, g, b = insecureColor.r, insecureColor.g, insecureColor.b
-					else
-						if self.isOffTank then
-							r, g, b = offTankColor.r, offTankColor.g, offTankColor.b
-						else
-							r, g, b = secureColor.r, secureColor.g, secureColor.b
-						end
-					end
-				elseif status == 2 or status == 1 then
-					r, g, b = transColor.r, transColor.g, transColor.b
-				elseif status == 0 then
-					if DB.Role ~= "Tank" and revertThreat then
-						r, g, b = secureColor.r, secureColor.g, secureColor.b
-					else
-						r, g, b = insecureColor.r, insecureColor.g, insecureColor.b
-					end
-				end
+			if NDuiDB["Nameplate"]["TankMode"] and isTargeting then
+				r, g, b = secureColor.r, secureColor.g, secureColor.b
 			end
 		end
 	end
@@ -210,14 +146,8 @@ function UF.UpdateColor(element, unit)
 		element:SetStatusBarColor(r, g, b)
 	end
 
-	if not NDuiDB["Nameplate"]["TankMode"] and DB.Role ~= "Tank" then
-		if status and status == 3 then
-			element.Shadow:SetBackdropBorderColor(1, 0, 0)
-		elseif status and (status == 2 or status == 1) then
-			element.Shadow:SetBackdropBorderColor(1, 1, 0)
-		else
-			element.Shadow:SetBackdropBorderColor(0, 0, 0)
-		end
+	if not NDuiDB["Nameplate"]["TankMode"] and not isPlayer and isTargeting then
+		element.Shadow:SetBackdropBorderColor(1, 0, 0)
 	else
 		element.Shadow:SetBackdropBorderColor(0, 0, 0)
 	end
@@ -226,7 +156,6 @@ end
 function UF:UpdateThreatColor(_, unit)
 	if unit ~= self.unit then return end
 
-	--UF.CheckTankStatus(self, unit)
 	UF.UpdateColor(self.Health, unit)
 end
 
@@ -624,7 +553,7 @@ function UF:CreatePlates()
 	UF:CreateRaidMark(self)
 	UF:CreatePrediction(self)
 	UF:CreateAuras(self)
-	UF:CreateThreatColor(self)
+	--UF:CreateThreatColor(self)
 
 	self.powerText = B.CreateFS(self, 15)
 	self.powerText:ClearAllPoints()
@@ -667,7 +596,11 @@ function UF:UpdateTargetClassPower()
 		UF:UpdateClassPowerAnchor()
 	else
 		isTargetClassPower = false
-		bar:SetParent(playerPlate.Health)
+		if NDuiDB["Nameplate"]["ClassPowerOnly"] then
+			bar:SetParent(UIParent)
+		else
+			bar:SetParent(playerPlate.Health)
+		end
 		bar:SetScale(1)
 		bar:ClearAllPoints()
 		bar:SetPoint("BOTTOMLEFT", playerPlate.Health, "TOPLEFT", 0, 3)
@@ -680,6 +613,7 @@ function UF:RefreshAllPlates()
 		nameplate:SetSize(NDuiDB["Nameplate"]["PlateWidth"], NDuiDB["Nameplate"]["PlateHeight"])
 		nameplate.nameText:SetFont(DB.Font[1], NDuiDB["Nameplate"]["NameTextSize"], DB.Font[3])
 		nameplate.healthValue:SetFont(DB.Font[1], NDuiDB["Nameplate"]["HealthTextSize"], DB.Font[3])
+		nameplate.healthValue:UpdateTag()
 		nameplate.Auras.showDebuffType = NDuiDB["Nameplate"]["ColorBorder"]
 		UF:UpdateClickableSize()
 		UF:UpdateTargetIndicator(nameplate)
@@ -741,6 +675,16 @@ function UF:ResizePlayerPlate()
 	end
 end
 
+function UF:TogglePlayerPlateElements()
+	if not NDuiDB["Nameplate"]["ClassPowerOnly"] then return end
+
+	local plate = _G.oUF_PlayerPlate
+	if plate then
+		plate:DisableElement("Health")
+		plate:DisableElement("Power")
+	end
+end
+
 function UF:CreatePlayerPlate()
 	self.mystyle = "PlayerPlate"
 	local iconSize, margin = NDuiDB["Nameplate"]["PPIconSize"], 2
@@ -763,7 +707,7 @@ function UF:CreatePlayerPlate()
 
 	UF:UpdateTargetClassPower()
 
-	if NDuiDB["Nameplate"]["PPHideOOC"] then
+	if NDuiDB["Nameplate"]["PPHideOOC"] and not NDuiDB["Nameplate"]["ClassPowerOnly"] then
 		self:RegisterEvent("PLAYER_REGEN_ENABLED", UF.PlateVisibility, true)
 		self:RegisterEvent("PLAYER_REGEN_DISABLED", UF.PlateVisibility, true)
 		self:RegisterEvent("PLAYER_ENTERING_WORLD", UF.PlateVisibility, true)

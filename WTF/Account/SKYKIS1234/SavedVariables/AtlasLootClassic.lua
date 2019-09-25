@@ -1,7 +1,7 @@
 
 AtlasLootClassicDB = {
 	["global"] = {
-		["__addonrevision"] = 1010010,
+		["__addonrevision"] = 1010012,
 	},
 	["profileKeys"] = {
 		["苍炎胧影 - 德姆塞卡尔"] = "苍炎胧影 - 德姆塞卡尔",
@@ -21,8 +21,8 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"Scholomance", -- [2]
-					14, -- [3]
+					"RazorfenDowns", -- [2]
+					7, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},

@@ -40,14 +40,15 @@ local defaultSettings = {
 		BagsWidth = 12,
 		BankWidth = 14,
 		BagsiLvl = true,
-		Artifact = true,
 		ReverseSort = false,
 		ItemFilter = true,
 		ItemSetFilter = false,
 		DeleteButton = true,
+		FavouriteItems = {},
+		GatherEmpty = false,
 	},
 	Auras = {
-		Reminder = false,
+		Reminder = true,
 		Totems = false,
 		DestroyTotems = true,
 		ClassAuras = false,
@@ -62,7 +63,7 @@ local defaultSettings = {
 		Enable = true,
 		ClickThrough = false,
 		IconScale = 1,
-		DeprecatedAuras = false,
+		WatchSpellRank = true,
 	},
 	UFs = {
 		Enable = true,
@@ -131,7 +132,7 @@ local defaultSettings = {
 		BlockAddonAlert = true,
 		ChatMenu = true,
 		WhisperColor = true,
-		--ChatItemLevel = true,
+		ChatItemLevel = true,
 		Chatbar = true,
 		ChatWidth = 380,
 		ChatHeight = 190,
@@ -153,7 +154,7 @@ local defaultSettings = {
 		AuraSize = 22,
 		FriendlyCC = false,
 		HostileCC = true,
-		--TankMode = false,
+		TankMode = false,
 		TargetIndicator = 5,
 		InsideView = true,
 		Distance = 42,
@@ -169,7 +170,7 @@ local defaultSettings = {
 		PPPHeight = 5,
 		PPPowerText = false,
 		FullHealth = false,
-		--SecureColor = {r=1, g=0, b=1},
+		SecureColor = {r=1, g=0, b=1},
 		--TransColor = {r=1, g=.8, b=0},
 		--InsecureColor = {r=1, g=0, b=0},
 		--OffTankColor = {r=.2, g=.7, b=.5},
@@ -177,13 +178,13 @@ local defaultSettings = {
 		PPIconSize = 32,
 		PPHideOOC = true,
 		NameplateClassPower = false,
-		MaxPowerGlow = false,
 		NameTextSize = 10,
 		HealthTextSize = 12,
 		MinScale = 1,
 		MinAlpha = 1,
 		ColorBorder = false,
 		QuestIndicator = true,
+		ClassPowerOnly = false,
 	},
 	Skins = {
 		DBM = true,
@@ -202,7 +203,6 @@ local defaultSettings = {
 		MenuLine = true,
 		ClassLine = true,
 		Details = true,
-		PGFSkin = true,
 		QuestLogEx = true,
 		QuestTracker = true,
 	},
@@ -223,6 +223,7 @@ local defaultSettings = {
 		Mail = true,
 		ItemLevel = true,
 		GemNEnchant = true,
+		ShowItemLevel = true,
 		HideErrors = true,
 		ExpRep = true,
 		Interrupt = false,
@@ -237,6 +238,7 @@ local defaultSettings = {
 		ExplosiveCache = {},
 		PlacedItemAlert = false,
 		EnhancedMenu = false,
+		AutoDismount = true,
 	},
 	Tutorial = {
 		Complete = false,
@@ -268,7 +270,8 @@ local accountSettings = {
 	TexStyle = 2,
 	KeystoneInfo = {},
 	AutoBubbles = false,
-	SystemInfoType = 1,
+	SystemInfoType = 0,
+	DisableInfobars = false,
 }
 
 -- Initial settings
@@ -446,19 +449,8 @@ local function updateErrorBlocker()
 	B:GetModule("Misc"):UpdateErrorBlocker()
 end
 
-local function questIndicatorTooltip(self)
-	if self.created then return end
-
-	self:HookScript("OnEnter", function()
-		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-		GameTooltip:ClearLines()
-		GameTooltip:AddLine(L["QuestIndicatorAddOns"], 1,.8,0, 1)
-		GameTooltip:Show()
-	end)
-	self:HookScript("OnLeave", B.HideTooltip)
-	self:GetScript("OnEnter")()
-
-	self.created = true
+local function updateReminder()
+	B:GetModule("Auras"):InitReminder()
 end
 
 -- Config
@@ -501,9 +493,10 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{1, "Bags", "ItemFilter", L["Bags ItemFilter"]},
 		{1, "Bags", "ItemSetFilter", L["Use ItemSetFilter"], true},
 		{},--blank
-		{1, "Bags", "DeleteButton", L["Bags DeleteButton"]},
-		{1, "Bags", "Artifact", L["Bags Artifact"], true},
-		{1, "Bags", "ReverseSort", L["Bags ReverseSort"].."*", true, nil, updateBagSortOrder},
+		{1, "Bags", "BagsiLvl", L["Bags Itemlevel"]},
+		{1, "Bags", "DeleteButton", L["Bags DeleteButton"], true},
+		{1, "Bags", "ReverseSort", L["Bags ReverseSort"].."*", nil, nil, updateBagSortOrder},
+		{1, "Bags", "GatherEmpty", "|cff00cc4c"..L["Bags GatherEmpty"], true},
 		{},--blank
 		{3, "Bags", "BagsScale", L["Bags Scale"], false, {.5, 1.5, 1}},
 		{3, "Bags", "IconSize", L["Bags IconSize"], true, {30, 42, 0}},
@@ -569,18 +562,18 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{1, "Nameplate", "FriendlyCC", L["Friendly CC"].."*"},
 		{1, "Nameplate", "HostileCC", L["Hostile CC"].."*"},
 		{4, "Nameplate", "TargetIndicator", L["TargetIndicator"].."*", true, {DISABLE, L["TopArrow"], L["RightArrow"], L["TargetGlow"], L["TopNGlow"], L["RightNGlow"]}, refreshNameplates},
-		{1, "Nameplate", "FullHealth", L["Show FullHealth"].."*"},
+		{1, "Nameplate", "FullHealth", L["Show FullHealth"].."*", nil, nil, refreshNameplates},
 		{1, "Nameplate", "ColorBorder", L["ColorBorder"].."*", true, nil, refreshNameplates},
 		{1, "Nameplate", "InsideView", L["Nameplate InsideView"].."*", nil, nil, updatePlateInsideView},
-		{1, "Nameplate", "QuestIndicator", L["QuestIndicator"], true, questIndicatorTooltip},
+		{1, "Nameplate", "QuestIndicator", L["QuestIndicator"], true, nil, nil, L["QuestIndicatorAddOns"]},
 		{},--blank
 		{1, "Nameplate", "CustomUnitColor", "|cff00cc4c"..L["CustomUnitColor"].."*", nil, nil, updateCustomUnitList},
 		{5, "Nameplate", "CustomColor", L["Custom Color"].."*", 2},
 		{2, "Nameplate", "UnitList", L["UnitColor List"].."*", nil, nil, updateCustomUnitList},
 		{2, "Nameplate", "ShowPowerList", L["ShowPowerList"].."*", true, nil, updatePowerUnitList},
-		--{1, "Nameplate", "TankMode", "|cff00cc4c"..L["Tank Mode"].."*"},
+		{1, "Nameplate", "TankMode", "|cff00cc4c"..L["Tank Mode"].."*"},
+		{5, "Nameplate", "SecureColor", L["Secure Color"].."*", 2},
 		--{1, "Nameplate", "DPSRevertThreat", L["DPS Revert Threat"].."*", true},
-		--{5, "Nameplate", "SecureColor", L["Secure Color"].."*"},
 		--{5, "Nameplate", "TransColor", L["Trans Color"].."*", 1},
 		--{5, "Nameplate", "InsecureColor", L["Insecure Color"].."*", 2},
 		--{5, "Nameplate", "OffTankColor", L["OffTank Color"].."*", 3},
@@ -598,19 +591,21 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 	},
 	[6] = {
 		{1, "AuraWatch", "Enable", "|cff00cc4c"..L["Enable AuraWatch"], nil, setupAuraWatch},
-		--{1, "AuraWatch", "DeprecatedAuras", L["DeprecatedAuras"]},
+		{1, "AuraWatch", "WatchSpellRank", L["AuraWatch WatchSpellRank"]},
 		{1, "AuraWatch", "ClickThrough", L["AuraWatch ClickThrough"]},
 		{3, "AuraWatch", "IconScale", L["AuraWatch IconScale"], true, {.8, 2, 1}},
 		{},--blank
 		{1, "Nameplate", "ShowPlayerPlate", "|cff00cc4c"..L["Enable PlayerPlate"]},
 		--{1, "Auras", "ClassAuras", L["Enable ClassAuras"], true},
-		--{1, "Nameplate", "MaxPowerGlow", L["MaxPowerGlow"]},
-		{1, "Nameplate", "NameplateClassPower", L["Nameplate ClassPower"], true},
+		{1, "Nameplate", "NameplateClassPower", L["Nameplate ClassPower"]},
+		{1, "Nameplate", "ClassPowerOnly", L["Nameplate ClassPowerOnly"], true},
 		{1, "Nameplate", "PPPowerText", L["PlayerPlate PowerText"]},
 		{1, "Nameplate", "PPHideOOC", L["Fadeout OOC"], true},
 		--{3, "Nameplate", "PPIconSize", L["PlayerPlate IconSize"], true, {30, 60, 0}},
 		{3, "Nameplate", "PPHeight", L["PlayerPlate HPHeight"].."*", false, {5, 15, 0}, updatePlayerPlate},
 		{3, "Nameplate", "PPPHeight", L["PlayerPlate MPHeight"].."*", true, {5, 15, 0}, updatePlayerPlate},
+		{},--blank
+		{1, "Auras", "Reminder", L["Enable Reminder"].."*", nil, nil, updateReminder},
 		{},--blank
 		{1, "Auras", "ReverseBuffs", L["ReverseBuffs"]},
 		{1, "Auras", "ReverseDebuffs", L["ReverseDebuffs"], true},
@@ -618,9 +613,7 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{3, "Auras", "DebuffSize", L["DebuffSize"], true, {24, 40, 0}},
 		{3, "Auras", "BuffsPerRow", L["BuffsPerRow"], nil, {10, 20, 0}},
 		{3, "Auras", "DebuffsPerRow", L["DebuffsPerRow"], true, {10, 16, 0}},
-		--{},--blank
 		--{1, "Auras", "Totems", L["Enable Totems"]},
-		--{1, "Auras", "Reminder", L["Enable Reminder"], true},
 	},
 	[7] = {
 		{1, "Skins", "RM", "|cff00cc4c"..L["Raid Manger"]},
@@ -650,7 +643,7 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{1, "Chat", "WhisperColor", L["Differ WhipserColor"].."*", true},
 		{1, "Chat", "Freedom", L["Language Filter"]},
 		{1, "Chat", "Chatbar", L["ShowChatbar"], true},
-		--{1, "Chat", "ChatItemLevel", "|cff00cc4c"..L["ShowChatItemLevel"]},
+		{1, "Chat", "ChatItemLevel", "|cff00cc4c"..L["ShowChatItemLevel"]},
 		{},--blank
 		{1, "Chat", "EnableFilter", "|cff00cc4c"..L["Enable Chatfilter"]},
 		{1, "Chat", "BlockAddonAlert", L["Block Addon Alert"], true},
@@ -690,8 +683,7 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{1, "Skins", "TMW", L["TMW Skin"], true},
 		{1, "Skins", "WeakAuras", L["WeakAuras Skin"]},
 		{1, "Skins", "Details", L["Details Skin"], true},
-		{1, "Skins", "PGFSkin", L["PGF Skin"]},
-		{1, "Skins", "QuestLogEx", L["QuestLogEx Skin"], true},
+		{1, "Skins", "QuestLogEx", L["QuestLogEx Skin"], nil, nil, nil, L["ExtendedQuestLogAddons"]},
 	},
 	[11] = {
 		{1, "Tooltip", "CombatHide", L["Hide Tooltip"].."*"},
@@ -710,15 +702,18 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 	[12] = {
 		{1, "Misc", "ItemLevel", "|cff00cc4c"..L["Show ItemLevel"]},
 		{1, "Misc", "GemNEnchant", L["Show GemNEnchant"].."*", true},
+		{1, "Misc", "ShowItemLevel", L["Show ItemLevel"].."*"},
 		{},--blank
 		{1, "Misc", "Mail", L["Mail Tool"]},
 		{1, "ACCOUNT", "AutoBubbles", L["AutoBubbles"], true},
 		{1, "Misc", "FasterLoot", L["Faster Loot"].."*", nil, nil, updateFasterLoot},
 		{1, "Misc", "HideErrors", L["Hide Error"].."*", true, nil, updateErrorBlocker},
-		{1, "Misc", "EnhancedMenu", L["TargetEnhancedMenu"]},
+		{1, "Misc", "EnhancedMenu", L["TargetEnhancedMenu"], nil, nil, nil, L["MenuEnhancedTaints"]},
+		{1, "Misc", "AutoDismount", L["AutoDismount"], true},
 	},
 	[13] = {
 		{1, "ACCOUNT", "VersionCheck", L["Version Check"]},
+		{1, "ACCOUNT", "DisableInfobars", L["DisableInfobars"]},
 		{},--blank
 		{3, "ACCOUNT", "UIScale", L["Setup UIScale"], false, {.4, 1.15, 2}},
 		{1, "ACCOUNT", "LockUIScale", "|cff00cc4c"..L["Lock UIScale"], true},
@@ -786,19 +781,11 @@ local function NDUI_VARIABLE(key, value, newValue)
 	end
 end
 
-local function editBoxOnEnter(self)
-	GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-	GameTooltip:ClearLines()
-	GameTooltip:AddLine(L["Tips"])
-	GameTooltip:AddLine(L["EdieBox Tip"], .6,.8,1)
-	GameTooltip:Show()
-end
-
 local function CreateOption(i)
 	local parent, offset = guiPage[i].child, 20
 
 	for _, option in pairs(optionList[i]) do
-		local optType, key, value, name, horizon, data, callback = unpack(option)
+		local optType, key, value, name, horizon, data, callback, tooltip = unpack(option)
 		-- Checkboxes
 		if optType == 1 then
 			local cb = B.CreateCheckBox(parent)
@@ -820,6 +807,10 @@ local function CreateOption(i)
 				bu:SetPoint("LEFT", cb.name, "RIGHT", -2, 1)
 				bu:SetScript("OnClick", data)
 			end
+			if tooltip then
+				cb.title = L["Tips"]
+				B.AddTooltip(cb, "ANCHOR_RIGHT", tooltip, "info")
+			end
 		-- Editbox
 		elseif optType == 2 then
 			local eb = B.CreateEditBox(parent, 200, 28)
@@ -838,8 +829,8 @@ local function CreateOption(i)
 				NDUI_VARIABLE(key, value, eb:GetText())
 				if callback then callback() end
 			end)
-			eb:SetScript("OnEnter", editBoxOnEnter)
-			eb:SetScript("OnLeave", B.HideTooltip)
+			eb.title = L["Tips"]
+			B.AddTooltip(eb, "ANCHOR_RIGHT", L["EdieBox Tip"], "info")
 
 			B.CreateFS(eb, 14, name, "system", "CENTER", 0, 25)
 		-- Slider
@@ -974,6 +965,11 @@ local function exportData()
 						for _, v in ipairs(value) do
 							text = text..":"..tostring(v)
 						end
+					elseif key == "FavouriteItems" then
+						text = text..";"..KEY..":"..key
+						for itemID in pairs(value) do
+							text = text..":"..tostring(itemID)
+						end
 					end
 				else
 					if NDuiDB[KEY][key] ~= defaultSettings[KEY][key] then
@@ -1065,6 +1061,11 @@ local function importData()
 				flash = toBoolean(flash)
 				if not NDuiDB[key][value] then NDuiDB[key][value] = {} end
 				NDuiDB[key][value][arg1] = {idType, spellID, unit, caster, stack, amount, timeless, combat, text, flash}
+			end
+		elseif value == "FavouriteItems" then
+			local items = {select(3, strsplit(":", option))}
+			for _, itemID in next, items do
+				NDuiDB[key][value][tonumber(itemID)] = true
 			end
 		elseif key == "Mover" then
 			local relFrom, parent, relTo, x, y = select(3, strsplit(":", option))

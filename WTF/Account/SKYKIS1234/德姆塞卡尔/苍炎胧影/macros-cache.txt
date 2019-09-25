@@ -1,8 +1,15 @@
+VER 3 0000000001000009 "AOE" "INV_MISC_QUESTIONMARK"
+#showtooltip 横扫攻击
+/cast 横扫攻击;
+/cast [modifier:shift;nostance:3]狂暴姿态;
+/cast 旋风斩;
+END
 VER 3 0000000001000002 "冲锋" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /dismount [mounted]
 /startattack
 /cast [stance:1,nocombat]冲锋; [stance:1,combat]防御姿态;[stance:2,nocombat]战斗姿态;[stance:2,combat]狂暴姿态;[stance:3,combat]拦截;[stance:3,nocombat]战斗姿态;
+/startattack
 END
 VER 3 0000000001000003 "嘲讽" "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -14,7 +21,12 @@ END
 VER 3 0000000001000005 "战斗" "INV_MISC_QUESTIONMARK"
 #showtooltip 战斗姿态
 /cast [stance:2]战斗姿态;[stance:3]战斗姿态
-/equip 阿契厄斯
+/equip 旋风之斧
+END
+VER 3 000000000100000A "拳击" "INV_MISC_QUESTIONMARK"
+#showtooltip 拳击
+/cast [nostance:3]狂暴姿态;
+/cast 拳击;
 END
 VER 3 0000000001000001 "攻击" "132282"
 #showtooltip
@@ -24,7 +36,7 @@ END
 VER 3 0000000001000006 "狂暴" "INV_MISC_QUESTIONMARK"
 #showtooltip 狂暴姿态
 /cast [stance:1]狂暴姿态;[stance:2]狂暴姿态;
-/equip 阿契厄斯
+/equip 旋风之斧
 END
 VER 3 0000000001000008 "狂暴之怒" "INV_MISC_QUESTIONMARK"
 #showtooltip 狂暴之怒
@@ -33,14 +45,14 @@ VER 3 0000000001000008 "狂暴之怒" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0000000001000007 "盾墙" "INV_MISC_QUESTIONMARK"
 #showtooltip 盾墙
-/cast [stance:1]防御姿态;[stance:3]防御姿态;
-/equipslot 16 削木短斧
+/cast [nostance:2]防御姿态;
+/equipslot 16 平静之剑
 /equipslot 17 石饰圆盾
 /cast 盾墙
 END
 VER 3 0000000001000004 "防御" "INV_MISC_QUESTIONMARK"
 #showtooltip 防御姿态
 /cast [stance:1]防御姿态;[stance:3]防御姿态;
-/equipslot 16 削木短斧
+/equipslot 16 平静之剑
 /equipslot 17 石饰圆盾
 END

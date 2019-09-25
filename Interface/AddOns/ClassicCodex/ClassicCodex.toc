@@ -4,8 +4,8 @@
 ## Title: ClassicCodex
 ## Notes: ClassicCodex
 ## Author: Pgarneau, Shagu
-## Version: 1.2.1
-## SavedVariablesPerCharacter: CodexConfig, CodexHistory, CodexBrowserFavorites, CodexColors
+## Version: 1.2.2
+## SavedVariablesPerCharacter: CodexConfig, CodexHiddenQuests, CodexBrowserFavorites, CodexColors
 
 # database index
 db\init.lua
@@ -55,6 +55,14 @@ db\zhCN\objects.lua
 db\zhCN\quests.lua
 db\zhCN\zones.lua
 db\zhCN\professions.lua
+
+# database zhTW
+db\zhTW\items.lua
+db\zhTW\units.lua
+db\zhTW\objects.lua
+db\zhTW\quests.lua
+db\zhTW\zones.lua
+db\zhTW\professions.lua
 
 # database esES
 db\esES\items.lua

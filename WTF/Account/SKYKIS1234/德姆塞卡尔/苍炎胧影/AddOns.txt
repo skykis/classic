@@ -17,7 +17,7 @@ AtlasLootClassic_Crafting: enabled
 AtlasLootClassic_DungeonsAndRaids: enabled
 AtlasLootClassic_Factions: enabled
 AtlasLootClassic_PvP: enabled
-CensusPlusClassic: enabled
+CensusPlusClassic: disabled
 ClassicCodex: enabled
 Details: enabled
 Details_TinyThreat: enabled
