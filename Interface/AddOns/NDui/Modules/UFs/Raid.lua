@@ -174,22 +174,28 @@ local keyList = {
 local defaultSpellList = {
 	["DRUID"] = {
 		[5] = 774,			-- 回春术
+		[6] = 8936,			-- 愈合
+		[9] = 20484,		-- 复生
 	},
 	["SHAMAN"] = {
-		[6] = 546,			-- 水上行走
+		[2] = 526,			-- 消毒术
+		[9] = 2008,			-- 先祖之魂
 	},
 	["PALADIN"] = {
-		[2] = 4987,			-- 驱散
+		[2] = 4987,			-- 清洁术
 		[5] = 20473,		-- 神圣震击
 		[6] = 1022,			-- 保护祝福
+		[9] = 10322,		-- 救赎
 	},
 	["PRIEST"] = {
-		[2] = 527,			-- 驱散
+		[2] = 527,			-- 驱散魔法
 		[5] = 17,			-- 真言术盾
-		[6] = 1706,			-- 漂浮术
+		[6] = 139,			-- 恢复
+		[9] = 2006,			-- 复活术
 	},
 	["MAGE"] = {
-		[6] = 130,			-- 缓落
+		[2] = 475,			-- 解除诅咒
+		[6] = 1460,			-- 奥术智慧
 	},
 	["ROGUE"] = {},
 	["HUNTER"] = {},
@@ -233,8 +239,8 @@ local function setupMouseWheelCast(self)
 	end
 
 	if found then
-		self:SetAttribute("clickcast_onenter", onEnterString)
-		self:SetAttribute("clickcast_onleave", onLeaveString)
+		self:SetAttribute("_onenter", onEnterString)
+		self:SetAttribute("_onleave", onLeaveString)
 		self:SetAttribute("_onshow", onLeaveString)
 		self:SetAttribute("_onhide", onLeaveString)
 	end

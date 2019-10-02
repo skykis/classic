@@ -60,7 +60,7 @@ local defaultSettings = {
 		DebuffsPerRow = 16,
 	},
 	AuraWatch = {
-		Enable = true,
+		Enable = false,
 		ClickThrough = false,
 		IconScale = 1,
 		WatchSpellRank = true,
@@ -70,12 +70,10 @@ local defaultSettings = {
 		Portrait = true,
 		PlayerDebuff = false,
 		ToTAuras = false,
-		Arena = true,
 		Castbars = true,
 		SwingBar = false,
 		SwingTimer = false,
 		RaidFrame = true,
-		AutoRes = true,
 		NumGroups = 6,
 		SimpleMode = false,
 		SimpleModeSortByRole = true,
@@ -101,13 +99,13 @@ local defaultSettings = {
 		LagString = true,
 		RaidBuffIndicator = true,
 		PartyFrame = true,
-		PartyWatcher = true,
 		PWOnRight = false,
 		PartyWidth = 100,
 		PartyHeight = 32,
 		HealthColor = 1,
 		BuffIndicatorType = 1,
 		BI_IconSize = 10,
+		EnergyTicker = true,
 
 		PlayerWidth = 245,
 		PlayerHeight = 24,
@@ -146,7 +144,7 @@ local defaultSettings = {
 		ShowRecycleBin = true,
 		WhoPings = true,
 		MapReveal = true,
-		MapFader = false,
+		MapFader = true,
 	},
 	Nameplate = {
 		Enable = true,
@@ -218,6 +216,7 @@ local defaultSettings = {
 		HideRealm = false,
 		HideTitle = false,
 		HideJunkGuild = true,
+		HideAllID = false,
 	},
 	Misc = {
 		Mail = true,
@@ -247,6 +246,7 @@ local defaultSettings = {
 
 local accountSettings = {
 	ChatFilterList = "%*",
+	ChatFilterWhiteList = "",
 	Timestamp = true,
 	NameplateFilter = {[1]={}, [2]={}},
 	RaidDebuffs = {},
@@ -375,6 +375,10 @@ end
 
 local function updateFilterList()
 	B:GetModule("Chat"):UpdateFilterList()
+end
+
+local function updateFilterWhiteList()
+	B:GetModule("Chat"):UpdateFilterWhiteList()
 end
 
 local function updateChatSize()
@@ -513,10 +517,10 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{},--blank
 		{1, "UFs", "Portrait", L["UFs Portrait"]},
 		{1, "UFs", "ClassPower", L["UFs ClassPower"], true},
-		--{1, "UFs", "Arena", L["Arena Frame"]},
 		{1, "UFs", "PlayerDebuff", L["Player Debuff"]},
-		{1, "UFs", "ToTAuras", L["ToT Debuff"], false},
+		{1, "UFs", "ToTAuras", L["ToT Debuff"]},
 		{4, "UFs", "HealthColor", L["HealthColor"], true, {L["Default Dark"], L["ClassColorHP"], L["GradientHP"]}},
+		{1, "UFs", "EnergyTicker", L["EnergyTicker"]},
 		{},--blank
 		{1, "UFs", "CombatText", "|cff00cc4c"..L["UFs CombatText"]},
 		{1, "UFs", "AutoAttack", L["CombatText AutoAttack"]},
@@ -529,18 +533,15 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{},--blank
 		{1, "UFs", "PartyFrame", "|cff00cc4c"..L["UFs PartyFrame"]},
 		{1, "UFs", "HorizonParty", L["Horizon PartyFrame"], true},
-		{1, "UFs", "PartyWatcher", L["UFs PartyWatcher"]},
-		{1, "UFs", "PWOnRight", L["PartyWatcherOnRight"], true},
 		{3, "UFs", "PartyWidth", L["PartyFrame Width"].."*(100)", false, {60, 200, 0}, updatePartySize},
 		{3, "UFs", "PartyHeight", L["PartyFrame Height"].."*(32)", true, {25, 60, 0}, updatePartySize},
 		{},--blank
 		{1, "UFs", "RaidBuffIndicator", "|cff00cc4c"..L["RaidBuffIndicator"], nil, setupBuffIndicator},
+		{1, "UFs", "RaidClickSets", "|cff00cc4c"..L["Enable ClickSets"], true, setupClickCast},
 		{3, "UFs", "BI_IconSize", L["BI_IconSize"], nil, {10, 18, 0}},
 		{4, "UFs", "BuffIndicatorType", L["BuffIndicatorType"], true, {L["BI_Blocks"], L["BI_Icons"], L["BI_Numbers"]}},
 		{1, "UFs", "InstanceAuras", "|cff00cc4c"..L["Instance Auras"], nil, setupRaidDebuffs},
-		{1, "UFs", "RaidClickSets", "|cff00cc4c"..L["Enable ClickSets"], true, setupClickCast},
-		{1, "UFs", "AurasClickThrough", L["RaidAuras ClickThrough"]},
-		{1, "UFs", "AutoRes", L["UFs AutoRes"], true},
+		{1, "UFs", "AurasClickThrough", L["RaidAuras ClickThrough"], true},
 		{},--blank
 		{1, "UFs", "ShowTeamIndex", L["RaidFrame TeamIndex"]},
 		{1, "UFs", "RaidClassColor", L["ClassColor RaidFrame"], true},
@@ -646,9 +647,10 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{1, "Chat", "ChatItemLevel", "|cff00cc4c"..L["ShowChatItemLevel"]},
 		{},--blank
 		{1, "Chat", "EnableFilter", "|cff00cc4c"..L["Enable Chatfilter"]},
-		{1, "Chat", "BlockAddonAlert", L["Block Addon Alert"], true},
-		{3, "Chat", "Matches", L["Keyword Match"].."*", false, {1, 3, 0}},
-		{2, "ACCOUNT", "ChatFilterList", L["Filter List"].."*", true, nil, updateFilterList},
+		{1, "Chat", "BlockAddonAlert", L["Block Addon Alert"]},
+		{2, "ACCOUNT", "ChatFilterWhiteList", "|cff00cc4c"..L["ChatFilterWhiteList"].."*", true, nil, updateFilterWhiteList, L["ChatFilterWhiteListTip"]},
+		{3, "Chat", "Matches", L["Keyword Match"].."*", nil, {1, 3, 0}},
+		{2, "ACCOUNT", "ChatFilterList", L["Filter List"].."*", true, nil, updateFilterList, L["FilterListTip"]},
 		{},--blank
 		{1, "Chat", "Invite", "|cff00cc4c"..L["Whisper Invite"]},
 		{1, "Chat", "GuildInvite", L["Guild Invite Only"].."*"},
@@ -698,6 +700,7 @@ local optionList = { -- type, key, value, name, horizon, doubleline
 		{1, "Tooltip", "HideRealm", L["Hide Realm"].."*"},
 		{1, "Tooltip", "SpecLevelByShift", L["Show SpecLevelByShift"].."*", true},
 		{1, "Tooltip", "TargetBy", L["Show TargetedBy"].."*"},
+		{1, "Tooltip", "HideAllID", "|cff00cc4c"..L["HideAllID"], true},
 	},
 	[12] = {
 		{1, "Misc", "ItemLevel", "|cff00cc4c"..L["Show ItemLevel"]},
@@ -830,7 +833,9 @@ local function CreateOption(i)
 				if callback then callback() end
 			end)
 			eb.title = L["Tips"]
-			B.AddTooltip(eb, "ANCHOR_RIGHT", L["EdieBox Tip"], "info")
+			local tip = L["EdieBox Tip"]
+			if tooltip then tip = tooltip.."|n"..tip end
+			B.AddTooltip(eb, "ANCHOR_RIGHT", tip, "info")
 
 			B.CreateFS(eb, 14, name, "system", "CENTER", 0, 25)
 		-- Slider
@@ -843,7 +848,7 @@ local function CreateOption(i)
 				x, y = 40, -offset - 30
 				offset = offset + 70
 			end
-			local s = B.CreateSlider(parent, name, min, max, x, y, width)
+			local s = B.CreateSlider(parent, name, min, max, x, y)
 			s:SetValue(NDUI_VARIABLE(key, value))
 			s:SetScript("OnValueChanged", function(_, v)
 				local current = tonumber(format("%."..step.."f", v))

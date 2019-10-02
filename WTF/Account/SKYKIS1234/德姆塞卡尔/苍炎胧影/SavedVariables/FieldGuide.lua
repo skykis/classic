@@ -14,6 +14,6 @@ FieldGuideOptions = {
 			["y"] = 0.3,
 		}, -- [1]
 	},
-	["showTalents"] = false,
 	["showEnemySpells"] = false,
+	["showTalents"] = false,
 }

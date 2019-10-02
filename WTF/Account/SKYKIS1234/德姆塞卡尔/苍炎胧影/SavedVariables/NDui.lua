@@ -2,45 +2,45 @@
 NDuiDB = {
 	["Nameplate"] = {
 		["CustomUnitColor"] = true,
-		["NameTextSize"] = 10,
-		["CustomColor"] = {
-			["r"] = 0,
-			["g"] = 0.8,
-			["b"] = 0.3,
-		},
+		["PPHeight"] = 5,
+		["PPPowerText"] = false,
 		["SecureColor"] = {
-			["b"] = 1,
-			["g"] = 0,
 			["r"] = 1,
+			["g"] = 0,
+			["b"] = 1,
 		},
 		["Enable"] = true,
 		["ShowPowerList"] = "",
 		["PPPHeight"] = 5,
 		["PPHideOOC"] = true,
 		["FullHealth"] = true,
-		["VerticalSpacing"] = 0.7,
-		["NameplateClassPower"] = true,
-		["PlateHeight"] = 5,
+		["PlateWidth"] = 135,
 		["ShowPlayerPlate"] = false,
+		["FriendlyCC"] = true,
+		["maxAuras"] = 5,
 		["MinAlpha"] = 1,
 		["QuestIndicator"] = true,
-		["PPIconSize"] = 32,
-		["TargetIndicator"] = 5,
+		["ColorBorder"] = false,
+		["InsideView"] = true,
 		["HostileCC"] = true,
-		["TankMode"] = false,
 		["AuraSize"] = 22,
+		["TankMode"] = false,
 		["HealthTextSize"] = 12,
 		["Distance"] = 42,
 		["ClassPowerOnly"] = false,
-		["InsideView"] = true,
-		["ColorBorder"] = false,
+		["TargetIndicator"] = 5,
+		["PPIconSize"] = 32,
 		["UnitList"] = "",
-		["maxAuras"] = 5,
-		["FriendlyCC"] = true,
+		["NameplateClassPower"] = true,
+		["PlateHeight"] = 5,
 		["MinScale"] = 1,
-		["PlateWidth"] = 135,
-		["PPPowerText"] = false,
-		["PPHeight"] = 5,
+		["VerticalSpacing"] = 0.7,
+		["CustomColor"] = {
+			["b"] = 0.3,
+			["g"] = 0.8,
+			["r"] = 0,
+		},
+		["NameTextSize"] = 10,
 	},
 	["Misc"] = {
 		["GemNEnchant"] = true,
@@ -57,12 +57,12 @@ NDuiDB = {
 		["Interrupt"] = false,
 		["ExplosiveCache"] = {
 		},
-		["ExpRep"] = true,
+		["PlacedItemAlert"] = false,
 		["QuestProgress"] = true,
 		["Mail"] = true,
-		["AutoDismount"] = true,
 		["FasterLoot"] = false,
-		["PlacedItemAlert"] = false,
+		["AutoDismount"] = true,
+		["ExpRep"] = true,
 	},
 	["Tutorial"] = {
 		["Complete"] = true,
@@ -73,29 +73,43 @@ NDuiDB = {
 		},
 		["ItemSetFilter"] = false,
 		["ReverseSort"] = false,
-		["GatherEmpty"] = false,
+		["BagsiLvl"] = true,
 		["Enable"] = true,
 		["BankWidth"] = 14,
-		["DeleteButton"] = false,
 		["IconSize"] = 34,
+		["DeleteButton"] = false,
 		["ItemFilter"] = true,
 		["BagsScale"] = 1,
-		["BagsiLvl"] = true,
+		["GatherEmpty"] = false,
 	},
 	["Auras"] = {
 		["ReverseDebuffs"] = false,
 		["ClassAuras"] = false,
 		["DebuffsPerRow"] = 16,
-		["DestroyTotems"] = true,
-		["BuffsPerRow"] = 16,
+		["ReverseBuffs"] = false,
+		["BuffSize"] = 30,
 		["Totems"] = false,
 		["DebuffSize"] = 34,
 		["Reminder"] = false,
-		["BuffSize"] = 30,
-		["ReverseBuffs"] = false,
+		["BuffsPerRow"] = 16,
+		["DestroyTotems"] = true,
 	},
 	["BFA"] = true,
 	["AuraWatchMover"] = {
+		["InternalCD"] = {
+			"LEFT", -- [1]
+			"UIParent", -- [2]
+			"LEFT", -- [3]
+			334.001647949219, -- [4]
+			-259.000885009766, -- [5]
+		},
+		[9] = {
+			"CENTER", -- [1]
+			"UIParent", -- [2]
+			"CENTER", -- [3]
+			-434, -- [4]
+			-82.0005874633789, -- [5]
+		},
 	},
 	["InternalCD"] = {
 	},
@@ -123,6 +137,30 @@ NDuiDB = {
 		{
 		}, -- [5]
 		{
+			[6178] = {
+				"SpellID", -- [1]
+				6178, -- [2]
+				nil, -- [3]
+				nil, -- [4]
+				false, -- [5]
+				false, -- [6]
+				false, -- [7]
+				false, -- [8]
+				"", -- [9]
+				false, -- [10]
+			},
+			[20252] = {
+				"SpellID", -- [1]
+				20252, -- [2]
+				nil, -- [3]
+				nil, -- [4]
+				false, -- [5]
+				false, -- [6]
+				false, -- [7]
+				false, -- [8]
+				"", -- [9]
+				false, -- [10]
+			},
 		}, -- [6]
 		{
 		}, -- [7]
@@ -158,104 +196,33 @@ NDuiDB = {
 			-75.0001220703125, -- [5]
 		},
 	},
-	["Skins"] = {
-		["Skada"] = true,
-		["DBM"] = true,
-		["BarLine"] = true,
-		["TMW"] = true,
-		["EasyMarking"] = true,
-		["ChatLine"] = true,
-		["InfobarLine"] = true,
-		["WeakAuras"] = true,
-		["QuestLogEx"] = true,
-		["Details"] = true,
-		["RMRune"] = false,
-		["MicroMenu"] = true,
-		["RM"] = true,
-		["Bigwigs"] = true,
-		["MenuLine"] = true,
-		["ClassLine"] = true,
-		["DBMCount"] = "10",
-		["QuestTracker"] = true,
+	["AuraWatch"] = {
+		["Enable"] = true,
+		["WatchSpellRank"] = true,
+		["IconScale"] = 1,
+		["ClickThrough"] = false,
 	},
 	["TempAnchor"] = {
-		["NDui_BackpackMain"] = {
+		["WorldMapFrame"] = {
 			"CENTER", -- [1]
 			"UIParent", -- [2]
 			"CENTER", -- [3]
-			346.500061035156, -- [4]
-			46.4996032714844, -- [5]
+			66.0320434570313, -- [4]
+			-2.03172779083252, -- [5]
 		},
-		["WorldMapFrame"] = {
-			"TOPLEFT", -- [1]
+		["NDui_BackpackMain"] = {
+			"RIGHT", -- [1]
 			"UIParent", -- [2]
-			"TOPLEFT", -- [3]
-			0, -- [4]
-			-26.4126319885254, -- [5]
+			"RIGHT", -- [3]
+			-97.0007476806641, -- [4]
+			15.4993209838867, -- [5]
 		},
-	},
-	["Map"] = {
-		["MapScale"] = 0.7,
-		["Coord"] = true,
-		["MapFader"] = false,
-		["MinmapScale"] = 1.4,
-		["ShowRecycleBin"] = true,
-		["Clock"] = true,
-		["WhoPings"] = true,
-		["MapReveal"] = true,
-		["CombatPulse"] = true,
-	},
-	["Tooltip"] = {
-		["FactionIcon"] = true,
-		["Scale"] = 1,
-		["TargetBy"] = true,
-		["Cursor"] = false,
-		["HideRealm"] = false,
-		["ClassColor"] = false,
-		["CombatHide"] = false,
-		["HideRank"] = false,
-		["HideJunkGuild"] = true,
-		["HideTitle"] = false,
-		["SpecLevelByShift"] = false,
-	},
-	["Actionbar"] = {
-		["OverrideWA"] = false,
-		["Enable"] = true,
-		["Scale"] = 1,
-		["Hotkeys"] = true,
-		["BindType"] = 1,
-		["Bar4Fade"] = false,
-		["Count"] = true,
-		["Style"] = 1,
-		["Bar5Fade"] = true,
-		["Classcolor"] = false,
-		["DecimalCD"] = true,
-		["Cooldown"] = true,
-		["Macro"] = true,
-	},
-	["Chat"] = {
-		["Oldname"] = false,
-		["Freedom"] = true,
-		["Invite"] = true,
-		["ChatWidth"] = 380,
-		["ChatItemLevel"] = true,
-		["ChatMenu"] = true,
-		["Keyword"] = "raid",
-		["Matches"] = 1,
-		["WhisperColor"] = true,
-		["GuildInvite"] = true,
-		["BlockAddonAlert"] = true,
-		["Lock"] = true,
-		["Chatbar"] = true,
-		["Sticky"] = false,
-		["ChatHeight"] = 190,
-		["EnableFilter"] = true,
-	},
-	["RaidClickSets"] = {
-		["ALT鼠标右键"] = {
-			"鼠标右键", -- [1]
-			"ALT", -- [2]
-			198304, -- [3]
+		["NDui_BackpackBank"] = {
+			"CENTER", -- [1]
+			"UIParent", -- [2]
+			"CENTER", -- [3]
+			43.5002021789551, -- [4]
+			-93.5005187988281, -- [5]
 		},
 	},
 	["UFs"] = {
@@ -274,47 +241,125 @@ NDuiDB = {
 		["RaidFrame"] = true,
 		["AutoRes"] = true,
 		["CombatText"] = false,
-		["PartyWidth"] = 100,
-		["InstanceAuras"] = true,
-		["AutoAttack"] = false,
+		["PlayerDebuff"] = true,
+		["PetHeight"] = 18,
+		["Arena"] = true,
 		["HorizonRaid"] = false,
-		["RaidWidth"] = 80,
+		["PetWidth"] = 120,
 		["PartyWatcher"] = true,
 		["Portrait"] = true,
-		["RaidClickSets"] = true,
+		["NumGroups"] = 6,
 		["HealthColor"] = 2,
 		["ClassPower"] = true,
-		["PetPowerHeight"] = 2,
-		["SimpleModeSortByRole"] = true,
+		["SpecRaidPos"] = false,
+		["ReverseRaid"] = false,
 		["RaidHPMode"] = 1,
-		["RaidHeight"] = 32,
+		["BossPowerHeight"] = 2,
 		["SwingTimer"] = true,
 		["BI_IconSize"] = 10,
-		["SwingBar"] = true,
-		["RaidScale"] = 1,
-		["HotsDots"] = false,
-		["RaidClassColor"] = true,
-		["PlayerPowerHeight"] = 4,
-		["PartyHeight"] = 32,
-		["BuffIndicatorType"] = 1,
 		["SimpleMode"] = false,
+		["RaidClassColor"] = true,
+		["HotsDots"] = false,
 		["BossWidth"] = 150,
+		["BuffIndicatorType"] = 1,
+		["PartyHeight"] = 32,
+		["PlayerPowerHeight"] = 4,
+		["RaidScale"] = 1,
+		["SwingBar"] = true,
 		["ShowTeamIndex"] = false,
-		["BossPowerHeight"] = 2,
+		["RaidHeight"] = 32,
 		["PlayerWidth"] = 245,
-		["ReverseRaid"] = false,
-		["SpecRaidPos"] = false,
+		["SimpleModeSortByRole"] = true,
+		["PetPowerHeight"] = 2,
 		["PartyFrame"] = true,
-		["NumGroups"] = 6,
-		["PetWidth"] = 120,
-		["Arena"] = true,
-		["PetHeight"] = 18,
-		["PlayerDebuff"] = true,
+		["RaidClickSets"] = true,
+		["RaidWidth"] = 80,
+		["AutoAttack"] = false,
+		["InstanceAuras"] = true,
+		["PartyWidth"] = 100,
 	},
-	["AuraWatch"] = {
+	["Tooltip"] = {
+		["FactionIcon"] = true,
+		["Scale"] = 1,
+		["TargetBy"] = true,
+		["Cursor"] = false,
+		["HideRealm"] = false,
+		["ClassColor"] = false,
+		["CombatHide"] = false,
+		["HideRank"] = false,
+		["SpecLevelByShift"] = false,
+		["HideTitle"] = false,
+		["HideJunkGuild"] = true,
+	},
+	["Actionbar"] = {
+		["OverrideWA"] = false,
 		["Enable"] = true,
-		["IconScale"] = 1,
-		["WatchSpellRank"] = true,
-		["ClickThrough"] = false,
+		["Macro"] = true,
+		["Hotkeys"] = true,
+		["BindType"] = 1,
+		["Cooldown"] = true,
+		["DecimalCD"] = true,
+		["Style"] = 1,
+		["Bar5Fade"] = true,
+		["Classcolor"] = false,
+		["Count"] = true,
+		["Bar4Fade"] = false,
+		["Scale"] = 1,
+	},
+	["Chat"] = {
+		["Oldname"] = false,
+		["Freedom"] = true,
+		["ChatWidth"] = 380,
+		["Invite"] = true,
+		["WhisperColor"] = true,
+		["ChatMenu"] = true,
+		["Keyword"] = "raid",
+		["Sticky"] = false,
+		["ChatHeight"] = 190,
+		["GuildInvite"] = true,
+		["Chatbar"] = true,
+		["Lock"] = true,
+		["BlockAddonAlert"] = true,
+		["Matches"] = 1,
+		["ChatItemLevel"] = true,
+		["EnableFilter"] = true,
+	},
+	["RaidClickSets"] = {
+		["ALT鼠标右键"] = {
+			"鼠标右键", -- [1]
+			"ALT", -- [2]
+			198304, -- [3]
+		},
+	},
+	["Map"] = {
+		["MapScale"] = 0.7,
+		["Coord"] = true,
+		["MapFader"] = false,
+		["MinmapScale"] = 1.4,
+		["ShowRecycleBin"] = true,
+		["Clock"] = true,
+		["WhoPings"] = true,
+		["CombatPulse"] = true,
+		["MapReveal"] = true,
+	},
+	["Skins"] = {
+		["Skada"] = true,
+		["DBM"] = true,
+		["BarLine"] = true,
+		["TMW"] = true,
+		["EasyMarking"] = true,
+		["ChatLine"] = true,
+		["InfobarLine"] = true,
+		["WeakAuras"] = true,
+		["QuestLogEx"] = true,
+		["Details"] = true,
+		["RMRune"] = false,
+		["MicroMenu"] = true,
+		["RM"] = true,
+		["Bigwigs"] = true,
+		["QuestTracker"] = true,
+		["ClassLine"] = true,
+		["DBMCount"] = "10",
+		["MenuLine"] = true,
 	},
 }

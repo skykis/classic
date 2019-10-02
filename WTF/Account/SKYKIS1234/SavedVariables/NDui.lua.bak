@@ -18,7 +18,7 @@ NDuiADB = {
 		},
 		["德姆塞卡尔"] = {
 			["苍炎胧影"] = {
-				1531078, -- [1]
+				1118549, -- [1]
 				"WARRIOR", -- [2]
 			},
 			["苍炎月影"] = {
@@ -33,14 +33,14 @@ NDuiADB = {
 			},
 		},
 	},
-	["UIScale"] = 0.71111,
+	["DisableInfobars"] = false,
 	["RepairType"] = 1,
 	["AutoBubbles"] = false,
 	["GuildSortOrder"] = true,
-	["BWRequest"] = true,
-	["SkadaRequest"] = true,
-	["ResetDetails"] = false,
+	["Timestamp"] = true,
 	["TexStyle"] = 2,
+	["GuildSortBy"] = 1,
+	["ResetDetails"] = false,
 	["VersionCheck"] = true,
 	["NameplateFilter"] = {
 		{
@@ -48,57 +48,7 @@ NDuiADB = {
 		{
 		}, -- [2]
 	},
-	["DBMRequest"] = false,
-	["RaidDebuffs"] = {
-	},
-	["DetectVersion"] = "1.0.1",
 	["CornerBuffs"] = {
-		["WARRIOR"] = {
-			[57723] = {
-				"BOTTOMLEFT", -- [1]
-				{
-					1, -- [1]
-					0.8, -- [2]
-					0, -- [3]
-				}, -- [2]
-				true, -- [3]
-			},
-			[80354] = {
-				"BOTTOMLEFT", -- [1]
-				{
-					1, -- [1]
-					0.8, -- [2]
-					0, -- [3]
-				}, -- [2]
-				true, -- [3]
-			},
-			[57724] = {
-				"BOTTOMLEFT", -- [1]
-				{
-					1, -- [1]
-					0.8, -- [2]
-					0, -- [3]
-				}, -- [2]
-				true, -- [3]
-			},
-			[264689] = {
-				"BOTTOMLEFT", -- [1]
-				{
-					1, -- [1]
-					0.8, -- [2]
-					0, -- [3]
-				}, -- [2]
-				true, -- [3]
-			},
-			[114030] = {
-				"TOPLEFT", -- [1]
-				{
-					0.2, -- [1]
-					0.2, -- [2]
-					1, -- [3]
-				}, -- [2]
-			},
-		},
 		["PRIEST"] = {
 			[264689] = {
 				"BOTTOMLEFT", -- [1]
@@ -167,13 +117,14 @@ NDuiADB = {
 					0.66, -- [3]
 				}, -- [2]
 			},
-			[41635] = {
-				"BOTTOMRIGHT", -- [1]
+			[80354] = {
+				"BOTTOMLEFT", -- [1]
 				{
-					0.2, -- [1]
-					0.7, -- [2]
-					0.2, -- [3]
+					1, -- [1]
+					0.8, -- [2]
+					0, -- [3]
 				}, -- [2]
+				true, -- [3]
 			},
 			[47788] = {
 				"LEFT", -- [1]
@@ -193,7 +144,52 @@ NDuiADB = {
 				}, -- [2]
 				true, -- [3]
 			},
+			[41635] = {
+				"BOTTOMRIGHT", -- [1]
+				{
+					0.2, -- [1]
+					0.7, -- [2]
+					0.2, -- [3]
+				}, -- [2]
+			},
+		},
+		["WARRIOR"] = {
+			[57723] = {
+				"BOTTOMLEFT", -- [1]
+				{
+					1, -- [1]
+					0.8, -- [2]
+					0, -- [3]
+				}, -- [2]
+				true, -- [3]
+			},
 			[80354] = {
+				"BOTTOMLEFT", -- [1]
+				{
+					1, -- [1]
+					0.8, -- [2]
+					0, -- [3]
+				}, -- [2]
+				true, -- [3]
+			},
+			[57724] = {
+				"BOTTOMLEFT", -- [1]
+				{
+					1, -- [1]
+					0.8, -- [2]
+					0, -- [3]
+				}, -- [2]
+				true, -- [3]
+			},
+			[114030] = {
+				"TOPLEFT", -- [1]
+				{
+					0.2, -- [1]
+					0.2, -- [2]
+					1, -- [3]
+				}, -- [2]
+			},
+			[264689] = {
 				"BOTTOMLEFT", -- [1]
 				{
 					1, -- [1]
@@ -204,10 +200,14 @@ NDuiADB = {
 			},
 		},
 	},
+	["RaidDebuffs"] = {
+	},
+	["DBMRequest"] = false,
+	["DetectVersion"] = "1.0.1",
 	["LockUIScale"] = true,
-	["GuildSortBy"] = 1,
-	["Timestamp"] = true,
+	["SkadaRequest"] = true,
+	["BWRequest"] = true,
 	["RaidAuraWatch"] = {
 	},
-	["DisableInfobars"] = false,
+	["UIScale"] = 0.71111,
 }

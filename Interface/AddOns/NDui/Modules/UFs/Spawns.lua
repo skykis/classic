@@ -23,6 +23,9 @@ local function CreatePlayerStyle(self)
 	UF:CreateFCT(self)
 	UF:CreateAddPower(self)
 
+	if not NDuiDB["Nameplate"]["ShowPlayerPlate"] or NDuiDB["Nameplate"]["ClassPowerOnly"] then
+		UF:CreateEneryTicker(self)
+	end
 	if NDuiDB["UFs"]["Castbars"] then
 		UF:ReskinMirrorBars()
 		UF:ReskinTimerTrakcer(self)
@@ -93,20 +96,6 @@ local function CreateBossStyle(self)
 	UF:CreateDebuffs(self)
 end
 
-local function CreateArenaStyle(self)
-	self.mystyle = "arena"
-	self:SetSize(NDuiDB["UFs"]["BossWidth"], NDuiDB["UFs"]["BossHeight"])
-
-	UF:CreateHeader(self)
-	UF:CreateHealthBar(self)
-	UF:CreateHealthText(self)
-	UF:CreatePowerBar(self)
-	UF:CreateCastBar(self)
-	UF:CreateRaidMark(self)
-	UF:CreateBuffs(self)
-	UF:CreateDebuffs(self)
-end
-
 function UF:ResizeRaidFrame()
 	for _, frame in pairs(oUF.objects) do
 		if frame.mystyle == "raid" and not frame.isPartyFrame then
@@ -152,7 +141,6 @@ end
 local function CreatePartyStyle(self)
 	self.isPartyFrame = true
 	CreateRaidStyle(self)
-	UF:InterruptIndicator(self)
 end
 
 -- Spawns
@@ -225,16 +213,6 @@ function UF:OnLogin()
 				boss[i].mover = B.Mover(boss[i], L["BossFrame"]..i, "Boss1", {"RIGHT", UIParent, "RIGHT", -350, -90}, moverWidth, moverHeight)
 			else
 				boss[i].mover = B.Mover(boss[i], L["BossFrame"]..i, "Boss"..i, {"BOTTOM", boss[i-1], "TOP", 0, 50}, moverWidth, moverHeight)
-			end
-		end
-
-		if NDuiDB["UFs"]["Arena"] then
-			oUF:RegisterStyle("Arena", CreateArenaStyle)
-			oUF:SetActiveStyle("Arena")
-			local arena = {}
-			for i = 1, 5 do
-				arena[i] = oUF:Spawn("arena"..i, "oUF_Arena"..i)
-				arena[i]:SetPoint("TOPLEFT", boss[i].mover)
 			end
 		end
 	end

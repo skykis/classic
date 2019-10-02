@@ -5,15 +5,15 @@ AtlasDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
-			["dropdowns"] = {
-				["东部王国副本"] = 1,
-				["卡利姆多副本"] = 2,
-			},
 			["options"] = {
 				["dropdowns"] = {
 					["module"] = 2,
-					["zone"] = 2,
+					["zone"] = 12,
 				},
+			},
+			["dropdowns"] = {
+				["卡利姆多副本"] = 12,
+				["东部王国副本"] = 1,
 			},
 		},
 	},

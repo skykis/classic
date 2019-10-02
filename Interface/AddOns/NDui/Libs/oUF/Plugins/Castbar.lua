@@ -3,7 +3,8 @@ local B, C, L, DB = unpack(ns)
 
 local unpack = unpack
 local GetTime, UnitIsUnit = GetTime, UnitIsUnit
-local UnitChannelInfo = UnitChannelInfo or ChannelInfo
+local CastingInfo = CastingInfo
+local ChannelInfo = ChannelInfo
 
 local LibClassicCasterino = LibStub('LibClassicCasterino', true)
 if(LibClassicCasterino) then
@@ -52,8 +53,19 @@ local function updateCastBarTicks(bar, numTicks)
 	end
 end
 
+function B:FixTargetCastbarUpdate()
+	if UnitIsUnit("target", "player") and not CastingInfo() and not ChannelInfo() then
+		self.casting = nil
+		self.channeling = nil
+		self.Text:SetText(INTERRUPTED)
+		self.holdTime = 0
+	end
+end
+
 function B:OnCastbarUpdate(elapsed)
 	if self.casting or self.channeling then
+		B.FixTargetCastbarUpdate(self)
+
 		local decimal = self.decimal
 
 		local duration = self.casting and self.duration + elapsed or self.duration - elapsed

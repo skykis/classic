@@ -1,0 +1,14 @@
+{
+    "addonsMap": [
+        "RareScanner"
+    ],
+    "interfaceMap": [],
+    "children": [],
+    "localName": "RareScanner",
+    "searchName": "RareScanner",
+    "name": "RareScanner",
+    "fileName": "rarescanner",
+    "target": "curse",
+    "version": "RareScanner_5.6.5",
+    "gameVersion": "8.2.5"
+}

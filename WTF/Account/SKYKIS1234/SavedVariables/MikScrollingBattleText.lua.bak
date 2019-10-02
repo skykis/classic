@@ -9,21 +9,21 @@ MSBTProfiles_SavedVars = {
 			},
 			["enableBlizzardDamage"] = true,
 			["enableBlizzardHealing"] = true,
-			["creationVersion"] = "5.7.150",
+			["qualityExclusions"] = {
+				true, -- [1]
+			},
 			["scrollAreas"] = {
 				["Incoming"] = {
 					["offsetX"] = -300,
 				},
-				["Outgoing"] = {
-					["offsetX"] = 280,
-				},
 				["Notification"] = {
 					["offsetY"] = 150,
 				},
+				["Outgoing"] = {
+					["offsetX"] = 280,
+				},
 			},
-			["qualityExclusions"] = {
-				true, -- [1]
-			},
+			["creationVersion"] = "5.7.150",
 		},
 	},
 }

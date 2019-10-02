@@ -48,7 +48,7 @@ CPp.TZWarningSent = false;  -- not used?
 
 -- Constants
 local CensusPlus_Version_Major = "0"; -- changing this number will force a saved data purge
-local CensusPlus_Version_Minor = "5"; -- changing this number will force a saved data purge
+local CensusPlus_Version_Minor = "7"; -- changing this number will force a saved data purge
 local CensusPlus_Version_Maint = "0";
 local CensusPlus_SubVersion = "";
 --local CensusPlus_VERSION = "WoD"
@@ -509,6 +509,13 @@ function CensusPlus_OnLoad(self)
 	--  Set up an empty frame for updates
 	local updateFrame = CreateFrame("Frame")
 	updateFrame:SetScript("OnUpdate", CensusPlus_OnUpdate)
+	
+	SetBindingClick("SHIFT-T", CensusPlusWhoButton:GetName())
+	CensusPlusWhoButton:SetScript("OnClick", function(self, button, down)
+	-- As we have not specified the button argument to SetBindingClick,
+	-- the binding will be mapped to a LeftButton click.
+		ManualWho()
+	end)
 end
 
 
@@ -562,7 +569,7 @@ function CP_ProcessWhoEvent(query, result, complete)
 		local zoneLetter = g_CurrentJob.m_zoneLetter
 		local letter = g_CurrentJob.m_Letter
 
-		if (minLevel ~= maxLevel and minLevel ~= 0) then
+		if (minLevel < maxLevel) then
 			-- The level range is greater than a single level, so split it in half and submit the two jobs
 			local pivot = floor((minLevel + maxLevel) / 2)
 			local jobLower =
@@ -1176,6 +1183,17 @@ function CENSUSPLUS_STOP_OnEnter(self, motion)
 	end
 end
 
+-- referenced by CensusPlusClassic.xml
+function CENSUSPLUS_MANUALWHO_OnEnter(self, motion)
+	if (motion == true) then
+		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+		GameTooltip:SetText("Issues manual who request.", 1.0, 1.0, 1.0)
+		GameTooltip:Show()
+	-- frame created underneath cursor.. not cursor movement to frame
+	else
+	end
+end
+
 
 function CensusPlus_TimerSet(self, minutes, ovrride)
 	if minutes == nil then
@@ -1460,6 +1478,11 @@ function CENSUSPLUS_STOPCENSUS()
 	CensusButton:SetText("C+")
 end
 
+function CENSUSPLUS_MANUALWHO()
+	print("istsecure() = ", issecure())
+	ManualWho()
+end
+
 -- Display Census results
 function CensusPlus_DisplayResults()
 	--
@@ -1510,7 +1533,7 @@ function CensusPlus_CreateWhoText(job)
 	local locale = GetLocale()
 	if (race ~= nil) then
 		if (locale == "ruRU") then
-			whoText = whoText .. race
+			whoText = whoText .. ' р-"' .. race .. '"'
 		else
 			whoText = whoText .. ' r-"' .. race .. '"'
 		end
@@ -1519,7 +1542,7 @@ function CensusPlus_CreateWhoText(job)
 	local class = job.m_Class
 	if (class ~= nil) then
 		if (locale == "ruRU") then
-			whoText = whoText .. class
+			whoText = whoText .. ' к-"' .. class .. '"'
 		else
 			whoText = whoText .. ' c-"' .. class .. '"'
 		end
@@ -1528,7 +1551,7 @@ function CensusPlus_CreateWhoText(job)
 	local letter = job.m_Letter
 	if (letter ~= nil) then
 		if (locale == "ruRU") then
-			whoText = whoText .. letter
+			whoText = whoText .. " и-" .. letter
 		else
 			whoText = whoText .. " n-" .. letter
 		end
@@ -1547,7 +1570,7 @@ function CensusPlus_CreateWhoText(job)
 	local zoneLetter = job.m_zoneLetter
 	if (zoneLetter ~= nil) then
 		if (locale == "ruRU") then
-			whoText = whoText .. zoneLetter
+			whoText = whoText .. " з-" .. zoneLetter
 		else
 			whoText = whoText .. " z-" .. zoneLetter
 		end
@@ -1589,12 +1612,12 @@ function CensusPlus_DumpJob(job)
 	end
 
 	local minLevel = job.m_MinLevel
-	if (minLevel ~= nil) then
+	if (minLevel ~= nil and minLevel ~= 0) then
 		whoText = whoText .. " min: " .. minLevel
 	end
 
 	local maxLevel = job.m_MaxLevel
-	if (maxLevel ~= nil) then
+	if (maxLevel ~= nil and maxLevel ~= 0) then
 		whoText = whoText .. " max: " .. maxLevel
 	end
 
@@ -3123,7 +3146,7 @@ function CensusPlus_OnEnterRace(self, motion)
 		local raceName = thisFactionRaces[id]
 		local count = g_RaceCount[id]
 		if (count ~= nil) and (g_TotalCount > 0) then
-			local percent = floor((count / g_TotalCount) * 100)
+			local percent = string.format("%.2f", (count / g_TotalCount) * 100)
 			GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 			GameTooltip:SetText(
 				raceName .. "\n" .. count .. "\n" .. percent .. "%",
@@ -3151,7 +3174,7 @@ function CensusPlus_OnEnterClass(self, motion)
 		local className = thisFactionClasses[id]
 		local count = g_ClassCount[id]
 		if (count ~= nil) and (g_TotalCount > 0) then
-			local percent = floor((count / g_TotalCount) * 100)
+			local percent = string.format("%.2f", (count / g_TotalCount) * 100)
 			GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 			GameTooltip:SetText(
 				className .. "\n" .. count .. "\n" .. percent .. "%",
@@ -3176,7 +3199,7 @@ function CensusPlus_OnEnterLevel(self, motion )
 		local id = self:GetID()
 		local count = g_LevelCount[id]
 		if (count ~= nil) and (g_TotalCount > 0) then
-			local percent = floor((count / g_TotalCount) * 100)
+			local percent = string.format("%.2f", (count / g_TotalCount) * 100)
 			GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 			GameTooltip:SetText(
 				LEVEL .. " " .. id .. "\n" .. count .. "\n" .. percent .. "%",
@@ -3528,6 +3551,23 @@ function CensusPlus_CheckTZ()
 	g_CensusPlusTZOffset = servDiff
 end
 
+local whoMsg
+
+function ManualWho()
+	if (g_Verbose == true) then
+		print("ManualWho:", whoMsg)
+	end
+	if (whoquery_active) then
+		wholib:Who(whoMsg, {
+			queue = wholib.WHOLIB_QUEUE_QUIET,
+			flags = 0,
+			callback = CP_ProcessWhoEvent
+		})
+		WhoFrameEditBox:SetText(whoMsg)
+		WhoFrameWhoButton:Click()
+	end
+end
+
 function CensusPlus_SendWho(msg)
 	if (g_Verbose == true) then
 		CensusPlus_Msg(format(CENSUSPLUS_SENDING, msg))
@@ -3549,14 +3589,17 @@ function CensusPlus_SendWho(msg)
 	end
 
 	if wholib then
-		wholib:Who(msg, {
-			queue = wholib.WHOLIB_QUEUE_QUIET,
-			flags = 0,
-			callback = CP_ProcessWhoEvent
-		})
+		whoMsg = msg
+		--wholib:Who(msg, {
+		--	queue = wholib.WHOLIB_QUEUE_QUIET,
+		--	flags = 0,
+		--	callback = CP_ProcessWhoEvent
+		--})
 		--wholib:AskWho({query = msg, queue = wholib.WHOLIB_QUEUE_QUIET, callback = CP_ProcessWhoEvent })
 	else
-		SendWho(msg)
+		--SendWho(msg)
+		--ManualWho(msg)
+		whoMsg = msg
 	end
 	whoquery_active = true
 	CP_g_queue_count = CP_g_queue_count + 1

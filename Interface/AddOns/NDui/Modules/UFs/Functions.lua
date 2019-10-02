@@ -24,7 +24,7 @@ local function retVal(self, val1, val2, val3, val4, val5)
 		return val1
 	elseif mystyle == "focus" then
 		return val2
-	elseif mystyle == "boss" or mystyle == "arena" then
+	elseif mystyle == "boss" then
 		return val3
 	else
 		if mystyle == "nameplate" and val5 then
@@ -126,8 +126,6 @@ function UF:CreateHealthText(self)
 		self:Tag(name, "[fulllevel] [color][name][afkdnd]")
 	elseif mystyle == "nameplate" then
 		self:Tag(name, "[nplevel][name]")
-	elseif mystyle == "arena" then
-		self:Tag(name, "[arenaspec] [color][name]")
 	else
 		self:Tag(name, "[nplevel][color][name]")
 	end
@@ -328,7 +326,7 @@ function UF:CreateCastBar(self)
 	elseif mystyle == "target" then
 		cb:SetSize(unpack(C.UFs.TargetcbSize))
 		createBarMover(cb, L["Target Castbar"], "TargetCB", C.UFs.Targetcb)
-	elseif mystyle == "boss" or mystyle == "arena" then
+	elseif mystyle == "boss" then
 		cb:SetPoint("TOPRIGHT", self.Power, "BOTTOMRIGHT", 0, -8)
 		cb:SetSize(self:GetWidth(), 10)
 	elseif mystyle == "nameplate" then
@@ -348,7 +346,7 @@ function UF:CreateCastBar(self)
 	name:SetPoint("RIGHT", timer, "LEFT", -5, 0)
 	name:SetJustifyH("LEFT")
 
-	if mystyle ~= "boss" and mystyle ~= "arena" then
+	if mystyle ~= "boss" then
 		cb.Icon = cb:CreateTexture(nil, "ARTWORK")
 		cb.Icon:SetSize(cb:GetHeight(), cb:GetHeight())
 		cb.Icon:SetPoint("BOTTOMRIGHT", cb, "BOTTOMLEFT", -5, 0)
@@ -385,7 +383,7 @@ function UF:CreateCastBar(self)
 		cb.timeToHold = .5
 	end
 
-	if mystyle == "nameplate" or mystyle == "boss" or mystyle == "arena" then
+	if mystyle == "nameplate" or mystyle == "boss" then
 		cb.decimal = "%.1f"
 	else
 		cb.decimal = "%.2f"
@@ -477,7 +475,6 @@ local filteredStyle = {
 	["target"] = true,
 	["nameplate"] = true,
 	["boss"] = true,
-	["arena"] = true,
 }
 
 function UF.PostUpdateIcon(element, unit, button, index, _, duration, expiration, debuffType)
@@ -559,11 +556,11 @@ function UF.CustomFilter(element, unit, button, name, _, _, _, _, _, caster, isS
 		end
 	elseif style == "raid" then
 		if NDuiDB["UFs"]["RaidBuffIndicator"] then
-			return C.RaidBuffs["ALL"][spellID] or NDuiADB["RaidAuraWatch"][spellID]
+			return C.RaidBuffs["ALL"][name] or NDuiADB["RaidAuraWatch"][spellID]
 		else
-			return (button.isPlayer or caster == "pet") and C.RaidBuffs[DB.MyClass][spellID] or C.RaidBuffs["ALL"][spellID] or C.RaidBuffs["WARNING"][spellID]
+			return (button.isPlayer or caster == "pet") and C.RaidBuffs[DB.MyClass][name] or C.RaidBuffs["ALL"][name]
 		end
-	elseif style == "nameplate" or style == "boss" or style == "arena" then
+	elseif style == "nameplate" or style == "boss" then
 		if NDuiADB["NameplateFilter"][2][spellID] or C.BlackList[spellID] then
 			return false
 		elseif element.showStealableBuffs and isStealable and not UnitIsPlayer(unit) then
@@ -684,7 +681,7 @@ function UF:CreateDebuffs(self)
 		bu.num = 14
 		bu.iconsPerRow = 7
 		bu.showDebuffType = true
-	elseif mystyle == "boss" or mystyle == "arena" then
+	elseif mystyle == "boss" then
 		bu:SetPoint("TOPRIGHT", self, "TOPLEFT", -5, 0)
 		bu.num = 10
 		bu.iconsPerRow = 5
@@ -865,60 +862,25 @@ function UF:CreateExpRepBar(self)
 end
 
 function UF:CreatePrediction(self)
-	if DB.isClassic then return end
+	local myBar = CreateFrame("StatusBar", nil, self)
+	myBar:SetWidth(self:GetWidth())
+	myBar:SetPoint("TOP", self.Health, "TOP")
+	myBar:SetPoint("BOTTOM", self.Health, "BOTTOM")
+	myBar:SetPoint("LEFT", self.Health:GetStatusBarTexture(), "RIGHT")
+	myBar:SetStatusBarTexture(DB.normTex)
+	myBar:SetStatusBarColor(0, 1, .5, .5)
 
-	local mhpb = self:CreateTexture(nil, "BORDER", nil, 5)
-	mhpb:SetWidth(1)
-	mhpb:SetTexture(DB.normTex)
-	mhpb:SetVertexColor(0, 1, .5, .5)
+	local otherBar = CreateFrame("StatusBar", nil, self)
+	otherBar:SetWidth(self:GetWidth())
+	otherBar:SetPoint("TOP", self.Health, "TOP")
+	otherBar:SetPoint("BOTTOM", self.Health, "BOTTOM")
+	otherBar:SetPoint("LEFT", myBar:GetStatusBarTexture(), "RIGHT")
+	otherBar:SetStatusBarTexture(DB.normTex)
+	otherBar:SetStatusBarColor(0, 1, 0, .5)
 
-	local ohpb = self:CreateTexture(nil, "BORDER", nil, 5)
-	ohpb:SetWidth(1)
-	ohpb:SetTexture(DB.normTex)
-	ohpb:SetVertexColor(0, 1, 0, .5)
-
-	local abb = self:CreateTexture(nil, "BORDER", nil, 5)
-	abb:SetWidth(1)
-	abb:SetTexture(DB.normTex)
-	abb:SetVertexColor(.66, 1, 1, .7)
-
-	local abbo = self:CreateTexture(nil, "ARTWORK", nil, 1)
-	abbo:SetAllPoints(abb)
-	abbo:SetTexture("Interface\\RaidFrame\\Shield-Overlay", true, true)
-	abbo.tileSize = 32
-
-	local oag = self:CreateTexture(nil, "ARTWORK", nil, 1)
-	oag:SetWidth(15)
-	oag:SetTexture("Interface\\RaidFrame\\Shield-Overshield")
-	oag:SetBlendMode("ADD")
-	oag:SetAlpha(.7)
-	oag:SetPoint("TOPLEFT", self.Health, "TOPRIGHT", -5, 2)
-	oag:SetPoint("BOTTOMLEFT", self.Health, "BOTTOMRIGHT", -5, -2)
-
-	local hab = CreateFrame("StatusBar", nil, self)
-	hab:SetPoint("TOP")
-	hab:SetPoint("BOTTOM")
-	hab:SetPoint("RIGHT", self.Health:GetStatusBarTexture())
-	hab:SetWidth(self.Health:GetWidth())
-	hab:SetReverseFill(true)
-	hab:SetStatusBarTexture(DB.normTex)
-	hab:SetStatusBarColor(0, .5, .8, .5)
-
-	local ohg = self:CreateTexture(nil, "ARTWORK", nil, 1)
-	ohg:SetWidth(15)
-	ohg:SetTexture("Interface\\RaidFrame\\Absorb-Overabsorb")
-	ohg:SetBlendMode("ADD")
-	ohg:SetPoint("TOPRIGHT", self.Health, "TOPLEFT", 5, 2)
-	ohg:SetPoint("BOTTOMRIGHT", self.Health, "BOTTOMLEFT", 5, -2)
-
-	self.HealPredictionAndAbsorb = {
-		myBar = mhpb,
-		otherBar = ohpb,
-		absorbBar = abb,
-		absorbBarOverlay = abbo,
-		overAbsorbGlow = oag,
-		healAbsorbBar = hab,
-		overHealAbsorbGlow = ohg,
+	self.HealthPrediction = {
+		myBar = myBar,
+		otherBar = otherBar,
 		maxOverflow = 1,
 	}
 end
@@ -1023,46 +985,11 @@ function UF:CreateFCT(self)
 	--B.HideOption(InterfaceOptionsCombatPanelEnableFloatingCombatText)
 end
 
-function UF:InterruptIndicator(self)
-	if not NDuiDB["UFs"]["PartyWatcher"] then return end
+function UF:CreateEneryTicker(self)
+	if not NDuiDB["UFs"]["EnergyTicker"] then return end
 
-	local horizon = NDuiDB["UFs"]["HorizonParty"]
-	local otherSide = NDuiDB["UFs"]["PWOnRight"]
-	local relF = horizon and "BOTTOMLEFT" or "TOPRIGHT"
-	local relT = "TOPLEFT"
-	local xOffset = horizon and 0 or -5
-	local yOffset = horizon and 5 or 0
-	local margin = horizon and 2 or -2
-	if otherSide then
-		relF = "TOPLEFT"
-		relT = horizon and "BOTTOMLEFT" or "TOPRIGHT"
-		xOffset = horizon and 0 or 5
-		yOffset = horizon and -(self.Power:GetHeight()+8) or 0
-		margin = 2
-	end
-	local rel1 = not horizon and not otherSide and "RIGHT" or "LEFT"
-	local rel2 = not horizon and not otherSide and "LEFT" or "RIGHT"
-	local buttons = {}
-	local maxIcons = 3
-	local iconSize = horizon and min((self:GetWidth()-(maxIcons-1)*abs(margin))/maxIcons, 32) or (self:GetHeight()+self.Power:GetHeight()+3)
+	local ticker = CreateFrame("Frame", nil, self)
+	ticker:SetFrameLevel(self.Power:GetFrameLevel() + 1)
 
-	for i = 1, maxIcons do
-		local bu = CreateFrame("Frame", nil, self)
-		bu:SetSize(iconSize, iconSize)
-		B.AuraIcon(bu)
-		bu.CD:SetReverse(false)
-		if i == 1 then
-			bu:SetPoint(relF, self, relT, xOffset, yOffset)
-		else
-			bu:SetPoint(rel1, buttons[i-1], rel2, margin, 0)
-		end
-		bu:Hide()
-
-		buttons[i] = bu
-	end
-
-	buttons.__max = maxIcons
-	buttons.PartySpells = C.PartySpells
-	buttons.TalentCDFix = C.TalentCDFix
-	self.PartyWatcher = buttons
+	self.EnergyTicker = ticker
 end

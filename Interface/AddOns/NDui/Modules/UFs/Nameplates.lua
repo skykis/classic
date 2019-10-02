@@ -146,7 +146,7 @@ function UF.UpdateColor(element, unit)
 		element:SetStatusBarColor(r, g, b)
 	end
 
-	if not NDuiDB["Nameplate"]["TankMode"] and not isPlayer and isTargeting then
+	if (not NDuiDB["Nameplate"]["TankMode"] or isCustomUnit or isPlayer) and UnitCanAttack(unit, "player") and isTargeting then
 		element.Shadow:SetBackdropBorderColor(1, 0, 0)
 	else
 		element.Shadow:SetBackdropBorderColor(0, 0, 0)
@@ -697,6 +697,7 @@ function UF:CreatePlayerPlate()
 	UF:CreateClassPower(self)
 	UF:StaggerBar(self)
 	if NDuiDB["Auras"]["ClassAuras"] and not DB.isClassic then auras:CreateLumos(self) end
+	if not NDuiDB["Nameplate"]["ClassPowerOnly"] then UF:CreateEneryTicker(self) end
 
 	if NDuiDB["Nameplate"]["PPPowerText"] then
 		local textFrame = CreateFrame("Frame", nil, self.Power)
